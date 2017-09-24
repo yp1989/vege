@@ -1,0 +1,11 @@
+target/
+*.class
+.settings/
+.project
+.classpath
+.svn/
+.idea/
+*.iml
+/log
+/crm-admin/log
+.DS_Store

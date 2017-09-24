@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+    <!-- 指明满足“/*”的页面，将被“/WEB-INF/views/decorators/decorator.html”所装饰 -->
+    <mapping path="/*" decorator="/WEB-INF/views/layout/default.jsp" />
+
+    <!-- 指明满足“/exclude.jsp*”的页面，将被排除，不被装饰 -->
+    <mapping path="/login" exclue="true" />
+    <mapping path="/clue/import" exclue="true" />
+    <mapping path="/clue/importbatch" exclue="true" />
+    <mapping path="/callcenter/getAgent" exclue="true" />
+    <mapping path="/business/auditing" exclue="true" />
+    <mapping path="/err" exclue="true" />
+</sitemesh>

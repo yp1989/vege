@@ -1,0 +1,82 @@
+package com.vcooline.crm.common.constant;
+
+public class WebUrlConstants {
+
+	public static final String [] WHITE_NAME_URL={
+		"/login",
+		"/doLogin",//登录请求
+		"/err",//保错请求
+		"/rootUrl",
+		"/logout",
+		"/updatePasswordPage",
+		"/checkPassword",
+		"/savaUpdatePassword",
+		//"/callcenter/index",
+		"/auth/addAdminPage",//添加管理员
+		"/auth/addAdminForm",
+		"/auth/editAdminPage",
+		"/auth/editAdminForm",
+		"/auth/closeAdmin",
+		"/auth/addRolePage",//添加角色
+		"/auth/addAuthForm",
+		"/auth/deleteRole",
+		"/auth/editRoleForm",
+		"/auth/addRoleAjax",
+		"/auth/addRoleForm",
+		"/auth/getRoleById",
+		"/auth/getTreeDepList",//获取部门树
+		"/auth/getAdminByDep",
+		"/auth/moveAdmin",
+		"/auth/deleteDep",
+		"/auth/savaAddDep",
+		"/auth/savaUpdateDep",
+		"/auth/setIsDepManager",
+		"/contract/selectContractInfoById",//合同管理
+		"/contract/contractAudit",
+		"/contract/contractAcc",
+		"/contract/contractCancel",
+		"/contract/downLoad",
+		"/contract/getContractByNumber",
+		"/contract/getContract",
+		"/product/addProduct",
+		"/product/updateProduct",
+		"/product/freezeProduct",
+		"/product/addVersion",
+		"/product/updateVersion",
+		"/product/freezeVersion",
+		"/clue/toAddClue",//线索管理
+		"/clue/doAddClue",
+		"/clue/toEditClue",
+		"/clue/allot",
+		"/clue/distribution",
+		"/clue/close",
+		"/clue/queryByPhone",
+		"/clue/queryProdVers",
+		"/clue/toShowClue",
+		"/clue/convertBusiness",
+		"/clue/import",
+		"/clue/importbatch",
+		"/business/edit",//商机管理
+		"/business/doEdit",
+		"/business/show",
+		"/business/allot",
+		"/business/distribution",
+		"/business/close",
+		"/business/auditing",
+		"/business/productsContract",
+		"/business/agentContract",
+		"/business/doProductsContract",
+		"/callcenter/toAddClue",//呼叫中心
+		"/callcenter/doAddClue",
+		"/callcenter/toEditClue",
+		"/callcenter/allot",
+		"/callcenter/distribution",
+		"/callcenter/close",
+		"/callcenter/toShowClue",
+		"/gather/toEdit",//收款管理
+		"/gather/doGather",
+		"/gather/confirm",
+		"/gather/doGather" //收款管理
+	};
+	
+}
