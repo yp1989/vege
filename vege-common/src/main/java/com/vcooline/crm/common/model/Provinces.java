@@ -29,7 +29,6 @@ public class Provinces extends BaseModel implements Serializable {
      * This method returns the value of the database column provinces.id
      *
      * @return the value of provinces.id
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public Integer getId() {
@@ -41,7 +40,6 @@ public class Provinces extends BaseModel implements Serializable {
      * This method sets the value of the database column provinces.id
      *
      * @param id the value for provinces.id
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setId(Integer id) {
@@ -53,7 +51,6 @@ public class Provinces extends BaseModel implements Serializable {
      * This method returns the value of the database column provinces.name
      *
      * @return the value of provinces.name
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public String getName() {
@@ -65,7 +62,6 @@ public class Provinces extends BaseModel implements Serializable {
      * This method sets the value of the database column provinces.name
      *
      * @param name the value for provinces.name
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setName(String name) {
@@ -77,7 +73,6 @@ public class Provinces extends BaseModel implements Serializable {
      * This method returns the value of the database column provinces.pinyin
      *
      * @return the value of provinces.pinyin
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public String getPinyin() {
@@ -89,7 +84,6 @@ public class Provinces extends BaseModel implements Serializable {
      * This method sets the value of the database column provinces.pinyin
      *
      * @param pinyin the value for provinces.pinyin
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setPinyin(String pinyin) {
@@ -101,7 +95,6 @@ public class Provinces extends BaseModel implements Serializable {
      * This method returns the value of the database column provinces.sort
      *
      * @return the value of provinces.sort
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public Integer getSort() {
@@ -113,7 +106,6 @@ public class Provinces extends BaseModel implements Serializable {
      * This method sets the value of the database column provinces.sort
      *
      * @param sort the value for provinces.sort
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setSort(Integer sort) {
@@ -125,7 +117,6 @@ public class Provinces extends BaseModel implements Serializable {
      * This method returns the value of the database column provinces.created_at
      *
      * @return the value of provinces.created_at
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public Date getCreatedAt() {
@@ -137,7 +128,6 @@ public class Provinces extends BaseModel implements Serializable {
      * This method sets the value of the database column provinces.created_at
      *
      * @param createdAt the value for provinces.created_at
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setCreatedAt(Date createdAt) {
@@ -149,7 +139,6 @@ public class Provinces extends BaseModel implements Serializable {
      * This method returns the value of the database column provinces.updated_at
      *
      * @return the value of provinces.updated_at
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public Date getUpdatedAt() {
@@ -161,7 +150,6 @@ public class Provinces extends BaseModel implements Serializable {
      * This method sets the value of the database column provinces.updated_at
      *
      * @param updatedAt the value for provinces.updated_at
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setUpdatedAt(Date updatedAt) {

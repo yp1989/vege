@@ -92,7 +92,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_customer.id
      *
      * @return the value of crm_customer.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getId() {
@@ -104,7 +103,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_customer.id
      *
      * @param id the value for crm_customer.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setId(Long id) {
@@ -116,7 +114,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_customer.cust_name
      *
      * @return the value of crm_customer.cust_name
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getCustName() {
@@ -128,7 +125,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_customer.cust_name
      *
      * @param custName the value for crm_customer.cust_name
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCustName(String custName) {
@@ -140,7 +136,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_customer.cust_role
      *
      * @return the value of crm_customer.cust_role
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Byte getCustRole() {
@@ -152,7 +147,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_customer.cust_role
      *
      * @param custRole the value for crm_customer.cust_role
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCustRole(Byte custRole) {
@@ -164,7 +158,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_customer.cust_phone
      *
      * @return the value of crm_customer.cust_phone
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getCustPhone() {
@@ -176,7 +169,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_customer.cust_phone
      *
      * @param custPhone the value for crm_customer.cust_phone
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCustPhone(String custPhone) {
@@ -188,7 +180,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_customer.cust_qq
      *
      * @return the value of crm_customer.cust_qq
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getCustQq() {
@@ -200,7 +191,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_customer.cust_qq
      *
      * @param custQq the value for crm_customer.cust_qq
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCustQq(String custQq) {
@@ -212,7 +202,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_customer.cust_email
      *
      * @return the value of crm_customer.cust_email
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getCustEmail() {
@@ -224,7 +213,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_customer.cust_email
      *
      * @param custEmail the value for crm_customer.cust_email
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCustEmail(String custEmail) {
@@ -236,7 +224,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_customer.cust_job
      *
      * @return the value of crm_customer.cust_job
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getCustJob() {
@@ -248,7 +235,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_customer.cust_job
      *
      * @param custJob the value for crm_customer.cust_job
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCustJob(String custJob) {
@@ -260,7 +246,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_customer.is_del
      *
      * @return the value of crm_customer.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Boolean getIsDel() {
@@ -272,7 +257,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_customer.is_del
      *
      * @param isDel the value for crm_customer.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -284,7 +268,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_customer.create_time
      *
      * @return the value of crm_customer.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getCreateTime() {
@@ -296,7 +279,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_customer.create_time
      *
      * @param createTime the value for crm_customer.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -308,7 +290,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_customer.update_time
      *
      * @return the value of crm_customer.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getUpdateTime() {
@@ -320,7 +301,6 @@ public class CrmCustomer extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_customer.update_time
      *
      * @param updateTime the value for crm_customer.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setUpdateTime(Date updateTime) {

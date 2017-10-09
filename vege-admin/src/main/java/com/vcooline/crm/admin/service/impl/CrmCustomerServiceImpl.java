@@ -5,7 +5,6 @@ import com.vcooline.crm.admin.service.CrmCustomerService;
 import com.vcooline.crm.common.enumutil.CustRoleEnum;
 import com.vcooline.crm.common.mapper.CrmCustomerMapper;
 import com.vcooline.crm.common.model.CrmCustomer;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,7 +34,7 @@ public class CrmCustomerServiceImpl extends BaseService implements CrmCustomerSe
 
     @Override
     public int insertSelective(CrmCustomer record) {
-        if (record.getIsDel() == null){
+        if (record.getIsDel() == null) {
             record.setIsDel(false);
         }
         return customerMapper.insertSelective(record);
@@ -65,7 +64,7 @@ public class CrmCustomerServiceImpl extends BaseService implements CrmCustomerSe
      */
     @Override
     public List<CrmCustomer> getCustlistByClueId(Long clueId, Byte releType) {
-        List<CrmCustomer> list = customerMapper.getCustlistByClueId(clueId,releType);
+        List<CrmCustomer> list = customerMapper.getCustlistByClueId(clueId, releType);
         return list;
     }
 

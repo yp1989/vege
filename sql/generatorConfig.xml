@@ -1,57 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
-    <classPathEntry location="mysql-connector-java-5.1.34.jar" />
+    <classPathEntry location="mysql-connector-java-5.1.34.jar"/>
     <context id="v1.0.0" targetRuntime="MyBatis3">
-    	<plugin type="org.mybatis.generator.plugins.SerializablePlugin" /> 
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <commentGenerator type="org.mybatis.generator.internal.DefinedCommentGenerator">
-            <property name="suppressAllComments" value="false" />
+            <property name="suppressAllComments" value="false"/>
         </commentGenerator>
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.1.166:3306/crm_production" userId="root" password="root" />
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.1.166:3306/crm_production" userId="root" password="root"/>
         <!--
         <javaTypeResolver >
             <property name="forceBigDecimals" value="true" />
         </javaTypeResolver>
         -->
-        
-        <javaModelGenerator targetPackage="com.vcooline.crm.common.model" targetProject="/Users/xinbaojian/java/crm/crm-common/src/main/java">
-            <property name="rootClass" value="com.vcooline.crm.common.model.BaseModel" /> 
-			<property name="trimStrings" value="true" />
-			<!--<property name="enableSubPackages" value="true" />-->
-		</javaModelGenerator>
-		<sqlMapGenerator targetPackage="com.vcooline.crm.common.mapper.impl" targetProject="/Users/xinbaojian/java/crm/crm-common/src/main/java">
-			<!--<property name="enableSubPackages" value="true" />-->
-		</sqlMapGenerator>
-		<javaClientGenerator targetPackage="com.vcooline.crm.common.mapper" targetProject="/Users/xinbaojian/java/crm/crm-common/src/main/java" type="XMLMAPPER">
-			<!--<property name="enableSubPackages" value="true" />-->
-		</javaClientGenerator>
 
-       <!--  <table tableName="cities" domainObjectName="Cities" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
-        </table>
+        <javaModelGenerator targetPackage="com.vcooline.crm.common.model"
+                            targetProject="/Users/xinbaojian/java/crm/crm-common/src/main/java">
+            <property name="rootClass" value="com.vcooline.crm.common.model.BaseModel"/>
+            <property name="trimStrings" value="true"/>
+            <!--<property name="enableSubPackages" value="true" />-->
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="com.vcooline.crm.common.mapper.impl"
+                         targetProject="/Users/xinbaojian/java/crm/crm-common/src/main/java">
+            <!--<property name="enableSubPackages" value="true" />-->
+        </sqlMapGenerator>
+        <javaClientGenerator targetPackage="com.vcooline.crm.common.mapper"
+                             targetProject="/Users/xinbaojian/java/crm/crm-common/src/main/java" type="XMLMAPPER">
+            <!--<property name="enableSubPackages" value="true" />-->
+        </javaClientGenerator>
 
-        <table tableName="crm_admin" domainObjectName="CrmAdmin" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="crm_admin_role" domainObjectName="CrmAdminRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
+        <!--  <table tableName="cities" domainObjectName="Cities" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+         </table>
 
-        <table tableName="crm_auth" domainObjectName="CrmAuth" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="crm_autharea" domainObjectName="CrmAutharea" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
+         <table tableName="crm_admin" domainObjectName="CrmAdmin" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
 
- 				
-        </table>-->
+         </table>
+         <table tableName="crm_admin_role" domainObjectName="CrmAdminRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+
+         </table>
+
+         <table tableName="crm_auth" domainObjectName="CrmAuth" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+
+         </table>
+         <table tableName="crm_autharea" domainObjectName="CrmAutharea" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+
+
+
+         </table>-->
         <!--<table tableName="crm_business" domainObjectName="CrmBusiness" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >-->
- 				<!-- -->
+        <!-- -->
         <!--</table>-->
         <!--<table tableName="crm_callback" domainObjectName="CrmCallback" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
  				
         </table> -->
         <!--<table tableName="crm_clue" domainObjectName="CrmClue" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >-->
- 				<!-- -->
+        <!-- -->
         <!--</table>-->
         <!-- <table tableName="crm_clue_cust" domainObjectName="CrmClueCust" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
  				
@@ -101,9 +106,11 @@
         <!--</table>-->
 
 
-    <!--<table tableName="crm_rele_version" domainObjectName="CrmReleVersion" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >-->
-    <!--</table>-->
-        <table tableName="crm_contract_file" domainObjectName="CrmContractFile" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+        <!--<table tableName="crm_rele_version" domainObjectName="CrmReleVersion" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >-->
+        <!--</table>-->
+        <table tableName="crm_contract_file" domainObjectName="CrmContractFile" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
 
         </table>
     </context>

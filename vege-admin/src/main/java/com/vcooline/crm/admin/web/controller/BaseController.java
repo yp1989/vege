@@ -4,7 +4,6 @@ import com.vcooline.crm.common.constant.GlobalConstants;
 import com.vcooline.crm.common.mapper.CrmAdminMapper;
 import com.vcooline.crm.common.mapper.CrmAuthMapper;
 import com.vcooline.crm.common.model.CrmAdmin;
-import com.vcooline.crm.common.model.CrmAuth;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.lang3.time.DateUtils;
@@ -28,37 +27,36 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 public class BaseController {
 
     protected Logger logger = LoggerFactory.getLogger(getClass());
 
-	@Autowired
-	private CrmAuthMapper crmAuthMapper;
+    @Autowired
+    private CrmAuthMapper crmAuthMapper;
 
-	@Autowired
-	private CrmAdminMapper adminMapper;
+    @Autowired
+    private CrmAdminMapper adminMapper;
 
-	protected HttpServletRequest getRequest() {
-		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
-				.getRequest();
+    protected HttpServletRequest getRequest() {
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
+                .getRequest();
 
-		return request;
-	}
+        return request;
+    }
 
-	protected HttpSession getSession() {
-		HttpServletRequest request = getRequest();
+    protected HttpSession getSession() {
+        HttpServletRequest request = getRequest();
 
-		return request.getSession();
-	}
+        return request.getSession();
+    }
 
     protected String getReqHost() {
         HttpServletRequest request = getRequest();
 
         String fh = request.getHeader("x-forwarded-for");
-		return fh == null ? request.getRemoteHost() : fh;
-	}
+        return fh == null ? request.getRemoteHost() : fh;
+    }
 
     protected String getReqAgent() {
         HttpServletRequest request = getRequest();
@@ -76,144 +74,148 @@ public class BaseController {
         return path;
     }
 
-	protected Cookie[] getCookies() {
-		HttpServletRequest request = getRequest();
+    protected Cookie[] getCookies() {
+        HttpServletRequest request = getRequest();
 
-		return request.getCookies();
-	}
+        return request.getCookies();
+    }
 
-	protected Object getSessionAttribute(String key) {
-		if (StringUtils.isBlank(key)) {
-			return null;
-		}
+    protected Object getSessionAttribute(String key) {
+        if (StringUtils.isBlank(key)) {
+            return null;
+        }
 
-		HttpSession session = getSession();
-		if (null != session) {
-			return session.getAttribute(key);
-		}
+        HttpSession session = getSession();
+        if (null != session) {
+            return session.getAttribute(key);
+        }
 
-		return null;
-	}
+        return null;
+    }
 
-	protected void setSessionAttribute(String key, Object value) {
-		if (StringUtils.isBlank(key)) {
-			return;
-		}
+    protected void setSessionAttribute(String key, Object value) {
+        if (StringUtils.isBlank(key)) {
+            return;
+        }
 
-		HttpSession session = getSession();
-		if (null != session) {
-			session.setAttribute(key, value);
-		}
-	}
+        HttpSession session = getSession();
+        if (null != session) {
+            session.setAttribute(key, value);
+        }
+    }
 
-	protected void setSessionMaxInactiveInterval(int max) {
-		HttpSession session = getSession();
+    protected void setSessionMaxInactiveInterval(int max) {
+        HttpSession session = getSession();
 
-		session.setMaxInactiveInterval(max);
-	}
+        session.setMaxInactiveInterval(max);
+    }
 
-	protected String getCookie(String key) {
-		if (StringUtils.isBlank(key)) {
-			return null;
-		}
+    protected String getCookie(String key) {
+        if (StringUtils.isBlank(key)) {
+            return null;
+        }
 
-		Cookie[] cookies = getCookies();
-		for (Cookie cookie : cookies) {
-			if (key.equals(cookie.getName())) {
-				return cookie.getValue();
-			}
-		}
+        Cookie[] cookies = getCookies();
+        for (Cookie cookie : cookies) {
+            if (key.equals(cookie.getName())) {
+                return cookie.getValue();
+            }
+        }
 
-		return null;
-	}
+        return null;
+    }
 
-	protected void addCookie(HttpServletResponse response, String key, String value, int expiry) {
-		if (StringUtils.isBlank(key) || null == response) {
-			return;
-		}
+    protected void addCookie(HttpServletResponse response, String key, String value, int expiry) {
+        if (StringUtils.isBlank(key) || null == response) {
+            return;
+        }
 
-		Cookie cookie = new Cookie(key, value);
-		cookie.setPath("/");
-		cookie.setMaxAge(expiry);
-		response.addCookie(cookie);
-	}
-	
-	/**
-	 * 仅当前会话中有效，关闭浏览器删除Cookie
-	 * @param response
-	 * @param key
-	 * @param value
-	 */
-	protected void addCookie(HttpServletResponse response, String key, String value) {
-		addCookie(response, key, value, -1);
-	}
-	
-	protected void deleteCookie(HttpServletResponse response, String key) {
-		addCookie(response, key, null, 0);
-	}
-	
+        Cookie cookie = new Cookie(key, value);
+        cookie.setPath("/");
+        cookie.setMaxAge(expiry);
+        response.addCookie(cookie);
+    }
 
-	@InitBinder
-	public void initBinder(WebDataBinder binder) {
-		binder.registerCustomEditor(Date.class, new PropertyEditorSupport(Boolean.valueOf(true)) {
+    /**
+     * 仅当前会话中有效，关闭浏览器删除Cookie
+     *
+     * @param response
+     * @param key
+     * @param value
+     */
+    protected void addCookie(HttpServletResponse response, String key, String value) {
+        addCookie(response, key, value, -1);
+    }
 
-			@Override
-			public void setAsText(String text) throws IllegalArgumentException {
-				super.getClass();
-				if (StringUtils.isBlank(text)) {
-					setValue(null);
-					return;
-				}
-				if (StringUtils.isBlank(text)) {
-					throw new IllegalArgumentException("Could not parse date: it is null");
-				}
+    protected void deleteCookie(HttpServletResponse response, String key) {
+        addCookie(response, key, null, 0);
+    }
 
-				if (NumberUtils.isDigits(text)) {
-					setValue(new Date(NumberUtils.toLong(text)));
-					return ;
-				}
 
-				Date parseDate = null;
-				try {
-					parseDate = DateUtils.parseDate(text, "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd");
-				} catch (ParseException e) {
-					// e.printStackTrace();
-				}
-				setValue(parseDate);
-			}
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        binder.registerCustomEditor(Date.class, new PropertyEditorSupport(Boolean.valueOf(true)) {
 
-			@Override
-			public String getAsText() {
-				Date value = (Date) getValue();
-				DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            @Override
+            public void setAsText(String text) throws IllegalArgumentException {
+                super.getClass();
+                if (StringUtils.isBlank(text)) {
+                    setValue(null);
+                    return;
+                }
+                if (StringUtils.isBlank(text)) {
+                    throw new IllegalArgumentException("Could not parse date: it is null");
+                }
 
-				return df.format(value);
-			}
-		});
-		binder.registerCustomEditor(BigDecimal.class, new CustomNumberEditor(BigDecimal.class, true));
-		binder.registerCustomEditor(Integer.class, null, new CustomNumberEditor(Integer.class, null, true));
-		binder.registerCustomEditor(Integer.TYPE, null, new CustomNumberEditor(Integer.class, null, true));
-		binder.registerCustomEditor(Long.class, null, new CustomNumberEditor(Long.class, null, true));
-		binder.registerCustomEditor(Long.TYPE, null, new CustomNumberEditor(Long.class, null, true));
-		binder.registerCustomEditor(Float.class, new CustomNumberEditor(Float.class, true));
-		binder.registerCustomEditor(Double.class, new CustomNumberEditor(Double.class, true));
-		binder.registerCustomEditor(BigInteger.class, new CustomNumberEditor(BigInteger.class, true));
-	}
+                if (NumberUtils.isDigits(text)) {
+                    setValue(new Date(NumberUtils.toLong(text)));
+                    return;
+                }
 
-	/**
-	 * 得到用户
-	 * @return
-	 */
-	protected CrmAdmin getUser(){
-		CrmAdmin admin = (CrmAdmin)getRequest().getSession().getAttribute(GlobalConstants.USER);;
-		return admin;
-	}
+                Date parseDate = null;
+                try {
+                    parseDate = DateUtils.parseDate(text, "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd");
+                } catch (ParseException e) {
+                    // e.printStackTrace();
+                }
+                setValue(parseDate);
+            }
 
-	/**
-	 * 得到用户ID
-	 * @return
-	 */
-	protected Long getUserId(){
-		return getUser().getId();
-	}
+            @Override
+            public String getAsText() {
+                Date value = (Date) getValue();
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+                return df.format(value);
+            }
+        });
+        binder.registerCustomEditor(BigDecimal.class, new CustomNumberEditor(BigDecimal.class, true));
+        binder.registerCustomEditor(Integer.class, null, new CustomNumberEditor(Integer.class, null, true));
+        binder.registerCustomEditor(Integer.TYPE, null, new CustomNumberEditor(Integer.class, null, true));
+        binder.registerCustomEditor(Long.class, null, new CustomNumberEditor(Long.class, null, true));
+        binder.registerCustomEditor(Long.TYPE, null, new CustomNumberEditor(Long.class, null, true));
+        binder.registerCustomEditor(Float.class, new CustomNumberEditor(Float.class, true));
+        binder.registerCustomEditor(Double.class, new CustomNumberEditor(Double.class, true));
+        binder.registerCustomEditor(BigInteger.class, new CustomNumberEditor(BigInteger.class, true));
+    }
+
+    /**
+     * 得到用户
+     *
+     * @return
+     */
+    protected CrmAdmin getUser() {
+        CrmAdmin admin = (CrmAdmin) getRequest().getSession().getAttribute(GlobalConstants.USER);
+        ;
+        return admin;
+    }
+
+    /**
+     * 得到用户ID
+     *
+     * @return
+     */
+    protected Long getUserId() {
+        return getUser().getId();
+    }
 }

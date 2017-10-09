@@ -1,9 +1,8 @@
 package com.vcooline.crm.common.mapper;
 
-import java.util.List;
-
 import com.vcooline.crm.common.model.CrmRole;
-import com.vcooline.crm.common.model.CrmRoleAuth;
+
+import java.util.List;
 
 public interface CrmRoleMapper {
     /**
@@ -53,37 +52,37 @@ public interface CrmRoleMapper {
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     int updateByPrimaryKey(CrmRole record);
-    
+
     /**
-      * @Description:查询获取角色列表
-      * @return List<CrmRole>    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月17日 上午10:56:00
-      * 上海微客来软件技术有限公司
+     * @return List<CrmRole>    返回类型
+     * @throws
+     * @Description:查询获取角色列表
+     * @author caohuan
+     * @date 2015年7月17日 上午10:56:00
+     * 上海微客来软件技术有限公司
      */
     List<CrmRole> getRoleList();
-    
+
     /**
-	  * @Description:根据id获取角色信息
-	  * @param @param id
-	  * @param @return    设定文件
-	  * @return CrmRole    返回类型
-	  * @throws
-	  * @author caohuan
-	  * @date 2015年7月27日 下午4:56:58
-	  * 上海微客来软件技术有限公司
-	 */
-  CrmRole getRoleById(Long id);
-  
-  /**
-    * @Description:软删角色
-    * @param @return    设定文件
-    * @return int    返回类型
-    * @throws
-    * @author caohuan
-    * @date 2015年7月28日 上午10:42:04
-    * 上海微客来软件技术有限公司
-   */
-  int deleteRoleById(Long id);
+     * @param @param  id
+     * @param @return 设定文件
+     * @return CrmRole    返回类型
+     * @throws
+     * @Description:根据id获取角色信息
+     * @author caohuan
+     * @date 2015年7月27日 下午4:56:58
+     * 上海微客来软件技术有限公司
+     */
+    CrmRole getRoleById(Long id);
+
+    /**
+     * @param @return 设定文件
+     * @return int    返回类型
+     * @throws
+     * @Description:软删角色
+     * @author caohuan
+     * @date 2015年7月28日 上午10:42:04
+     * 上海微客来软件技术有限公司
+     */
+    int deleteRoleById(Long id);
 }

@@ -54,8 +54,9 @@ public interface CrmBusiProductMapper {
 
     /**
      * 根据商机ID产出商机套餐关联
+     *
      * @param busiId
      * @return
      */
-    int deleteByBusiId(@Param("busiId")Long busiId);
+    int deleteByBusiId(@Param("busiId") Long busiId);
 }

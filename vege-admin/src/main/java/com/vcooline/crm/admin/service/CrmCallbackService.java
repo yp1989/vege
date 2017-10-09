@@ -60,6 +60,7 @@ public interface CrmCallbackService {
 
     /**
      * 根据线索ID查询该线索最后一条回访记录
+     *
      * @param clueId
      * @return
      */
@@ -67,6 +68,7 @@ public interface CrmCallbackService {
 
     /**
      * 根据线索ID查询该线索最后一条回访记录(倒序)
+     *
      * @param clueId
      * @param releType
      * @return
@@ -75,6 +77,7 @@ public interface CrmCallbackService {
 
     /**
      * 根据商机ID，修改线索状态
+     *
      * @param busiId
      * @return
      */

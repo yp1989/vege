@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <appender
-        name="STDOUT"
-        class="ch.qos.logback.core.ConsoleAppender">
+            name="STDOUT"
+            class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
     <appender
-        name="LOGFILE"
-        class="ch.qos.logback.core.rolling.RollingFileAppender">
+            name="LOGFILE"
+            class="ch.qos.logback.core.rolling.RollingFileAppender">
         <File>log/crm-admin.log</File>
         <rollingPolicy
-            class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <FileNamePattern>log/%d{yyyy-MM-dd}_crm-admin.log.zip</FileNamePattern>
         </rollingPolicy>
         <layout class="ch.qos.logback.classic.PatternLayout">
@@ -20,9 +20,9 @@
         </layout>
     </appender>
     <root level="info">
-        <appender-ref ref="LOGFILE" />
+        <appender-ref ref="LOGFILE"/>
     </root>
     <logger name="com.vcooline.crm">
-        <level value="DEBUG" />
+        <level value="DEBUG"/>
     </logger>
 </configuration>

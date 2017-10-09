@@ -56,26 +56,28 @@ public interface CrmProductVersionMapper {
 
     /**
      * 根据条件查询版本信息
+     *
      * @param record
      * @return
      */
     List<CrmProductVersion> getList(CrmProductVersion record);
-    
+
     /**
-      * @Description:获取所有套餐列表
-      * @return List<CrmProductVersion>    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月29日 下午3:42:01
-      * 上海微客来软件技术有限公司
+     * @return List<CrmProductVersion>    返回类型
+     * @throws
+     * @Description:获取所有套餐列表
+     * @author caohuan
+     * @date 2015年7月29日 下午3:42:01
+     * 上海微客来软件技术有限公司
      */
     List<CrmProductVersion> getVersionList();
 
 
     /**
      * 根据商机ID查询关联套餐
+     *
      * @param busiId
      * @return
      */
-    List<CrmProductVersion> getVersionListByBusiId(@Param("busiId")Long busiId);
+    List<CrmProductVersion> getVersionListByBusiId(@Param("busiId") Long busiId);
 }

@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.vcooline.crm.admin.service.CrmAdminService;
 import com.vcooline.crm.admin.service.CrmContractService;
 import com.vcooline.crm.admin.service.CrmGatheringService;
-import com.vcooline.crm.common.constant.GlobalConstants;
 import com.vcooline.crm.common.enumutil.ContractTypeEnum;
 import com.vcooline.crm.common.model.CrmAdmin;
 import com.vcooline.crm.common.model.CrmContract;
@@ -18,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +27,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/gather")
-public class GatherController extends BaseController{
+public class GatherController extends BaseController {
 
     @Autowired
     private CrmAdminService adminService;
@@ -42,7 +40,7 @@ public class GatherController extends BaseController{
 
 
     @RequestMapping("/index")
-    public String index(ModelMap modelMap,CrmGathering gathering,Integer pageNo,Integer pageSize){
+    public String index(ModelMap modelMap, CrmGathering gathering, Integer pageNo, Integer pageSize) {
         Page<CrmGathering> page = gatheringService.queryGatherForPage(gathering, pageNo, pageSize);
         modelMap.addAttribute("page", page);
         //合同类型
@@ -55,38 +53,39 @@ public class GatherController extends BaseController{
         modelMap.addAttribute("contractNames", JSONObject.toJSONString(contractNames));
         modelMap.addAttribute("gath", gathering);
         String msg = getRequest().getParameter("msg");
-        if (StringUtils.isNotEmpty(msg)){
-            modelMap.addAttribute("msg",msg);
+        if (StringUtils.isNotEmpty(msg)) {
+            modelMap.addAttribute("msg", msg);
         }
         return "html/gathering/gathering";
     }
 
     /**
      * 新增收款
+     *
      * @param gathering
      * @param modelMap
      * @param ra
      * @return
      */
     @RequestMapping("/doGather")
-    public String doAddGather(CrmGathering gathering,ModelMap modelMap,RedirectAttributes ra){
+    public String doAddGather(CrmGathering gathering, ModelMap modelMap, RedirectAttributes ra) {
         CrmAdmin admin = getUser();
         gathering.setRegisterId(admin.getId());
         gathering.setRegisterName(admin.getAdminRealName());
         int result = 0;
-        if (gathering.getId() == null){
+        if (gathering.getId() == null) {
             result = gatheringService.saveGathering(gathering);
-            if (result == 1){
-                ra.addAttribute("msg","新增收款成功！");
-            }else{
-                ra.addAttribute("msg","新增收款失败！");
+            if (result == 1) {
+                ra.addAttribute("msg", "新增收款成功！");
+            } else {
+                ra.addAttribute("msg", "新增收款失败！");
             }
-        }else{
+        } else {
             result = gatheringService.updateGathering(gathering);
-            if (result == 1){
-                ra.addAttribute("msg","编辑收款成功！");
-            }else{
-                ra.addAttribute("msg","编辑收款失败！");
+            if (result == 1) {
+                ra.addAttribute("msg", "编辑收款成功！");
+            } else {
+                ra.addAttribute("msg", "编辑收款失败！");
             }
         }
 
@@ -96,35 +95,37 @@ public class GatherController extends BaseController{
 
     /**
      * 编辑收款管理
+     *
      * @param id
      * @param contNumber
      * @return
      */
     @RequestMapping("/toEdit")
     @ResponseBody
-    public Map<String,Object> toEdit(Long id,String contNumber){
-        Map<String,Object> map = new HashMap<>();
+    public Map<String, Object> toEdit(Long id, String contNumber) {
+        Map<String, Object> map = new HashMap<>();
         CrmGathering gathering = gatheringService.selectByPrimaryKey(id);
         CrmContract contract = contractService.getContractByNumber(contNumber);
-        map.put("gathering",gathering);
-        map.put("contract",contract);
+        map.put("gathering", gathering);
+        map.put("contract", contract);
         return map;
     }
 
     /**
      * 确认开通账户
+     *
      * @return
      */
     @RequestMapping("/confirm")
-    public String confirmOpen(Long contId,RedirectAttributes ra){
+    public String confirmOpen(Long contId, RedirectAttributes ra) {
         CrmContract contract = new CrmContract();
         contract.setId(contId);
-        contract.setAccStatus((byte)1);//开通成功
+        contract.setAccStatus((byte) 1);//开通成功
         int result = contractService.updateByPrimaryKeySelective(contract);
-        if (result == 1){
-            ra.addAttribute("msg","开通成功！");
-        }else{
-            ra.addAttribute("msg","开通失败！");
+        if (result == 1) {
+            ra.addAttribute("msg", "开通成功！");
+        } else {
+            ra.addAttribute("msg", "开通失败！");
         }
         return "redirect:/gather/index";
     }

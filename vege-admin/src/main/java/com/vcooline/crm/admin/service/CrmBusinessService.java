@@ -2,7 +2,6 @@ package com.vcooline.crm.admin.service;
 
 import com.vcooline.crm.common.model.CrmBusiProduct;
 import com.vcooline.crm.common.model.CrmBusiness;
-import com.vcooline.crm.common.model.CrmCustomer;
 import com.vcooline.crm.common.model.Page;
 import com.vcooline.crm.common.pojo.BusinessForm;
 
@@ -63,28 +62,32 @@ public interface CrmBusinessService {
 
     /**
      * 获取当前自增码最大值
+     *
      * @return
      */
     Integer getMaxNumCode();
 
     /**
      * 根据线索转换商机
+     *
      * @param clueId
      * @return
      */
-    int convertBusinessFormClue(Long clueId,List<CrmBusiProduct> busiProducts);
+    int convertBusinessFormClue(Long clueId, List<CrmBusiProduct> busiProducts);
 
     /**
      * 分页查询商机西诺西
+     *
      * @param business 查询条件
-     * @param pageNo 当前页
+     * @param pageNo   当前页
      * @param pageSize 每页条数
      * @return
      */
-    Page<CrmBusiness> queryBusinessByPage(CrmBusiness business,Integer pageNo,Integer pageSize);
+    Page<CrmBusiness> queryBusinessByPage(CrmBusiness business, Integer pageNo, Integer pageSize);
 
     /**
      * 保存或更新商机
+     *
      * @param form
      * @return
      */
@@ -92,8 +95,9 @@ public interface CrmBusinessService {
 
     /**
      * 审核商机
+     *
      * @param busiId 要审核的商机ID
-     * @param pass 是否通过审核
+     * @param pass   是否通过审核
      * @param remark
      */
     Boolean auditingBusiness(Long busiId, Boolean pass, String remark);

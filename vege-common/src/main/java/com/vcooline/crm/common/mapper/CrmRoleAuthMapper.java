@@ -1,10 +1,8 @@
 package com.vcooline.crm.common.mapper;
 
-import java.util.List;
-import java.util.Map;
-
-import com.vcooline.crm.common.model.CrmRole;
 import com.vcooline.crm.common.model.CrmRoleAuth;
+
+import java.util.Map;
 
 public interface CrmRoleAuthMapper {
     /**
@@ -54,29 +52,29 @@ public interface CrmRoleAuthMapper {
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     int updateByPrimaryKey(CrmRoleAuth record);
-    
+
     /**
-      * @Description:批量插入角色权限管理数据
-      * @param roleAuthList
-      * @return int    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月21日 上午10:58:04
-      * 上海微客来软件技术有限公司
+     * @param roleAuthList
+     * @return int    返回类型
+     * @throws
+     * @Description:批量插入角色权限管理数据
+     * @author caohuan
+     * @date 2015年7月21日 上午10:58:04
+     * 上海微客来软件技术有限公司
      */
-    int batchInsert(Map<String,Object> roleAuthList);
-    
-   
+    int batchInsert(Map<String, Object> roleAuthList);
+
+
     /**
-      * @Description:根据角色删除关联的权限
-      * @param  id
-      * @param @return    设定文件
-      * @return int    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月28日 上午10:35:36
-      * 上海微客来软件技术有限公司
+     * @param id
+     * @param @return 设定文件
+     * @return int    返回类型
+     * @throws
+     * @Description:根据角色删除关联的权限
+     * @author caohuan
+     * @date 2015年7月28日 上午10:35:36
+     * 上海微客来软件技术有限公司
      */
     int deleteAuthByRole(Long id);
-    
+
 }

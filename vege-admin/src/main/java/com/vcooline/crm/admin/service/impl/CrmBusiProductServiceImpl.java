@@ -4,7 +4,6 @@ import com.vcooline.crm.admin.service.BaseService;
 import com.vcooline.crm.admin.service.CrmBusiProductService;
 import com.vcooline.crm.common.mapper.CrmBusiProductMapper;
 import com.vcooline.crm.common.model.CrmBusiProduct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @Service
-public class CrmBusiProductServiceImpl extends BaseService implements CrmBusiProductService{
+public class CrmBusiProductServiceImpl extends BaseService implements CrmBusiProductService {
 
     @Autowired
     private CrmBusiProductMapper busiProductMapper;

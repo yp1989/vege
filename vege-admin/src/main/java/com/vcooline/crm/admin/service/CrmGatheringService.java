@@ -58,7 +58,8 @@ public interface CrmGatheringService {
     int updateByPrimaryKey(CrmGathering record);
 
     int saveGathering(CrmGathering gathering);
+
     int updateGathering(CrmGathering gathering);
 
-    Page<CrmGathering> queryGatherForPage(CrmGathering gathering,Integer pageNo,Integer pageSize);
+    Page<CrmGathering> queryGatherForPage(CrmGathering gathering, Integer pageNo, Integer pageSize);
 }

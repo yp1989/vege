@@ -7,12 +7,10 @@ import com.vcooline.crm.common.model.*;
 import com.vcooline.crm.common.pojo.BusinessForm;
 import com.vcooline.crm.common.utils.DateUtil;
 import com.vcooline.crm.common.utils.StringUtils;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -23,7 +21,7 @@ import java.util.Map;
  */
 @Transactional
 @Service
-public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessService {
+public class CrmBusinessServiceImpl extends BaseService implements CrmBusinessService {
 
     @Autowired
     private CrmBusinessMapper businessMapper;
@@ -57,6 +55,7 @@ public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessS
 
     @Autowired
     private CrmProductService crmProductService;
+
     @Override
     public int deleteByPrimaryKey(Long id) {
         return businessMapper.deleteByPrimaryKey(id);
@@ -97,7 +96,7 @@ public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessS
     }
 
     @Override
-    public int convertBusinessFormClue(Long clueId,List<CrmBusiProduct> busiProducts) {
+    public int convertBusinessFormClue(Long clueId, List<CrmBusiProduct> busiProducts) {
         CrmAdmin admin = getUser();
         //第一步，线索转换商机
         CrmClue clue = clueService.selectByPrimaryKey(clueId);
@@ -113,10 +112,10 @@ public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessS
         business.setOwnerName(clue.getOwnerName());
         business.setRemark(clue.getRemark());
         //若为系统分单，则显示线索的录入人，否则为当前录入者
-        if (ClueSourceEnum.SYS_SPLIT.getCode().equals(clue.getClueSource())){//是系统分单
+        if (ClueSourceEnum.SYS_SPLIT.getCode().equals(clue.getClueSource())) {//是系统分单
             business.setAdminId(clue.getAdminId());
             business.setAdminName(clue.getAdminName());
-        }else{
+        } else {
             business.setAdminId(admin.getId());
             business.setAdminName(admin.getAdminName());
         }
@@ -124,7 +123,7 @@ public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessS
         business.setCreateTime(new Date());
         business.setAllotTime(new Date());
         int result = insertSelective(business);
-        if (result ==1){
+        if (result == 1) {
             CrmClue newclue = new CrmClue();
             newclue.setId(clue.getId());
             //修改原线索的状态为已关闭 @Deprecated
@@ -133,7 +132,7 @@ public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessS
             newclue.setIsDel(false);
             newclue.setClueStatusOnline(ClueStatusEnum.DONE_CLOSED.getCode());
             clueService.updateByPrimaryKeySelective(newclue);
-            logger.info(String.format("线索ID：%s 转换商机成功！",clue.getId().toString()));
+            logger.info(String.format("线索ID：%s 转换商机成功！", clue.getId().toString()));
         }
         //第二步，关联联系人
         List<CrmCustomer> customerList = customerService.getCustlistByClueId(clue.getId(), ReleTypeEnum.CLUE_TYPE.getCode());
@@ -147,21 +146,21 @@ public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessS
             releCustService.insertSelective(releCust);
         }
         //第三步，更新商机所关联套餐
-        if(busiProducts == null || busiProducts.size() == 0){
-        	List<CrmProduct> products = crmProductService.getProductsByClueId(clueId);
-        	if(products != null && products.size() != 0){
-        		CrmBusiProduct bProduct = null;
-        		for(CrmProduct product: products){
-        			bProduct = new CrmBusiProduct();
-        			bProduct.setBusiId(product.getId());
-        			bProduct.setCreateTime(new Date());
-        			bProduct.setUpdateTime(new Date());
+        if (busiProducts == null || busiProducts.size() == 0) {
+            List<CrmProduct> products = crmProductService.getProductsByClueId(clueId);
+            if (products != null && products.size() != 0) {
+                CrmBusiProduct bProduct = null;
+                for (CrmProduct product : products) {
+                    bProduct = new CrmBusiProduct();
+                    bProduct.setBusiId(product.getId());
+                    bProduct.setCreateTime(new Date());
+                    bProduct.setUpdateTime(new Date());
                     busiProductService.insertSelective(bProduct);
-        		}
-        	}
-        }else{
-        	for (CrmBusiProduct busiProduct : busiProducts) {
-                if (busiProduct.getProdVersionId() != null){
+                }
+            }
+        } else {
+            for (CrmBusiProduct busiProduct : busiProducts) {
+                if (busiProduct.getProdVersionId() != null) {
                     busiProduct.setBusiId(business.getId());
                     busiProduct.setCreateTime(new Date());
                     busiProduct.setUpdateTime(new Date());
@@ -169,7 +168,7 @@ public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessS
                 }
             }
         }
-        
+
         //获取线索回访信息
         List<CrmCallback> callbackList = callbackService.selectCallBackListByClueId(clueId, ReleTypeEnum.CLUE_TYPE.getCode());
         for (CrmCallback callback : callbackList) {
@@ -207,15 +206,15 @@ public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessS
     public Page<CrmBusiness> queryBusinessByPage(CrmBusiness business, Integer pageNo, Integer pageSize) {
         Page<CrmBusiness> page = new Page<>();
         Map<String, Object> params = new HashMap<>();
-        params.put("custName",StringUtils.isEmpty(business.getCustName()) ? null : business.getCustName());
+        params.put("custName", StringUtils.isEmpty(business.getCustName()) ? null : business.getCustName());
         params.put("createTimestart", business.getCreateTimestart());
-        params.put("createTimeend",business.getCreateTimeend() == null ? null : DateUtil.covertEndDate(business.getCreateTimeend()));
-        params.put("busiStatus",business.getBusiStatus());
-        params.put("busiSource",business.getBusiSource());
-        params.put("owner",business.getOwner());
-        params.put("busiType",business.getBusiType());
-        params.put("callBargain",business.getCallBargain());
-        params.put("isDepManager",business.getIsDepManager());
+        params.put("createTimeend", business.getCreateTimeend() == null ? null : DateUtil.covertEndDate(business.getCreateTimeend()));
+        params.put("busiStatus", business.getBusiStatus());
+        params.put("busiSource", business.getBusiSource());
+        params.put("owner", business.getOwner());
+        params.put("busiType", business.getBusiType());
+        params.put("callBargain", business.getCallBargain());
+        params.put("isDepManager", business.getIsDepManager());
         if (pageNo != null) page.setPageNo(pageNo);
         if (pageSize != null) page.setPageSize(pageSize);
         page.setParams(params);
@@ -240,7 +239,7 @@ public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessS
             updateByPrimaryKeySelective(form.getBusiness());
             //更新商机联系人（联系人不能删除，修改，只能新增）
             for (CrmCustomer customer : form.getCustomerList()) {
-                if (customer.getId() == null){
+                if (customer.getId() == null) {
                     //只有新增的才插入
                     customerService.insertSelective(customer);
                     //保存线索 客户联系人关联表
@@ -274,7 +273,7 @@ public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessS
             }
             //保存回访信息end
             //记录操作记录
-            optionLogService.saveOptionLog(ReleTypeEnum.BUSINESS_TYPE.getCode(),form.getBusiness().getId(),admin.getId(), OptionTypeEnum.EDIT.getCode());
+            optionLogService.saveOptionLog(ReleTypeEnum.BUSINESS_TYPE.getCode(), form.getBusiness().getId(), admin.getId(), OptionTypeEnum.EDIT.getCode());
         } catch (NumberFormatException e) {
             e.printStackTrace();
             logger.error("更新商机出错了,商机ID：%s", form.getBusiness().getId());
@@ -288,11 +287,11 @@ public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessS
         CrmBusiness business = selectByPrimaryKey(busiId);
         boolean result = true;
         try {
-            if (pass){
+            if (pass) {
                 //审核通过
                 business.setBusiStatus(BusinessStatusEnum.ACTIVE.getCode());
                 updateByPrimaryKeySelective(business);
-            }else{
+            } else {
                 business.setBusiStatus(BusinessStatusEnum.RETURN_CHANGE.getCode());
                 business.setIsDel(true);
                 updateByPrimaryKeySelective(business);
@@ -306,7 +305,7 @@ public class CrmBusinessServiceImpl  extends BaseService implements CrmBusinessS
             }
         } catch (Exception e) {
             e.printStackTrace();
-            logger.error("审核商机失败了！",e);
+            logger.error("审核商机失败了！", e);
             return false;
         }
         return result;

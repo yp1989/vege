@@ -61,19 +61,19 @@ public class ContractForm {
         this.contProducts = contProducts;
     }
 
-    public Long getContReceivable(){
+    public Long getContReceivable() {
         Long result = 0l;
-        if (this.getContProducts() != null){
+        if (this.getContProducts() != null) {
             for (CrmContProduct contProduct : contProducts) {
-                if (contProduct.getBuyCount() != null){
+                if (contProduct.getBuyCount() != null) {
                     result += contProduct.getActualAmount() * contProduct.getBuyCount();
-                }else {
+                } else {
                     result += contProduct.getActualAmount() == null ? 0 : contProduct.getActualAmount();
                 }
 
             }
         }
-        return  result;
+        return result;
     }
 
     public List<CrmContractFile> getContractFileList() {

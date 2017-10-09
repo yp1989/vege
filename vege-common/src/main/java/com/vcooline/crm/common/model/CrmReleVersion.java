@@ -66,7 +66,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_rele_version.id
      *
      * @return the value of crm_rele_version.id
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public Long getId() {
@@ -78,7 +77,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_rele_version.id
      *
      * @param id the value for crm_rele_version.id
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public void setId(Long id) {
@@ -90,7 +88,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_rele_version.rele_type
      *
      * @return the value of crm_rele_version.rele_type
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public Byte getReleType() {
@@ -102,7 +99,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_rele_version.rele_type
      *
      * @param releType the value for crm_rele_version.rele_type
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public void setReleType(Byte releType) {
@@ -114,7 +110,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_rele_version.rele_id
      *
      * @return the value of crm_rele_version.rele_id
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public Long getReleId() {
@@ -126,7 +121,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_rele_version.rele_id
      *
      * @param releId the value for crm_rele_version.rele_id
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public void setReleId(Long releId) {
@@ -138,7 +132,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_rele_version.version_id
      *
      * @return the value of crm_rele_version.version_id
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public Long getVersionId() {
@@ -150,7 +143,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_rele_version.version_id
      *
      * @param versionId the value for crm_rele_version.version_id
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public void setVersionId(Long versionId) {
@@ -162,7 +154,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_rele_version.is_del
      *
      * @return the value of crm_rele_version.is_del
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public Boolean getIsDel() {
@@ -174,7 +165,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_rele_version.is_del
      *
      * @param isDel the value for crm_rele_version.is_del
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -186,7 +176,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_rele_version.create_time
      *
      * @return the value of crm_rele_version.create_time
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public Date getCreateTime() {
@@ -198,7 +187,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_rele_version.create_time
      *
      * @param createTime the value for crm_rele_version.create_time
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -210,7 +198,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_rele_version.update_time
      *
      * @return the value of crm_rele_version.update_time
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public Date getUpdateTime() {
@@ -222,7 +209,6 @@ public class CrmReleVersion extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_rele_version.update_time
      *
      * @param updateTime the value for crm_rele_version.update_time
-     *
      * @mbggenerated Thu Jul 30 15:40:22 CST 2015
      */
     public void setUpdateTime(Date updateTime) {

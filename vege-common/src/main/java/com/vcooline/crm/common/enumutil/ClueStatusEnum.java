@@ -11,12 +11,11 @@ import java.util.List;
  * Created by xinbaojian on 15/7/17.
  */
 public enum ClueStatusEnum {
-    NOT_ALLOCATED((byte)0,"未分配"),
-    ALLOCATED((byte)1,"已分配"),
-    CLOSED((byte)2,"已关闭"),
-    RETURN_CHANGE((byte)3,"退回修改"),
-    DONE_CLOSED((byte)4,"生成商机"),
-    ;
+    NOT_ALLOCATED((byte) 0, "未分配"),
+    ALLOCATED((byte) 1, "已分配"),
+    CLOSED((byte) 2, "已关闭"),
+    RETURN_CHANGE((byte) 3, "退回修改"),
+    DONE_CLOSED((byte) 4, "生成商机"),;
 
     private Byte code;
     private String desc;
@@ -41,23 +40,23 @@ public enum ClueStatusEnum {
     public void setDesc(String desc) {
         this.desc = desc;
     }
-    
-    public static ClueStatusEnum getByCode(Byte code){
-        if (code == null){
+
+    public static ClueStatusEnum getByCode(Byte code) {
+        if (code == null) {
             return ClueStatusEnum.NOT_ALLOCATED;
         }
 
         for (ClueStatusEnum clue : ClueStatusEnum.values()) {
             if (clue.getCode() == null)
                 continue;
-            if (clue.getCode().equals(code)){
+            if (clue.getCode().equals(code)) {
                 return clue;
             }
         }
         return null;
     }
 
-    public static String toJson(){
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (ClueStatusEnum enumpojo : ClueStatusEnum.values()) {
@@ -69,7 +68,7 @@ public enum ClueStatusEnum {
         return JSONObject.toJSONString(list);
     }
 
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (ClueStatusEnum enumpojo : ClueStatusEnum.values()) {

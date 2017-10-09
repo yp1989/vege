@@ -3,7 +3,6 @@ package com.vcooline.crm.common.pojo;
 import com.vcooline.crm.common.model.CrmBusiness;
 import com.vcooline.crm.common.model.CrmCallback;
 import com.vcooline.crm.common.model.CrmCustomer;
-import com.vcooline.crm.common.model.CrmProductVersion;
 
 import java.util.List;
 

@@ -54,7 +54,7 @@ public class FileUtils {
             zipOut.close();
         } catch (IOException e) {
             e.printStackTrace();
-            logger.error("压缩文件失败了",e);
+            logger.error("压缩文件失败了", e);
             return false;
         }
         return true;

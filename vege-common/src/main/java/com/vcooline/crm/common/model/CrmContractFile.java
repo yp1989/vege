@@ -68,7 +68,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_contract_file.id
      *
      * @return the value of crm_contract_file.id
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public Long getId() {
@@ -80,7 +79,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_contract_file.id
      *
      * @param id the value for crm_contract_file.id
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public void setId(Long id) {
@@ -92,7 +90,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_contract_file.file_type
      *
      * @return the value of crm_contract_file.file_type
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public Byte getFileType() {
@@ -104,7 +101,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_contract_file.file_type
      *
      * @param fileType the value for crm_contract_file.file_type
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public void setFileType(Byte fileType) {
@@ -116,7 +112,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_contract_file.target_id
      *
      * @return the value of crm_contract_file.target_id
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public Long getTargetId() {
@@ -128,7 +123,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_contract_file.target_id
      *
      * @param targetId the value for crm_contract_file.target_id
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public void setTargetId(Long targetId) {
@@ -140,7 +134,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_contract_file.file_name
      *
      * @return the value of crm_contract_file.file_name
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public String getFileName() {
@@ -152,7 +145,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_contract_file.file_name
      *
      * @param fileName the value for crm_contract_file.file_name
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public void setFileName(String fileName) {
@@ -164,7 +156,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_contract_file.file_name_random
      *
      * @return the value of crm_contract_file.file_name_random
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public String getFileNameRandom() {
@@ -176,7 +167,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_contract_file.file_name_random
      *
      * @param fileNameRandom the value for crm_contract_file.file_name_random
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public void setFileNameRandom(String fileNameRandom) {
@@ -188,7 +178,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_contract_file.created_at
      *
      * @return the value of crm_contract_file.created_at
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public Date getCreatedAt() {
@@ -200,7 +189,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_contract_file.created_at
      *
      * @param createdAt the value for crm_contract_file.created_at
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public void setCreatedAt(Date createdAt) {
@@ -212,7 +200,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_contract_file.updated_at
      *
      * @return the value of crm_contract_file.updated_at
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public Date getUpdatedAt() {
@@ -224,7 +211,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_contract_file.updated_at
      *
      * @param updatedAt the value for crm_contract_file.updated_at
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public void setUpdatedAt(Date updatedAt) {
@@ -236,7 +222,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_contract_file.status
      *
      * @return the value of crm_contract_file.status
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public Byte getStatus() {
@@ -248,7 +233,6 @@ public class CrmContractFile extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_contract_file.status
      *
      * @param status the value for crm_contract_file.status
-     *
      * @mbggenerated Wed Nov 11 15:36:25 CST 2015
      */
     public void setStatus(Byte status) {

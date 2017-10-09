@@ -11,10 +11,9 @@ import java.util.List;
  * Created by xinbaojian on 15/7/17.
  */
 public enum CustRoleEnum {
-    CONTACT_PERSON((byte)1,"联系人"),
-    REPORTER((byte)2,"汇报人"),
-    DECISION_MAKER((byte)3,"决策人"),
-    ;
+    CONTACT_PERSON((byte) 1, "联系人"),
+    REPORTER((byte) 2, "汇报人"),
+    DECISION_MAKER((byte) 3, "决策人"),;
 
     private Byte code;
     private String desc;
@@ -40,16 +39,16 @@ public enum CustRoleEnum {
         this.desc = desc;
     }
 
-    public static CustRoleEnum getByCode(Byte code){
+    public static CustRoleEnum getByCode(Byte code) {
         for (CustRoleEnum clue : CustRoleEnum.values()) {
-            if (clue.getCode().equals(code)){
+            if (clue.getCode().equals(code)) {
                 return clue;
             }
         }
         return null;
     }
 
-    public static String toJson(){
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (CustRoleEnum roleEnum : CustRoleEnum.values()) {
@@ -61,7 +60,7 @@ public enum CustRoleEnum {
         return JSONObject.toJSONString(list);
     }
 
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (CustRoleEnum roleEnum : CustRoleEnum.values()) {

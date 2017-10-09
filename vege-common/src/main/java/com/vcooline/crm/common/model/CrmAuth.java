@@ -59,7 +59,7 @@ public class CrmAuth extends BaseModel implements Serializable {
      * 菜单图标
      */
     private String authImg;
-    
+
     /**
      * 排序
      *
@@ -86,7 +86,7 @@ public class CrmAuth extends BaseModel implements Serializable {
      *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
-    private Date updateTime; 
+    private Date updateTime;
 
     private List<CrmAuth> children;
     /**
@@ -102,7 +102,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_auth.id
      *
      * @return the value of crm_auth.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getId() {
@@ -114,7 +113,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_auth.id
      *
      * @param id the value for crm_auth.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setId(Long id) {
@@ -126,7 +124,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_auth.auth_code
      *
      * @return the value of crm_auth.auth_code
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Integer getAuthCode() {
@@ -138,7 +135,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_auth.auth_code
      *
      * @param authCode the value for crm_auth.auth_code
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAuthCode(Integer authCode) {
@@ -150,7 +146,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_auth.parent_id
      *
      * @return the value of crm_auth.parent_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getParentId() {
@@ -162,7 +157,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_auth.parent_id
      *
      * @param parentId the value for crm_auth.parent_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setParentId(Long parentId) {
@@ -174,7 +168,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_auth.auth_name
      *
      * @return the value of crm_auth.auth_name
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getAuthName() {
@@ -186,7 +179,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_auth.auth_name
      *
      * @param authName the value for crm_auth.auth_name
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAuthName(String authName) {
@@ -198,7 +190,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_auth.auth_type
      *
      * @return the value of crm_auth.auth_type
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Byte getAuthType() {
@@ -210,7 +201,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_auth.auth_type
      *
      * @param authType the value for crm_auth.auth_type
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAuthType(Byte authType) {
@@ -222,7 +212,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_auth.auth_desc
      *
      * @return the value of crm_auth.auth_desc
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getAuthDesc() {
@@ -234,7 +223,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_auth.auth_desc
      *
      * @param authDesc the value for crm_auth.auth_desc
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAuthDesc(String authDesc) {
@@ -246,7 +234,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_auth.auth_url
      *
      * @return the value of crm_auth.auth_url
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getAuthUrl() {
@@ -258,7 +245,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_auth.auth_url
      *
      * @param authUrl the value for crm_auth.auth_url
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAuthUrl(String authUrl) {
@@ -270,7 +256,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_auth.auth_sort
      *
      * @return the value of crm_auth.auth_sort
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Integer getAuthSort() {
@@ -282,7 +267,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_auth.auth_sort
      *
      * @param authSort the value for crm_auth.auth_sort
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAuthSort(Integer authSort) {
@@ -294,7 +278,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_auth.is_del
      *
      * @return the value of crm_auth.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Boolean getIsDel() {
@@ -306,7 +289,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_auth.is_del
      *
      * @param isDel the value for crm_auth.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -318,7 +300,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_auth.create_time
      *
      * @return the value of crm_auth.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getCreateTime() {
@@ -330,7 +311,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_auth.create_time
      *
      * @param createTime the value for crm_auth.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -342,7 +322,6 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_auth.update_time
      *
      * @return the value of crm_auth.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getUpdateTime() {
@@ -354,47 +333,46 @@ public class CrmAuth extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_auth.update_time
      *
      * @param updateTime the value for crm_auth.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 
-    
-	public List<CrmAuth> getChildren() {
-		return children;
-	}
 
-	public void setChildren(List<CrmAuth> children) {
-		this.children = children;
-	}
+    public List<CrmAuth> getChildren() {
+        return children;
+    }
 
-	public String getAuthImg() {
-		return authImg;
-	}
+    public void setChildren(List<CrmAuth> children) {
+        this.children = children;
+    }
 
-	public void setAuthImg(String authImg) {
-		this.authImg = authImg;
-	}
+    public String getAuthImg() {
+        return authImg;
+    }
 
-	public Long getAuthId() {
-		return authId;
-	}
+    public void setAuthImg(String authImg) {
+        this.authImg = authImg;
+    }
 
-	public void setAuthId(Long authId) {
-		this.authId = authId;
-	}
+    public Long getAuthId() {
+        return authId;
+    }
 
-	@Override
-	public String toString() {
-		return "CrmAuth [id=" + id + ", authCode=" + authCode + ", parentId="
-				+ parentId + ", authName=" + authName + ", authType="
-				+ authType + ", authDesc=" + authDesc + ", authUrl=" + authUrl
-				+ ", authSort=" + authSort + ", isDel=" + isDel
-				+ ", createTime=" + createTime + ", updateTime=" + updateTime
-				+ "]";
-	}
-    
-    
+    public void setAuthId(Long authId) {
+        this.authId = authId;
+    }
+
+    @Override
+    public String toString() {
+        return "CrmAuth [id=" + id + ", authCode=" + authCode + ", parentId="
+                + parentId + ", authName=" + authName + ", authType="
+                + authType + ", authDesc=" + authDesc + ", authUrl=" + authUrl
+                + ", authSort=" + authSort + ", isDel=" + isDel
+                + ", createTime=" + createTime + ", updateTime=" + updateTime
+                + "]";
+    }
+
+
 }

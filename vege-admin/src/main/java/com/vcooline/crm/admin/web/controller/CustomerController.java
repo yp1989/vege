@@ -22,7 +22,7 @@ public class CustomerController {
 
     @RequestMapping("/query")
     @ResponseBody
-    public List<CrmCustomer> getCustomerList(String phone){
+    public List<CrmCustomer> getCustomerList(String phone) {
         List<CrmCustomer> customerList = customerService.getCustListByPhone(phone);
         return customerList;
     }

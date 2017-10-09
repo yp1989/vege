@@ -11,10 +11,9 @@ import java.util.List;
  * Created by xinbaojian on 15/7/24.
  */
 public enum ReleTypeEnum {
-    CLUE_TYPE((byte)1,"线索"),
-    BUSINESS_TYPE((byte)2,"商机"),
-    CONTRACT((byte)3,"合同"),
-    ;
+    CLUE_TYPE((byte) 1, "线索"),
+    BUSINESS_TYPE((byte) 2, "商机"),
+    CONTRACT((byte) 3, "合同"),;
 
     private Byte code;
     private String desc;
@@ -41,16 +40,16 @@ public enum ReleTypeEnum {
     }
 
 
-    public static ReleTypeEnum getByCode(Byte code){
+    public static ReleTypeEnum getByCode(Byte code) {
         for (ReleTypeEnum clue : ReleTypeEnum.values()) {
-            if (clue.getCode().equals(code)){
+            if (clue.getCode().equals(code)) {
                 return clue;
             }
         }
         return null;
     }
 
-    public static String toJson(){
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (ReleTypeEnum enumpojo : ReleTypeEnum.values()) {
@@ -62,7 +61,7 @@ public enum ReleTypeEnum {
         return JSONObject.toJSONString(list);
     }
 
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (ReleTypeEnum enumpojo : ReleTypeEnum.values()) {

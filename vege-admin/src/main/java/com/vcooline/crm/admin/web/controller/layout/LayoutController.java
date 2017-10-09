@@ -14,22 +14,27 @@ public class LayoutController {
     public String stylesheets() {
         return "layout/stylesheets";
     }
+
     @RequestMapping("/scripts")
     public String scripts() {
         return "layout/scripts";
     }
+
     @RequestMapping("/navbar")
     public String navbar() {
         return "layout/navbar";
     }
+
     @RequestMapping("/sidebar")
     public String sidebar() {
         return "layout/sidebar";
     }
+
     @RequestMapping("/breadcrumbs")
     public String breadcrumbs() {
         return "layout/breadcrumbs";
     }
+
     @RequestMapping("/footer")
     public String footer() {
         return "layout/footer";

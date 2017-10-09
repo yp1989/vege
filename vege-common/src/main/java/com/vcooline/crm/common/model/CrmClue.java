@@ -265,7 +265,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.id
      *
      * @return the value of crm_clue.id
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Long getId() {
@@ -277,7 +276,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.id
      *
      * @param id the value for crm_clue.id
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setId(Long id) {
@@ -289,7 +287,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.clue_number
      *
      * @return the value of crm_clue.clue_number
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public String getClueNumber() {
@@ -301,7 +298,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.clue_number
      *
      * @param clueNumber the value for crm_clue.clue_number
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setClueNumber(String clueNumber) {
@@ -313,7 +309,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.num_code
      *
      * @return the value of crm_clue.num_code
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Integer getNumCode() {
@@ -325,7 +320,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.num_code
      *
      * @param numCode the value for crm_clue.num_code
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setNumCode(Integer numCode) {
@@ -337,7 +331,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.clue_source
      *
      * @return the value of crm_clue.clue_source
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Byte getClueSource() {
@@ -349,7 +342,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.clue_source
      *
      * @param clueSource the value for crm_clue.clue_source
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setClueSource(Byte clueSource) {
@@ -361,7 +353,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.clue_know
      *
      * @return the value of crm_clue.clue_know
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Byte getClueKnow() {
@@ -373,7 +364,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.clue_know
      *
      * @param clueKnow the value for crm_clue.clue_know
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setClueKnow(Byte clueKnow) {
@@ -385,7 +375,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.clue_consult
      *
      * @return the value of crm_clue.clue_consult
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Byte getClueConsult() {
@@ -397,7 +386,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.clue_consult
      *
      * @param clueConsult the value for crm_clue.clue_consult
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setClueConsult(Byte clueConsult) {
@@ -409,7 +397,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.clue_type
      *
      * @return the value of crm_clue.clue_type
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Byte getClueType() {
@@ -421,7 +408,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.clue_type
      *
      * @param clueType the value for crm_clue.clue_type
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setClueType(Byte clueType) {
@@ -433,7 +419,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.clue_status_online
      *
      * @return the value of crm_clue.clue_status_online
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Byte getClueStatusOnline() {
@@ -445,7 +430,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.clue_status_online
      *
      * @param clueStatusOnline the value for crm_clue.clue_status_online
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setClueStatusOnline(Byte clueStatusOnline) {
@@ -457,7 +441,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.clue_keyword
      *
      * @return the value of crm_clue.clue_keyword
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public String getClueKeyword() {
@@ -469,7 +452,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.clue_keyword
      *
      * @param clueKeyword the value for crm_clue.clue_keyword
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setClueKeyword(String clueKeyword) {
@@ -481,7 +463,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.admin_id
      *
      * @return the value of crm_clue.admin_id
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Long getAdminId() {
@@ -493,7 +474,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.admin_id
      *
      * @param adminId the value for crm_clue.admin_id
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setAdminId(Long adminId) {
@@ -505,7 +485,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.admin_name
      *
      * @return the value of crm_clue.admin_name
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public String getAdminName() {
@@ -517,7 +496,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.admin_name
      *
      * @param adminName the value for crm_clue.admin_name
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setAdminName(String adminName) {
@@ -529,7 +507,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.owner
      *
      * @return the value of crm_clue.owner
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Long getOwner() {
@@ -541,7 +518,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.owner
      *
      * @param owner the value for crm_clue.owner
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setOwner(Long owner) {
@@ -553,7 +529,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.owner_name
      *
      * @return the value of crm_clue.owner_name
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public String getOwnerName() {
@@ -565,7 +540,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.owner_name
      *
      * @param ownerName the value for crm_clue.owner_name
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setOwnerName(String ownerName) {
@@ -577,7 +551,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.cust_name
      *
      * @return the value of crm_clue.cust_name
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public String getCustName() {
@@ -589,7 +562,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.cust_name
      *
      * @param custName the value for crm_clue.cust_name
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setCustName(String custName) {
@@ -601,7 +573,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.cust_addr
      *
      * @return the value of crm_clue.cust_addr
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public String getCustAddr() {
@@ -613,7 +584,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.cust_addr
      *
      * @param custAddr the value for crm_clue.cust_addr
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setCustAddr(String custAddr) {
@@ -625,7 +595,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.cust_province
      *
      * @return the value of crm_clue.cust_province
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Integer getCustProvince() {
@@ -637,7 +606,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.cust_province
      *
      * @param custProvince the value for crm_clue.cust_province
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setCustProvince(Integer custProvince) {
@@ -649,7 +617,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.cust_city
      *
      * @return the value of crm_clue.cust_city
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Integer getCustCity() {
@@ -661,7 +628,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.cust_city
      *
      * @param custCity the value for crm_clue.cust_city
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setCustCity(Integer custCity) {
@@ -673,7 +639,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.cust_area
      *
      * @return the value of crm_clue.cust_area
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Integer getCustArea() {
@@ -685,7 +650,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.cust_area
      *
      * @param custArea the value for crm_clue.cust_area
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setCustArea(Integer custArea) {
@@ -697,7 +661,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.is_callback
      *
      * @return the value of crm_clue.is_callback
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Boolean getIsCallback() {
@@ -709,7 +672,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.is_callback
      *
      * @param isCallback the value for crm_clue.is_callback
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setIsCallback(Boolean isCallback) {
@@ -721,7 +683,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.remark
      *
      * @return the value of crm_clue.remark
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public String getRemark() {
@@ -733,7 +694,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.remark
      *
      * @param remark the value for crm_clue.remark
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setRemark(String remark) {
@@ -745,7 +705,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.is_del
      *
      * @return the value of crm_clue.is_del
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Boolean getIsDel() {
@@ -757,7 +716,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.is_del
      *
      * @param isDel the value for crm_clue.is_del
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -769,7 +727,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.allot_time
      *
      * @return the value of crm_clue.allot_time
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Date getAllotTime() {
@@ -781,7 +738,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.allot_time
      *
      * @param allotTime the value for crm_clue.allot_time
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setAllotTime(Date allotTime) {
@@ -793,7 +749,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.create_time
      *
      * @return the value of crm_clue.create_time
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Date getCreateTime() {
@@ -805,7 +760,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.create_time
      *
      * @param createTime the value for crm_clue.create_time
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -817,7 +771,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue.update_time
      *
      * @return the value of crm_clue.update_time
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public Date getUpdateTime() {
@@ -829,7 +782,6 @@ public class CrmClue extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue.update_time
      *
      * @param updateTime the value for crm_clue.update_time
-     *
      * @mbggenerated Wed Jul 22 10:16:27 CST 2015
      */
     public void setUpdateTime(Date updateTime) {
@@ -837,9 +789,9 @@ public class CrmClue extends BaseModel implements Serializable {
     }
 
     public String getClueSourceStr() {
-        if (clueSource != null){
+        if (clueSource != null) {
             String source = ClueSourceEnum.getByCode(clueSource).getDesc();
-            if (StringUtils.isNotEmpty(source)){
+            if (StringUtils.isNotEmpty(source)) {
                 clueSourceStr = source;
             }
         }
@@ -851,9 +803,9 @@ public class CrmClue extends BaseModel implements Serializable {
     }
 
     public String getClueKnowStr() {
-        if (clueKnow != null && clueKnow > 0){
+        if (clueKnow != null && clueKnow > 0) {
             String clueKnows = ClueKnowEnum.getByCode(clueKnow).getDesc();
-            if (StringUtils.isNotEmpty(clueKnows)){
+            if (StringUtils.isNotEmpty(clueKnows)) {
                 clueKnowStr = clueKnows;
             }
         }
@@ -865,10 +817,10 @@ public class CrmClue extends BaseModel implements Serializable {
     }
 
     public String getClueTypeStr() {
-        if (clueType != null){
+        if (clueType != null) {
             System.out.println(clueType);
             String clueKnows = ClueTypeEnum.getByCode(clueType).getDesc();
-            if (StringUtils.isNotEmpty(clueKnows)){
+            if (StringUtils.isNotEmpty(clueKnows)) {
                 clueTypeStr = clueKnows;
             }
         }
@@ -882,7 +834,7 @@ public class CrmClue extends BaseModel implements Serializable {
 
     public String getClueStatusOnlineStr() {
         String clueKnows = ClueStatusEnum.getByCode(clueStatusOnline).getDesc();
-        if (StringUtils.isNotEmpty(clueKnows)){
+        if (StringUtils.isNotEmpty(clueKnows)) {
             clueStatusOnlineStr = clueKnows;
         }
         return clueStatusOnlineStr;

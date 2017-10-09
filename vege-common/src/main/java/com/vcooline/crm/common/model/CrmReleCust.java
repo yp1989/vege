@@ -64,7 +64,6 @@ public class CrmReleCust extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue_cust.id
      *
      * @return the value of crm_clue_cust.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getId() {
@@ -76,7 +75,6 @@ public class CrmReleCust extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue_cust.id
      *
      * @param id the value for crm_clue_cust.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setId(Long id) {
@@ -89,7 +87,6 @@ public class CrmReleCust extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue_cust.cust_id
      *
      * @return the value of crm_clue_cust.cust_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getCustId() {
@@ -101,7 +98,6 @@ public class CrmReleCust extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue_cust.cust_id
      *
      * @param custId the value for crm_clue_cust.cust_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCustId(Long custId) {
@@ -113,7 +109,6 @@ public class CrmReleCust extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue_cust.is_del
      *
      * @return the value of crm_clue_cust.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Boolean getIsDel() {
@@ -125,7 +120,6 @@ public class CrmReleCust extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue_cust.is_del
      *
      * @param isDel the value for crm_clue_cust.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -137,7 +131,6 @@ public class CrmReleCust extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue_cust.create_time
      *
      * @return the value of crm_clue_cust.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getCreateTime() {
@@ -149,7 +142,6 @@ public class CrmReleCust extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue_cust.create_time
      *
      * @param createTime the value for crm_clue_cust.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -161,7 +153,6 @@ public class CrmReleCust extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_clue_cust.update_time
      *
      * @return the value of crm_clue_cust.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getUpdateTime() {
@@ -173,7 +164,6 @@ public class CrmReleCust extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_clue_cust.update_time
      *
      * @param updateTime the value for crm_clue_cust.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setUpdateTime(Date updateTime) {

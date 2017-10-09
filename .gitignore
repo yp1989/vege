@@ -6,6 +6,6 @@ target/
 .svn/
 .idea/
 *.iml
-/log
+/log/*
 /crm-admin/log
 .DS_Store

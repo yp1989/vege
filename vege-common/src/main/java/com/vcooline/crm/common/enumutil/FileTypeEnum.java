@@ -5,8 +5,7 @@ package com.vcooline.crm.common.enumutil;
  * Created by xinbaojian on 15/11/11.
  */
 public enum FileTypeEnum {
-    CONTRACT_FILE((byte)0,"合同文件"),
-    ;
+    CONTRACT_FILE((byte) 0, "合同文件"),;
     private Byte code;
     private String desc;
 

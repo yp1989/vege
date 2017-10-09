@@ -11,12 +11,11 @@ import java.util.List;
  * Created by xinbaojian on 15/7/28.
  */
 public enum BusinessStatusEnum {
-    AUDIT((byte)1,"审核中"),
-    CLOSED((byte)0,"已关闭"),
-    RETURN_CHANGE((byte)2,"退回修改"),
-    ACTIVE((byte)3,"活动商机"),
-    CREATE_CONTRACT((byte)4,"生成合同"),
-    ;
+    AUDIT((byte) 1, "审核中"),
+    CLOSED((byte) 0, "已关闭"),
+    RETURN_CHANGE((byte) 2, "退回修改"),
+    ACTIVE((byte) 3, "活动商机"),
+    CREATE_CONTRACT((byte) 4, "生成合同"),;
     private Byte code;
     private String desc;
 
@@ -25,18 +24,18 @@ public enum BusinessStatusEnum {
         this.desc = desc;
     }
 
-    public static BusinessStatusEnum getByCode(Byte code){
+    public static BusinessStatusEnum getByCode(Byte code) {
         for (BusinessStatusEnum clue : BusinessStatusEnum.values()) {
             if (clue.getCode() == null)
                 continue;
-            if (clue.getCode().equals(code)){
+            if (clue.getCode().equals(code)) {
                 return clue;
             }
         }
         return null;
     }
 
-    public static String toJson(){
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (BusinessStatusEnum enumpojo : BusinessStatusEnum.values()) {
@@ -48,7 +47,7 @@ public enum BusinessStatusEnum {
         return JSONObject.toJSONString(list);
     }
 
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (BusinessStatusEnum enumpojo : BusinessStatusEnum.values()) {

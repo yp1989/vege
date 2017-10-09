@@ -15,34 +15,35 @@ import javax.servlet.http.HttpSession;
 
 public class BaseService {
 
-	protected Logger logger = LoggerFactory.getLogger(getClass());
+    protected Logger logger = LoggerFactory.getLogger(getClass());
 
-	@Autowired
-	protected JdbcTemplate jdbcTemplate;
+    @Autowired
+    protected JdbcTemplate jdbcTemplate;
 
-	@Autowired
-	protected NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+    @Autowired
+    protected NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
-	protected HttpServletRequest getRequest() {
-		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
-				.getRequest();
+    protected HttpServletRequest getRequest() {
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
+                .getRequest();
 
-		return request;
-	}
+        return request;
+    }
 
-	protected HttpSession getSession() {
-		HttpServletRequest request = getRequest();
+    protected HttpSession getSession() {
+        HttpServletRequest request = getRequest();
 
-		return request.getSession();
-	}
+        return request.getSession();
+    }
 
-	/**
-	 * 得到用户
-	 * @return
-	 */
-	protected CrmAdmin getUser(){
-		CrmAdmin admin = (CrmAdmin)getRequest().getSession().getAttribute(GlobalConstants.USER);
-		return admin;
-	}
+    /**
+     * 得到用户
+     *
+     * @return
+     */
+    protected CrmAdmin getUser() {
+        CrmAdmin admin = (CrmAdmin) getRequest().getSession().getAttribute(GlobalConstants.USER);
+        return admin;
+    }
 
 }

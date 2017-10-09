@@ -1,12 +1,10 @@
 package com.vcooline.crm.common.mapper;
 
-import java.util.List;
-
-import org.apache.ibatis.annotations.Param;
-
-import com.vcooline.crm.common.model.CrmAdmin;
 import com.vcooline.crm.common.model.CrmContract;
 import com.vcooline.crm.common.model.Page;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface CrmContractMapper {
     /**
@@ -56,45 +54,46 @@ public interface CrmContractMapper {
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     int updateByPrimaryKey(CrmContract record);
-    
+
     /**
-	  * @Description:获取合同列表
-	  * @return List<CrmContract>    返回类型
-	  * @throws
-	  * @author caohuan
-	  * @date 2015年7月30日 下午2:45:57
-	  * 上海微客来软件技术有限公司
-	 */
-	List<CrmContract> getCrmContractListPage(@Param("page") Page<CrmContract> page);
-	
-	/**
-	  * @Description:获取合同表中当日最大的合同编号
-	  * @param @return    设定文件
-	  * @return Integer    返回类型
-	  * @throws
-	  * @author caohuan
-	  * @date 2015年7月31日 上午11:43:12
-	  * 上海微客来软件技术有限公司
-	 */
-	Integer selectMaxNumber();
-	
-	/**
-	  * @Description:根据id获取合同详细信息
-	  * @param id
-	  * @return CrmContract    返回类型
-	  * @throws
-	  * @author caohuan
-	  * @date 2015年8月3日 上午10:31:22
-	  * 上海微客来软件技术有限公司
-	 */
-	CrmContract selectContractInfoById(Long id);
+     * @return List<CrmContract>    返回类型
+     * @throws
+     * @Description:获取合同列表
+     * @author caohuan
+     * @date 2015年7月30日 下午2:45:57
+     * 上海微客来软件技术有限公司
+     */
+    List<CrmContract> getCrmContractListPage(@Param("page") Page<CrmContract> page);
+
+    /**
+     * @param @return 设定文件
+     * @return Integer    返回类型
+     * @throws
+     * @Description:获取合同表中当日最大的合同编号
+     * @author caohuan
+     * @date 2015年7月31日 上午11:43:12
+     * 上海微客来软件技术有限公司
+     */
+    Integer selectMaxNumber();
+
+    /**
+     * @param id
+     * @return CrmContract    返回类型
+     * @throws
+     * @Description:根据id获取合同详细信息
+     * @author caohuan
+     * @date 2015年8月3日 上午10:31:22
+     * 上海微客来软件技术有限公司
+     */
+    CrmContract selectContractInfoById(Long id);
 
     /**
      * 根据合同编号查询
+     *
      * @param contNumber
      * @return
      */
-    List<CrmContract> selectContractByNumber(@Param("contNumber")String contNumber);
+    List<CrmContract> selectContractByNumber(@Param("contNumber") String contNumber);
 
-    CrmContract getContractByNumber(@Param("contNumber")String contNumber);
+    CrmContract getContractByNumber(@Param("contNumber") String contNumber);
 }

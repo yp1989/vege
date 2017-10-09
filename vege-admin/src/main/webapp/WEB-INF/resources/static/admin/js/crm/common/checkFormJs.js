@@ -1,5 +1,5 @@
 /**
- * js表单验证工具类 
+ * js表单验证工具类
  *@author caohuan
  *@date 2015/8/10
  */
@@ -9,11 +9,11 @@
  * @param number
  */
 function checkNumber(number) {
-	var userreg=/^[0-9]+([.]{1}[0-9]{1,2})?$/; 
+    var userreg = /^[0-9]+([.]{1}[0-9]{1,2})?$/;
 
-	if(userreg.test(number)){
-		return true;
-	}
-	
-	return false;
+    if (userreg.test(number)) {
+        return true;
+    }
+
+    return false;
 }

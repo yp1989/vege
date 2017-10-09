@@ -5,9 +5,8 @@ package com.vcooline.crm.common.enumutil;
  */
 public enum ClueOwnerTypeEnum {
 
-    USER((byte)0,"用户"),
-    AGENT((byte)1,"代理商"),
-    ;
+    USER((byte) 0, "用户"),
+    AGENT((byte) 1, "代理商"),;
 
     private Byte code;
     private String desc;
@@ -17,9 +16,9 @@ public enum ClueOwnerTypeEnum {
         this.desc = desc;
     }
 
-    public static ClueOwnerTypeEnum getByCode(Byte code){
+    public static ClueOwnerTypeEnum getByCode(Byte code) {
         for (ClueOwnerTypeEnum clue : ClueOwnerTypeEnum.values()) {
-            if (clue.getCode().equals(code)){
+            if (clue.getCode().equals(code)) {
                 return clue;
             }
         }

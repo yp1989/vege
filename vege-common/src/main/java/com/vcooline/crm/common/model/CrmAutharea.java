@@ -73,7 +73,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_autharea.id
      *
      * @return the value of crm_autharea.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getId() {
@@ -85,7 +84,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_autharea.id
      *
      * @param id the value for crm_autharea.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setId(Long id) {
@@ -97,7 +95,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_autharea.cont_id
      *
      * @return the value of crm_autharea.cont_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getContId() {
@@ -109,7 +106,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_autharea.cont_id
      *
      * @param contId the value for crm_autharea.cont_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setContId(Long contId) {
@@ -121,7 +117,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_autharea.province_id
      *
      * @return the value of crm_autharea.province_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Integer getProvinceId() {
@@ -133,7 +128,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_autharea.province_id
      *
      * @param provinceId the value for crm_autharea.province_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setProvinceId(Integer provinceId) {
@@ -145,7 +139,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_autharea.city_id
      *
      * @return the value of crm_autharea.city_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Integer getCityId() {
@@ -157,7 +150,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_autharea.city_id
      *
      * @param cityId the value for crm_autharea.city_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCityId(Integer cityId) {
@@ -169,7 +161,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_autharea.area_id
      *
      * @return the value of crm_autharea.area_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Integer getAreaId() {
@@ -181,7 +172,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_autharea.area_id
      *
      * @param areaId the value for crm_autharea.area_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAreaId(Integer areaId) {
@@ -193,7 +183,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_autharea.is_del
      *
      * @return the value of crm_autharea.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Boolean getIsDel() {
@@ -205,7 +194,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_autharea.is_del
      *
      * @param isDel the value for crm_autharea.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -217,7 +205,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_autharea.create_time
      *
      * @return the value of crm_autharea.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getCreateTime() {
@@ -229,7 +216,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_autharea.create_time
      *
      * @param createTime the value for crm_autharea.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -241,7 +227,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_autharea.update_time
      *
      * @return the value of crm_autharea.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getUpdateTime() {
@@ -253,7 +238,6 @@ public class CrmAutharea extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_autharea.update_time
      *
      * @param updateTime the value for crm_autharea.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setUpdateTime(Date updateTime) {

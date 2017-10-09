@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class SessionUtils {
 
-    public static CrmAdmin getUser(HttpServletRequest request){
-        return (CrmAdmin)request.getSession().getAttribute(GlobalConstants.USER);
+    public static CrmAdmin getUser(HttpServletRequest request) {
+        return (CrmAdmin) request.getSession().getAttribute(GlobalConstants.USER);
     }
 }

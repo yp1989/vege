@@ -23,6 +23,7 @@ public interface CrmCustomerService {
 
     /**
      * 根据线索ID查询该线索的联系人
+     *
      * @param clueId
      * @param releType
      * @return
@@ -31,6 +32,7 @@ public interface CrmCustomerService {
 
     /**
      * 根据手机号模糊查询客户信息
+     *
      * @param phone
      * @return
      */
