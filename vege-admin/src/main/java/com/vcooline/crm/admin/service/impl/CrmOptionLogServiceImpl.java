@@ -5,7 +5,6 @@ import com.vcooline.crm.admin.service.CrmOptionLogService;
 import com.vcooline.crm.common.enumutil.OptionTypeEnum;
 import com.vcooline.crm.common.mapper.CrmOptionLogMapper;
 import com.vcooline.crm.common.model.CrmOptionLog;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +16,7 @@ import java.util.List;
  */
 @Transactional
 @Service
-public class CrmOptionLogServiceImpl extends BaseService implements CrmOptionLogService{
+public class CrmOptionLogServiceImpl extends BaseService implements CrmOptionLogService {
 
     @Autowired
     private CrmOptionLogMapper optionLogMapper;
@@ -56,7 +55,7 @@ public class CrmOptionLogServiceImpl extends BaseService implements CrmOptionLog
     public List<CrmOptionLog> selectListByTargetId(CrmOptionLog record) {
         List<CrmOptionLog> optionLogList = optionLogMapper.selectListByTargetId(record);
         for (CrmOptionLog log : optionLogList) {
-            if (log.getOption() != null){
+            if (log.getOption() != null) {
                 log.setOptionStr(OptionTypeEnum.getByCode(log.getOption()).getDesc());
             }
         }
@@ -65,10 +64,11 @@ public class CrmOptionLogServiceImpl extends BaseService implements CrmOptionLog
 
     /**
      * 保存操作记录
-     * @param alloType 那种操作记录
-     * @param targetId 目标ID
+     *
+     * @param alloType  那种操作记录
+     * @param targetId  目标ID
      * @param alloAdmin 操作人
-     * @param option 操作
+     * @param option    操作
      * @return
      */
     @Override

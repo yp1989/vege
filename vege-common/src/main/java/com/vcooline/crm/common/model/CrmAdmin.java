@@ -100,19 +100,19 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * 角色列表
      */
     private List<CrmRole> roleList;
-    
+
     /**
      * 角色id
      */
     private Long role_id;
-    
+
     /**
      * 部门名称
      */
     private String depName;
-    
-    private Byte roleType; 
-    
+
+    private Byte roleType;
+
     //是否重置密码
     private int isResetPassword;
     /**
@@ -128,7 +128,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.id
      *
      * @return the value of crm_admin.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getId() {
@@ -140,7 +139,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.id
      *
      * @param id the value for crm_admin.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setId(Long id) {
@@ -152,7 +150,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.admin_name
      *
      * @return the value of crm_admin.admin_name
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getAdminName() {
@@ -164,7 +161,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.admin_name
      *
      * @param adminName the value for crm_admin.admin_name
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAdminName(String adminName) {
@@ -176,7 +172,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.admin_password
      *
      * @return the value of crm_admin.admin_password
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getAdminPassword() {
@@ -188,7 +183,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.admin_password
      *
      * @param adminPassword the value for crm_admin.admin_password
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAdminPassword(String adminPassword) {
@@ -200,7 +194,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.admin_status
      *
      * @return the value of crm_admin.admin_status
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Byte getAdminStatus() {
@@ -212,7 +205,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.admin_status
      *
      * @param adminStatus the value for crm_admin.admin_status
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAdminStatus(Byte adminStatus) {
@@ -224,7 +216,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.admin_job
      *
      * @return the value of crm_admin.admin_job
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getAdminJob() {
@@ -236,7 +227,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.admin_job
      *
      * @param adminJob the value for crm_admin.admin_job
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAdminJob(String adminJob) {
@@ -248,7 +238,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.admin_real_name
      *
      * @return the value of crm_admin.admin_real_name
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getAdminRealName() {
@@ -260,7 +249,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.admin_real_name
      *
      * @param adminRealName the value for crm_admin.admin_real_name
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAdminRealName(String adminRealName) {
@@ -272,7 +260,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.admin_phone
      *
      * @return the value of crm_admin.admin_phone
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getAdminPhone() {
@@ -284,7 +271,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.admin_phone
      *
      * @param adminPhone the value for crm_admin.admin_phone
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAdminPhone(String adminPhone) {
@@ -296,7 +282,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.admin_dep
      *
      * @return the value of crm_admin.admin_dep
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getAdminDep() {
@@ -308,7 +293,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.admin_dep
      *
      * @param adminDep the value for crm_admin.admin_dep
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAdminDep(Long adminDep) {
@@ -320,7 +304,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.is_dep_manager
      *
      * @return the value of crm_admin.is_dep_manager
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Byte getIsDepManager() {
@@ -332,7 +315,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.is_dep_manager
      *
      * @param isDepManager the value for crm_admin.is_dep_manager
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setIsDepManager(Byte isDepManager) {
@@ -344,7 +326,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.admin_last_time
      *
      * @return the value of crm_admin.admin_last_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getAdminLastTime() {
@@ -356,7 +337,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.admin_last_time
      *
      * @param adminLastTime the value for crm_admin.admin_last_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAdminLastTime(Date adminLastTime) {
@@ -368,7 +348,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.is_del
      *
      * @return the value of crm_admin.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Boolean getIsDel() {
@@ -380,7 +359,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.is_del
      *
      * @param isDel the value for crm_admin.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -392,7 +370,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.create_time
      *
      * @return the value of crm_admin.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getCreateTime() {
@@ -404,7 +381,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.create_time
      *
      * @param createTime the value for crm_admin.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -416,7 +392,6 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin.update_time
      *
      * @return the value of crm_admin.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getUpdateTime() {
@@ -428,53 +403,51 @@ public class CrmAdmin extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin.update_time
      *
      * @param updateTime the value for crm_admin.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 
-	public List<CrmRole> getRoleList() {
-		return roleList;
-	}
+    public List<CrmRole> getRoleList() {
+        return roleList;
+    }
 
-	public void setRoleList(List<CrmRole> roleList) {
-		this.roleList = roleList;
-	}
+    public void setRoleList(List<CrmRole> roleList) {
+        this.roleList = roleList;
+    }
 
-	public Long getRole_id() {
-		return role_id;
-	}
+    public Long getRole_id() {
+        return role_id;
+    }
 
-	public void setRole_id(Long role_id) {
-		this.role_id = role_id;
-	}
+    public void setRole_id(Long role_id) {
+        this.role_id = role_id;
+    }
 
-	public String getDepName() {
-		return depName;
-	}
+    public String getDepName() {
+        return depName;
+    }
 
-	public void setDepName(String depName) {
-		this.depName = depName;
-	}
+    public void setDepName(String depName) {
+        this.depName = depName;
+    }
 
-	public Byte getRoleType() {
-		return roleType;
-	}
+    public Byte getRoleType() {
+        return roleType;
+    }
 
-	public void setRoleType(Byte roleType) {
-		this.roleType = roleType;
-	}
+    public void setRoleType(Byte roleType) {
+        this.roleType = roleType;
+    }
 
-	public int getIsResetPassword() {
-		return isResetPassword;
-	}
+    public int getIsResetPassword() {
+        return isResetPassword;
+    }
 
-	public void setIsResetPassword(int isResetPassword) {
-		this.isResetPassword = isResetPassword;
-	}
+    public void setIsResetPassword(int isResetPassword) {
+        this.isResetPassword = isResetPassword;
+    }
 
 
-    
 }

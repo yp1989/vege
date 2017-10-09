@@ -55,6 +55,7 @@ public interface CrmAllocationLogMapper {
 
     /**
      * 根据目标Id查询线索或商机的分配记录
+     *
      * @param record
      * @return
      */

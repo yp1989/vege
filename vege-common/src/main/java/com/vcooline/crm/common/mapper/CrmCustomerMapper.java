@@ -56,15 +56,17 @@ public interface CrmCustomerMapper {
 
     /**
      * 根据线索ID查询该线索的联系人
+     *
      * @param targetId
      * @return
      */
-    List<CrmCustomer> getCustlistByClueId(@Param("targetId")Long targetId,@Param("releType")Byte releType);
+    List<CrmCustomer> getCustlistByClueId(@Param("targetId") Long targetId, @Param("releType") Byte releType);
 
     /**
      * 根据手机号模糊查询客户信息
+     *
      * @param custPhone
      * @return
      */
-    List<CrmCustomer> getCustListByPhone(@Param("custPhone")String custPhone);
+    List<CrmCustomer> getCustListByPhone(@Param("custPhone") String custPhone);
 }

@@ -1,41 +1,109 @@
-.mt10{ margin-top: 10px;}
-.mr10{ margin-right: 10px !important;}
-.mb10{ margin-bottom: 10px;}
-.ml10{ margin-left: 10px;}
+.mt10 {
+    margin-top: 10px;
+}
 
-.mt20{ margin-top: 20px;}
-.mr20{ margin-right: 20px;}
-.mb20{ margin-bottom: 20px;}
-.ml20{ margin-left: 20px;}
+.mr10 {
+    margin-right: 10px !important;
+}
 
-.pt10{ padding-top: 10px;}
-.pr10{ padding-right: 10px;}
-.pb10{ padding-bottom: 10px;}
-.pl10{ padding-left: 10px;}
+.mb10 {
+    margin-bottom: 10px;
+}
 
-.pt20{ padding-top: 20px;}
-.pr20{ padding-right: 20px;}
-.pb20{ padding-bottom: 20px;}
-.pl20{ padding-left: 20px;}
-.fl{ float: left;}
-.fr{ float: right;}
-.in_b{ display: inline-block;}
+.ml10 {
+    margin-left: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.pr10 {
+    padding-right: 10px;
+}
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.pl10 {
+    padding-left: 10px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.in_b {
+    display: inline-block;
+}
+
 .required-star {
-	color: #e02222;
-	padding-left: 2px;
-	font-family: 'simhei', sans-serif;
-	font-size: 14px;
+    color: #e02222;
+    padding-left: 2px;
+    font-family: 'simhei', sans-serif;
+    font-size: 14px;
 }
-.visit_record .widget-toolbar{ float: left;}
-#myModal .lead_distribute{ padding: 20px 0 0px;}
-.modal_closeTip{ margin: 25px 0 45px; text-align: center; font-size: 16px;}
-.role_table.table-bordered, .role_table.table-bordered>tbody>tr>td, .role_table.table-bordered>tbody>tr>th,.role_table.table-bordered>thead>tr>th {
-border: 1px solid #ddd;
-border-bottom: 0 !important;
+
+.visit_record .widget-toolbar {
+    float: left;
 }
-.roleTable.table-bordered>thead>tr>th {
-border-bottom-width: 1px !important;
+
+#myModal .lead_distribute {
+    padding: 20px 0 0px;
 }
+
+.modal_closeTip {
+    margin: 25px 0 45px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.role_table.table-bordered, .role_table.table-bordered > tbody > tr > td, .role_table.table-bordered > tbody > tr > th, .role_table.table-bordered > thead > tr > th {
+    border: 1px solid #ddd;
+    border-bottom: 0 !important;
+}
+
+.roleTable.table-bordered > thead > tr > th {
+    border-bottom-width: 1px !important;
+}
+
 .file-btn input[type="file"] {
     width: 100%;
     height: 100%;
@@ -49,27 +117,56 @@ border-bottom-width: 1px !important;
     /*-khtml-opacity: 0;*/
     cursor: pointer;
 }
-.dd2-item.dd-item>button{ margin-left: 0 !important;}
-.btn_normal{ border-width: 2px;}
-#modal_generate .checkbox-inline{ margin-left: 10px !important;}
-.selected_box{ position: relative;}
-.selected_box input{ width:100%;}
-.selected_box .select_ul{
-    position: absolute; 
-    display: none;
-    width: 100%; 
-    background: #fff;
-    z-index: 100;   
-    border:1px solid #d5d5d5;
-    border-top:0;
+
+.dd2-item.dd-item > button {
+    margin-left: 0 !important;
 }
-.select_ul ul{
+
+.btn_normal {
+    border-width: 2px;
+}
+
+#modal_generate .checkbox-inline {
+    margin-left: 10px !important;
+}
+
+.selected_box {
+    position: relative;
+}
+
+.selected_box input {
+    width: 100%;
+}
+
+.selected_box .select_ul {
+    position: absolute;
+    display: none;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+    border: 1px solid #d5d5d5;
+    border-top: 0;
+}
+
+.select_ul ul {
     list-style-type: none;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
-#modal_checkClose .modal_more{ padding: 15px;}
-.datepicker{ z-index: 9999 !important;}
-.pos-rel, .twitter-typeahead ,input.typeahead{ width: 100% !important;}
 
-.btn-purple, .btn-purple:focus { background-color: #428bca!important;border-color: #428bca;}
+#modal_checkClose .modal_more {
+    padding: 15px;
+}
+
+.datepicker {
+    z-index: 9999 !important;
+}
+
+.pos-rel, .twitter-typeahead, input.typeahead {
+    width: 100% !important;
+}
+
+.btn-purple, .btn-purple:focus {
+    background-color: #428bca !important;
+    border-color: #428bca;
+}

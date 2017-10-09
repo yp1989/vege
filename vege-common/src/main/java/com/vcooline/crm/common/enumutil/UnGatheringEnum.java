@@ -1,21 +1,20 @@
 package com.vcooline.crm.common.enumutil;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.alibaba.fastjson.JSONObject;
 import com.vcooline.crm.common.pojo.EnumPojo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public enum UnGatheringEnum {
-    ZERO((byte)1,"0"),
-	
-    ZERO_FIFTYTHOUSAND((byte)2,"0-50000"),
-    
-    FIFTYTHOUSAND_HUNDREDTHOUSAND((byte)3,"50000-100000"),
-    
-    HUNDREDTHOUSAND((byte)4,"100000以上"),
-    ;
-    
+    ZERO((byte) 1, "0"),
+
+    ZERO_FIFTYTHOUSAND((byte) 2, "0-50000"),
+
+    FIFTYTHOUSAND_HUNDREDTHOUSAND((byte) 3, "50000-100000"),
+
+    HUNDREDTHOUSAND((byte) 4, "100000以上"),;
+
     private Byte code;
     private String desc;
 
@@ -40,16 +39,16 @@ public enum UnGatheringEnum {
         this.desc = desc;
     }
 
-    public static UnGatheringEnum getByCode(Byte code){
+    public static UnGatheringEnum getByCode(Byte code) {
         for (UnGatheringEnum clue : UnGatheringEnum.values()) {
-            if (clue.getCode().equals(code)){
+            if (clue.getCode().equals(code)) {
                 return clue;
             }
         }
         return null;
     }
 
-    public static String toJson(){
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (UnGatheringEnum enumpojo : UnGatheringEnum.values()) {
@@ -61,7 +60,7 @@ public enum UnGatheringEnum {
         return JSONObject.toJSONString(list);
     }
 
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (UnGatheringEnum enumpojo : UnGatheringEnum.values()) {

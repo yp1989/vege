@@ -54,98 +54,99 @@ public interface CrmAdminMapper {
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     int updateByPrimaryKey(CrmAdmin record);
-    
+
     List<CrmAdmin> getAdminListPage(@Param("page") Page<CrmAdmin> page);
-    
+
     /**
-      * @Description:根据管理员账号密码查询管理员信息
-      * @param  admin
-      * @return CrmAdmin    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月22日 上午11:45:02
-      * 上海微客来软件技术有限公司
+     * @param admin
+     * @return CrmAdmin    返回类型
+     * @throws
+     * @Description:根据管理员账号密码查询管理员信息
+     * @author caohuan
+     * @date 2015年7月22日 上午11:45:02
+     * 上海微客来软件技术有限公司
      */
     CrmAdmin selctByAdminNameAndPassword(CrmAdmin admin);
-    
+
     /**
-      * @Description:根据部门id查询分页管理员列表
-      * @param page
-      * @return List<CrmAdmin>    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月22日 下午4:10:05
-      * 上海微客来软件技术有限公司
+     * @param page
+     * @return List<CrmAdmin>    返回类型
+     * @throws
+     * @Description:根据部门id查询分页管理员列表
+     * @author caohuan
+     * @date 2015年7月22日 下午4:10:05
+     * 上海微客来软件技术有限公司
      */
     List<CrmAdmin> selectByAdminDep(@Param("page") Page<CrmAdmin> page);
 
 
     /**
-      * @Description:根据id修改管理员的部门
-      * @param admin
-      * @return int    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月23日 上午11:13:53
-      * 上海微客来软件技术有限公司
-     */
-    int updateAdminDepById(CrmAdmin admin);
-    
-    /**
-      * @Description:软删管理员
-      * @param  id
-      * @return int    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月23日 上午11:33:13
-      * 上海微客来软件技术有限公司
-     */
-    int deleteAdminById(String id);
-    
-    List<CrmAdmin> selectAdminByDep(Long adminDep);
-    
-    List<CrmAdmin> getOwerList(CrmAdmin admin);
-    
-    /**
-      * @Description:根据id修改管理员的名称
-      * @param  admin
-      * @return int    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月27日 下午1:26:10
-      * 上海微客来软件技术有限公司
-     */
-    int updateAdminById(CrmAdmin admin);
-    
-    /**
-      * @Description:设置部门管理员
-      * @param @param admin
-      * @param @return    设定文件
-      * @return int    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月27日 下午2:31:32
-      * 上海微客来软件技术有限公司
-     */
-    int setIsDepManager(CrmAdmin admin);
-    
-    /**
-     * @Description:设置部门管理员前先删除该部门下的部门管理员
-     * @param @param admin
-     * @param @return    设定文件
+     * @param admin
      * @return int    返回类型
      * @throws
+     * @Description:根据id修改管理员的部门
+     * @author caohuan
+     * @date 2015年7月23日 上午11:13:53
+     * 上海微客来软件技术有限公司
+     */
+    int updateAdminDepById(CrmAdmin admin);
+
+    /**
+     * @param id
+     * @return int    返回类型
+     * @throws
+     * @Description:软删管理员
+     * @author caohuan
+     * @date 2015年7月23日 上午11:33:13
+     * 上海微客来软件技术有限公司
+     */
+    int deleteAdminById(String id);
+
+    List<CrmAdmin> selectAdminByDep(Long adminDep);
+
+    List<CrmAdmin> getOwerList(CrmAdmin admin);
+
+    /**
+     * @param admin
+     * @return int    返回类型
+     * @throws
+     * @Description:根据id修改管理员的名称
+     * @author caohuan
+     * @date 2015年7月27日 下午1:26:10
+     * 上海微客来软件技术有限公司
+     */
+    int updateAdminById(CrmAdmin admin);
+
+    /**
+     * @param @param  admin
+     * @param @return 设定文件
+     * @return int    返回类型
+     * @throws
+     * @Description:设置部门管理员
      * @author caohuan
      * @date 2015年7月27日 下午2:31:32
      * 上海微客来软件技术有限公司
-    */
+     */
+    int setIsDepManager(CrmAdmin admin);
+
+    /**
+     * @param @param  admin
+     * @param @return 设定文件
+     * @return int    返回类型
+     * @throws
+     * @Description:设置部门管理员前先删除该部门下的部门管理员
+     * @author caohuan
+     * @date 2015年7月27日 下午2:31:32
+     * 上海微客来软件技术有限公司
+     */
     int setIsDepManagerToFalse(CrmAdmin admin);
 
     /**
      * 根据真实邢敏查询用户(暂不考虑姓名重复)
+     *
      * @param adminRealName
-     * @author baojianxin
      * @return
+     * @author baojianxin
      */
-    CrmAdmin selectAdminByRealName(@Param("adminRealName")String adminRealName);
+    CrmAdmin selectAdminByRealName(@Param("adminRealName") String adminRealName);
 }

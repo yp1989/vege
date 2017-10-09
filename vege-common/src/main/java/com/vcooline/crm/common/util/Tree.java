@@ -5,109 +5,114 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Tree {  
-	public static final String OPEN = "open";
+public class Tree {
+    public static final String OPEN = "open";
 
-	private Long id;
-	
-	private String text;
-	
-	private boolean isParent;
-	
-	private String state = "closed";
-	/**节点图标*/
-	private String iconCls;
-	/**节点是否展开*/
-	private boolean open;
-	/**标识该节点是否重新排序*/
-	private boolean sort;
-	
-	private boolean hasChild;
-	
-	private Map<String,String> attributes = new HashMap<String, String>();
-	
-	private List<Tree> children = new ArrayList<Tree>();
+    private Long id;
 
-	
-	
-	public Long getId() {
-		return id;
-	}
+    private String text;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    private boolean isParent;
 
-	public String getText() {
-		return text;
-	}
+    private String state = "closed";
+    /**
+     * 节点图标
+     */
+    private String iconCls;
+    /**
+     * 节点是否展开
+     */
+    private boolean open;
+    /**
+     * 标识该节点是否重新排序
+     */
+    private boolean sort;
 
-	public void setText(String text) {
-		this.text = text;
-	}
+    private boolean hasChild;
 
-	public String getIconCls() {
-		return iconCls;
-	}
+    private Map<String, String> attributes = new HashMap<String, String>();
 
-	public void setIconCls(String iconCls) {
-		this.iconCls = iconCls;
-	}
+    private List<Tree> children = new ArrayList<Tree>();
 
-	public boolean isOpen() {
-		return open;
-	}
 
-	public void setOpen(boolean open) {
-		this.open = open;
-		this.state = OPEN;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public boolean isSort() {
-		return sort;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setSort(boolean sort) {
-		this.sort = sort;
-	}
+    public String getText() {
+        return text;
+    }
 
-	public boolean isHasChild() {
-		return hasChild;
-	}
+    public void setText(String text) {
+        this.text = text;
+    }
 
-	public void setHasChild(boolean hasChild) {
-		this.hasChild = hasChild;
-	}
+    public String getIconCls() {
+        return iconCls;
+    }
 
-	public boolean isParent() {
-		return isParent;
-	}
+    public void setIconCls(String iconCls) {
+        this.iconCls = iconCls;
+    }
 
-	public void setParent(boolean isParent) {
-		this.isParent = isParent;
-	}
+    public boolean isOpen() {
+        return open;
+    }
 
-	public String getState() {
-		return state;
-	}
+    public void setOpen(boolean open) {
+        this.open = open;
+        this.state = OPEN;
+    }
 
-	public void setState(String state) {
-		this.state = state;
-	}
+    public boolean isSort() {
+        return sort;
+    }
 
-	public Map<String, String> getAttributes() {
-		return attributes;
-	}
+    public void setSort(boolean sort) {
+        this.sort = sort;
+    }
 
-	public void setAttributes(Map<String, String> attributes) {
-		this.attributes = attributes;
-	}
+    public boolean isHasChild() {
+        return hasChild;
+    }
 
-	public List<Tree> getChildren() {
-		return children;
-	}
+    public void setHasChild(boolean hasChild) {
+        this.hasChild = hasChild;
+    }
 
-	public void setChildren(List<Tree> children) {
-		this.children = children;
-	}
+    public boolean isParent() {
+        return isParent;
+    }
+
+    public void setParent(boolean isParent) {
+        this.isParent = isParent;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public Map<String, String> getAttributes() {
+        return attributes;
+    }
+
+    public void setAttributes(Map<String, String> attributes) {
+        this.attributes = attributes;
+    }
+
+    public List<Tree> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<Tree> children) {
+        this.children = children;
+    }
 }

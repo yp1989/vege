@@ -59,5 +59,5 @@ public interface CrmOptionLogService {
 
     List<CrmOptionLog> selectListByTargetId(CrmOptionLog record);
 
-    int saveOptionLog(Byte alloType,Long targetId,Long alloAdmin,Byte option);
+    int saveOptionLog(Byte alloType, Long targetId, Long alloAdmin, Byte option);
 }

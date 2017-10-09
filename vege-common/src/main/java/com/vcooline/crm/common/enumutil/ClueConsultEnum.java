@@ -11,11 +11,10 @@ import java.util.List;
  * Created by xinbaojian on 15/7/17.
  */
 public enum ClueConsultEnum {
-    FREE((byte)1,"免费申请"),
-    QQ((byte)2,"QQ"),
-    PHONE_400((byte)3,"400电话"),
-    OTHERS((byte)4,"其他"),
-    ;
+    FREE((byte) 1, "免费申请"),
+    QQ((byte) 2, "QQ"),
+    PHONE_400((byte) 3, "400电话"),
+    OTHERS((byte) 4, "其他"),;
 
     private Byte code;
     private String desc;
@@ -41,7 +40,7 @@ public enum ClueConsultEnum {
         this.desc = desc;
     }
 
-    public static String toJson(){
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (ClueConsultEnum enumpojo : ClueConsultEnum.values()) {
@@ -54,8 +53,7 @@ public enum ClueConsultEnum {
     }
 
 
-
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (ClueConsultEnum enumpojo : ClueConsultEnum.values()) {

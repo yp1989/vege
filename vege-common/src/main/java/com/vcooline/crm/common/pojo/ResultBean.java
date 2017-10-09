@@ -3,9 +3,11 @@ package com.vcooline.crm.common.pojo;
 /**
  * Created by xinbaojian on 15/11/11.
  */
-public class ResultBean {
+public class ResultBean<T> {
     private String msg;
     private Integer code;
+
+    private T object;
 
     public String getMsg() {
         return msg;
@@ -21,5 +23,13 @@ public class ResultBean {
 
     public void setCode(Integer code) {
         this.code = code;
+    }
+
+    public T getObject() {
+        return object;
+    }
+
+    public void setObject(T object) {
+        this.object = object;
     }
 }

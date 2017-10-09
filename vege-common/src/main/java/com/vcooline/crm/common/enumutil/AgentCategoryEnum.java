@@ -11,12 +11,10 @@ import java.util.List;
  * Created by xinbaojian on 15/8/4.
  */
 public enum AgentCategoryEnum {
-    WKL_AGENT((byte)1,"微客来代理商"),
-    BT_AGENT((byte)2,"百拓代理商"),
-    WDS_AGENT((byte)3,"微电商代理商"),
-    HB_AGENT((byte)4,"红包代理商"),
-
-    ;
+    WKL_AGENT((byte) 1, "微客来代理商"),
+    BT_AGENT((byte) 2, "百拓代理商"),
+    WDS_AGENT((byte) 3, "微电商代理商"),
+    HB_AGENT((byte) 4, "红包代理商"),;
     private Byte code;
     private String desc;
 
@@ -41,16 +39,16 @@ public enum AgentCategoryEnum {
         this.desc = desc;
     }
 
-    public static AgentCategoryEnum getByCode(Byte code){
+    public static AgentCategoryEnum getByCode(Byte code) {
         for (AgentCategoryEnum clue : AgentCategoryEnum.values()) {
-            if (clue.getCode().equals(code)){
+            if (clue.getCode().equals(code)) {
                 return clue;
             }
         }
         return null;
     }
 
-    public static String toJson(){
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (AgentCategoryEnum enumpojo : AgentCategoryEnum.values()) {
@@ -62,7 +60,7 @@ public enum AgentCategoryEnum {
         return JSONObject.toJSONString(list);
     }
 
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (AgentCategoryEnum enumpojo : AgentCategoryEnum.values()) {

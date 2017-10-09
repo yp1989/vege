@@ -4,7 +4,6 @@ import com.vcooline.crm.admin.service.BaseService;
 import com.vcooline.crm.admin.service.CrmAllocationLogService;
 import com.vcooline.crm.common.mapper.CrmAllocationLogMapper;
 import com.vcooline.crm.common.model.CrmAllocationLog;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,7 +15,7 @@ import java.util.List;
  */
 @Transactional
 @Service
-public class CrmAllocationLogServiceImpl extends BaseService implements CrmAllocationLogService{
+public class CrmAllocationLogServiceImpl extends BaseService implements CrmAllocationLogService {
 
     @Autowired
     private CrmAllocationLogMapper allocationLogMapper;

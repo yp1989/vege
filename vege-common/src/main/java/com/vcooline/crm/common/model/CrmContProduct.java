@@ -31,7 +31,7 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     private Long versId;
-    
+
     /**
      * 实际金额
      *
@@ -102,7 +102,7 @@ public class CrmContProduct extends BaseModel implements Serializable {
      */
     private Date updateTime;
 
-    
+
     /********自定义属性************************/
     private String versName;
     private Long versPrice;
@@ -121,7 +121,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.id
      *
      * @return the value of crm_cont_product.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getId() {
@@ -133,7 +132,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.id
      *
      * @param id the value for crm_cont_product.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setId(Long id) {
@@ -145,7 +143,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.cont_id
      *
      * @return the value of crm_cont_product.cont_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getContId() {
@@ -157,7 +154,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.cont_id
      *
      * @param contId the value for crm_cont_product.cont_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setContId(Long contId) {
@@ -169,7 +165,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.prod_id
      *
      * @return the value of crm_cont_product.prod_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getProdId() {
@@ -181,7 +176,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.prod_id
      *
      * @param prodId the value for crm_cont_product.prod_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setProdId(Long prodId) {
@@ -193,7 +187,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.actual_amount
      *
      * @return the value of crm_cont_product.actual_amount
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getActualAmount() {
@@ -205,7 +198,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.actual_amount
      *
      * @param actualAmount the value for crm_cont_product.actual_amount
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setActualAmount(Long actualAmount) {
@@ -217,7 +209,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.buy_count
      *
      * @return the value of crm_cont_product.buy_count
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Integer getBuyCount() {
@@ -229,7 +220,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.buy_count
      *
      * @param buyCount the value for crm_cont_product.buy_count
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setBuyCount(Integer buyCount) {
@@ -241,7 +231,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.prod_discount
      *
      * @return the value of crm_cont_product.prod_discount
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getProdDiscount() {
@@ -253,7 +242,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.prod_discount
      *
      * @param prodDiscount the value for crm_cont_product.prod_discount
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setProdDiscount(String prodDiscount) {
@@ -265,7 +253,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.sum_menday
      *
      * @return the value of crm_cont_product.sum_menday
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Integer getSumMenday() {
@@ -277,7 +264,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.sum_menday
      *
      * @param sumMenday the value for crm_cont_product.sum_menday
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setSumMenday(Integer sumMenday) {
@@ -289,7 +275,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.price_menday
      *
      * @return the value of crm_cont_product.price_menday
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getPriceMenday() {
@@ -301,7 +286,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.price_menday
      *
      * @param priceMenday the value for crm_cont_product.price_menday
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setPriceMenday(Long priceMenday) {
@@ -313,7 +297,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.acc_try_period
      *
      * @return the value of crm_cont_product.acc_try_period
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Integer getAccTryPeriod() {
@@ -325,7 +308,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.acc_try_period
      *
      * @param accTryPeriod the value for crm_cont_product.acc_try_period
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAccTryPeriod(Integer accTryPeriod) {
@@ -337,7 +319,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.acc_try_count
      *
      * @return the value of crm_cont_product.acc_try_count
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Integer getAccTryCount() {
@@ -349,7 +330,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.acc_try_count
      *
      * @param accTryCount the value for crm_cont_product.acc_try_count
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAccTryCount(Integer accTryCount) {
@@ -361,7 +341,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.is_del
      *
      * @return the value of crm_cont_product.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Boolean getIsDel() {
@@ -373,7 +352,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.is_del
      *
      * @param isDel the value for crm_cont_product.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -385,7 +363,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.create_time
      *
      * @return the value of crm_cont_product.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getCreateTime() {
@@ -397,7 +374,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.create_time
      *
      * @param createTime the value for crm_cont_product.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -409,7 +385,6 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_cont_product.update_time
      *
      * @return the value of crm_cont_product.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getUpdateTime() {
@@ -421,36 +396,35 @@ public class CrmContProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_cont_product.update_time
      *
      * @param updateTime the value for crm_cont_product.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 
-	public String getVersName() {
-		return versName;
-	}
+    public String getVersName() {
+        return versName;
+    }
 
-	public void setVersName(String versName) {
-		this.versName = versName;
-	}
+    public void setVersName(String versName) {
+        this.versName = versName;
+    }
 
-	public Long getVersId() {
-		return versId;
-	}
+    public Long getVersId() {
+        return versId;
+    }
 
-	public void setVersId(Long versId) {
-		this.versId = versId;
-	}
+    public void setVersId(Long versId) {
+        this.versId = versId;
+    }
 
-	public Long getVersPrice() {
-		return versPrice;
-	}
+    public Long getVersPrice() {
+        return versPrice;
+    }
 
-	public void setVersPrice(Long versPrice) {
-		this.versPrice = versPrice;
-	}
+    public void setVersPrice(Long versPrice) {
+        this.versPrice = versPrice;
+    }
 
     public String getProductName() {
         return productName;

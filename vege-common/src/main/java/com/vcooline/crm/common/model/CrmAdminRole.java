@@ -59,7 +59,6 @@ public class CrmAdminRole extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin_role.id
      *
      * @return the value of crm_admin_role.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getId() {
@@ -71,7 +70,6 @@ public class CrmAdminRole extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin_role.id
      *
      * @param id the value for crm_admin_role.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setId(Long id) {
@@ -83,7 +81,6 @@ public class CrmAdminRole extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin_role.admin_id
      *
      * @return the value of crm_admin_role.admin_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getAdminId() {
@@ -95,7 +92,6 @@ public class CrmAdminRole extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin_role.admin_id
      *
      * @param adminId the value for crm_admin_role.admin_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAdminId(Long adminId) {
@@ -107,7 +103,6 @@ public class CrmAdminRole extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin_role.role_id
      *
      * @return the value of crm_admin_role.role_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getRoleId() {
@@ -119,7 +114,6 @@ public class CrmAdminRole extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin_role.role_id
      *
      * @param roleId the value for crm_admin_role.role_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setRoleId(Long roleId) {
@@ -131,7 +125,6 @@ public class CrmAdminRole extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin_role.is_del
      *
      * @return the value of crm_admin_role.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Boolean getIsDel() {
@@ -143,7 +136,6 @@ public class CrmAdminRole extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin_role.is_del
      *
      * @param isDel the value for crm_admin_role.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -155,7 +147,6 @@ public class CrmAdminRole extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin_role.create_time
      *
      * @return the value of crm_admin_role.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getCreateTime() {
@@ -167,7 +158,6 @@ public class CrmAdminRole extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin_role.create_time
      *
      * @param createTime the value for crm_admin_role.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -179,7 +169,6 @@ public class CrmAdminRole extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_admin_role.update_time
      *
      * @return the value of crm_admin_role.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getUpdateTime() {
@@ -191,7 +180,6 @@ public class CrmAdminRole extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_admin_role.update_time
      *
      * @param updateTime the value for crm_admin_role.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setUpdateTime(Date updateTime) {

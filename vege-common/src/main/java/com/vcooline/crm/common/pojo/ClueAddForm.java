@@ -14,7 +14,7 @@ public class ClueAddForm {
 
     private List<CrmCustomer> customerList;
 
-    private Long []productIds;
+    private Long[] productIds;
 
     private CrmCallback callback;
 

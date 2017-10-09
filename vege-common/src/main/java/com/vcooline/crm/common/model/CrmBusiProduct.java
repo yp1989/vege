@@ -66,7 +66,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_busi_product.id
      *
      * @return the value of crm_busi_product.id
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public Long getId() {
@@ -78,7 +77,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_busi_product.id
      *
      * @param id the value for crm_busi_product.id
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public void setId(Long id) {
@@ -90,7 +88,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_busi_product.busi_id
      *
      * @return the value of crm_busi_product.busi_id
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public Long getBusiId() {
@@ -102,7 +99,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_busi_product.busi_id
      *
      * @param busiId the value for crm_busi_product.busi_id
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public void setBusiId(Long busiId) {
@@ -114,7 +110,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_busi_product.prod_id
      *
      * @return the value of crm_busi_product.prod_id
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public Long getProdId() {
@@ -126,7 +121,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_busi_product.prod_id
      *
      * @param prodId the value for crm_busi_product.prod_id
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public void setProdId(Long prodId) {
@@ -138,7 +132,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_busi_product.prod_version_id
      *
      * @return the value of crm_busi_product.prod_version_id
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public Long getProdVersionId() {
@@ -150,7 +143,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_busi_product.prod_version_id
      *
      * @param prodVersionId the value for crm_busi_product.prod_version_id
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public void setProdVersionId(Long prodVersionId) {
@@ -162,7 +154,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_busi_product.is_del
      *
      * @return the value of crm_busi_product.is_del
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public Boolean getIsDel() {
@@ -174,7 +165,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_busi_product.is_del
      *
      * @param isDel the value for crm_busi_product.is_del
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -186,7 +176,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_busi_product.create_time
      *
      * @return the value of crm_busi_product.create_time
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public Date getCreateTime() {
@@ -198,7 +187,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_busi_product.create_time
      *
      * @param createTime the value for crm_busi_product.create_time
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -210,7 +198,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_busi_product.update_time
      *
      * @return the value of crm_busi_product.update_time
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public Date getUpdateTime() {
@@ -222,7 +209,6 @@ public class CrmBusiProduct extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_busi_product.update_time
      *
      * @param updateTime the value for crm_busi_product.update_time
-     *
      * @mbggenerated Wed Jul 29 14:31:47 CST 2015
      */
     public void setUpdateTime(Date updateTime) {

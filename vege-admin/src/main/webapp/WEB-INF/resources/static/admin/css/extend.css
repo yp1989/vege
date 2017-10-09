@@ -1,16 +1,50 @@
 @charset "utf-8";
 /* CSS Document */
-body{padding:0;	margin:0;font-family:"微软雅黑",Arial, Helvetica, sans-serif;  background: #eee;}
-div, h1, h2, h3, h4, p, form, label,  textarea, img, span{margin:0; padding:0; border:none;}
-a{ text-decoration:none;}
-ul{	margin:0; 	padding:0; 	list-style-type:none;}
-.clearfix{	clear:both; overflow: hidden;}
-div{font-size:14px;line-height:24px; color: #333;}
-* {margin:0;padding:0; outline: 0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+    background: #eee;
+}
+
+div, h1, h2, h3, h4, p, form, label, textarea, img, span {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.clearfix {
+    clear: both;
+    overflow: hidden;
+}
+
+div {
+    font-size: 14px;
+    line-height: 24px;
+    color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 html, body {
     height: 100%
 }
+
 body {
     position: relative;
     overflow-x: hidden;
@@ -19,25 +53,33 @@ body {
     font-family: arial, "\5FAE\8F6F\96C5\9ED1";
     -webkit-text-size-adjust: none;
 }
+
 body, p, form, h1, h2, h3, h4, h5, h6, ul, ol, li, section, div, * {
     padding: 0;
     margin: 0
 }
-ul{ list-style-type:none;}
+
+ul {
+    list-style-type: none;
+}
+
 img {
     border: 0;
     -ms-interpolation-mode: bicubic;
     vertical-align: middle;
     display: inline-block;
 }
+
 a {
     text-decoration: none;
 }
+
 video {
     display: inline-block;
-    width:100%;
-    background:#000;
+    width: 100%;
+    background: #000;
 }
+
 /*::-moz-selection {
     background: none;
     color: #fff;
@@ -50,35 +92,175 @@ video {
 } */
 dl,
 ul,
-p{-webkit-margin-before:0em;-webkit-margin-after:0em;}
+p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
 
+.extendpop {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
 
-.extendpop{ position: fixed; height: 100%; width: 100%; left: 0; top: 0; background: rgba(0,0,0,0.8); z-index: 9999; }
-.extendpop .popbox{ height: 140px; width: 300px; margin: -70px 0 0 -150px; position: absolute; left: 50%; top: 50%; background: #fff; border-radius: 3px;overflow: hidden;}
-.extendpop .popbox .text{ height: 58px; border-bottom: 1px solid #e8e8e8; padding: 30px 0 0 0; text-align: center; font-size: 16px; color: #666; line-height: 20px;}
-.extendpop .popbox .btn{ height: 52px; width: 302px;}
-.extendpop .popbox .btn.confirm a{ height: 52px; text-align: center; width: 150px; float: left; display: inline-block; line-height: 52px; font-size: 16px; color: #666;}
-.extendpop .popbox .btn.confirm a:nth-last-child(1){ border-left: 1px solid #e8e8e8; background: #f3f3f3;}
+.extendpop .popbox {
+    height: 140px;
+    width: 300px;
+    margin: -70px 0 0 -150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+}
 
-.extendpop .popbox .btn.alert a{ height: 52px; text-align: center; display: block; line-height: 52px; font-size: 16px; color: #666; background: #f3f3f3;}
+.extendpop .popbox .text {
+    height: 58px;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 30px 0 0 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    line-height: 20px;
+}
 
-.tippop{ position: fixed; z-index: 9999; left: 0; top: 50%; height: 60px; margin-top: -30px; font-size: 12px; text-align: center; width: 100%;}
+.extendpop .popbox .btn {
+    height: 52px;
+    width: 302px;
+}
 
-.tippop .text{ padding: 15px 30px; display: inline-block; height: 70px; line-height: 70px; font-size: 16px; border-radius: 4px;}
-.tippop .text i{ font-size: 36px; margin-right: 10px;  vertical-align: middle;}
-.tippop .waring{ background: #f2dede; border: 1px solid #ebccd1;color: #a94442;}
-.tippop .success{ background: #dff0d8; border: 1px solid #d6e9c6;color: #3c763d;}
-.tippop .info{ background: #d9edf7; border: 1px solid #bce8f1;color: #31708f;}
+.extendpop .popbox .btn.confirm a {
+    height: 52px;
+    text-align: center;
+    width: 150px;
+    float: left;
+    display: inline-block;
+    line-height: 52px;
+    font-size: 16px;
+    color: #666;
+}
 
-.tiplistfixed{ position: fixed; right: 10px; top: 10px; padding: 15px; width: 250px;}
-.tiplistfixed .item{ margin-bottom: 10px; position: relative;}
-.tiplistfixed .text{ padding: 25px 15px; line-height: 20px; font-size: 16px; border-radius: 4px;}
-.tiplistfixed .text i{ margin-right: 5px; font-size: 24px; vertical-align: middle;}
-.tiplistfixed .waring{ background: #f2dede; border: 1px solid #ebccd1;color: #a94442;}
-.tiplistfixed .success{ background: #dff0d8; border: 1px solid #d6e9c6;color: #3c763d;}
-.tiplistfixed .info{ background: #d9edf7; border: 1px solid #bce8f1;color: #31708f;}
-.tiplistfixed .item .close{ position: absolute; right: 9px; top: 9px; color: #555; cursor: pointer; display: none;}
-.tiplistfixed .item:hover .close{ display: block;}
+.extendpop .popbox .btn.confirm a:nth-last-child(1) {
+    border-left: 1px solid #e8e8e8;
+    background: #f3f3f3;
+}
+
+.extendpop .popbox .btn.alert a {
+    height: 52px;
+    text-align: center;
+    display: block;
+    line-height: 52px;
+    font-size: 16px;
+    color: #666;
+    background: #f3f3f3;
+}
+
+.tippop {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 50%;
+    height: 60px;
+    margin-top: -30px;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+}
+
+.tippop .text {
+    padding: 15px 30px;
+    display: inline-block;
+    height: 70px;
+    line-height: 70px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.tippop .text i {
+    font-size: 36px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.tippop .waring {
+    background: #f2dede;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+}
+
+.tippop .success {
+    background: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+}
+
+.tippop .info {
+    background: #d9edf7;
+    border: 1px solid #bce8f1;
+    color: #31708f;
+}
+
+.tiplistfixed {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    padding: 15px;
+    width: 250px;
+}
+
+.tiplistfixed .item {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.tiplistfixed .text {
+    padding: 25px 15px;
+    line-height: 20px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.tiplistfixed .text i {
+    margin-right: 5px;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.tiplistfixed .waring {
+    background: #f2dede;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+}
+
+.tiplistfixed .success {
+    background: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+}
+
+.tiplistfixed .info {
+    background: #d9edf7;
+    border: 1px solid #bce8f1;
+    color: #31708f;
+}
+
+.tiplistfixed .item .close {
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    color: #555;
+    cursor: pointer;
+    display: none;
+}
+
+.tiplistfixed .item:hover .close {
+    display: block;
+}
 
 
 

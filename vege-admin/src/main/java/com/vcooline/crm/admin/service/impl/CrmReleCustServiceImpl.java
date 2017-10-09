@@ -4,13 +4,11 @@ import com.vcooline.crm.admin.service.BaseService;
 import com.vcooline.crm.admin.service.CrmReleCustService;
 import com.vcooline.crm.common.mapper.CrmReleCustMapper;
 import com.vcooline.crm.common.model.CrmReleCust;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- *
  * Created by xinbaojian on 15/7/17.
  */
 @Transactional

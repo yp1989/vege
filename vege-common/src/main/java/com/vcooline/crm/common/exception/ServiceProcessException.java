@@ -4,30 +4,31 @@ import java.io.Serializable;
 
 /**
  * 功能描述：业务处理异常
+ *
  * @author caohuan
  */
-public class ServiceProcessException  extends Exception implements Serializable{
-  
-	private static final long serialVersionUID = 1771211490096170754L;
+public class ServiceProcessException extends Exception implements Serializable {
 
-	public ServiceProcessException() {
+    private static final long serialVersionUID = 1771211490096170754L;
 
-		super();
-	}
+    public ServiceProcessException() {
 
-	public ServiceProcessException(String message) {
+        super();
+    }
 
-		super(message);
-	}
+    public ServiceProcessException(String message) {
 
-	public ServiceProcessException(String message, Throwable cause) {
+        super(message);
+    }
 
-		super(message, cause);
-	}
+    public ServiceProcessException(String message, Throwable cause) {
 
-	public ServiceProcessException(Throwable cause) {
+        super(message, cause);
+    }
 
-		super(cause);
-	}
+    public ServiceProcessException(Throwable cause) {
+
+        super(cause);
+    }
 
 }

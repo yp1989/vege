@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <script src="/static/admin/js/jquery.min.js"></script>
 <script src="/static/admin/js/bootstrap.min.js"></script>
 <!-- ace settings handler -->

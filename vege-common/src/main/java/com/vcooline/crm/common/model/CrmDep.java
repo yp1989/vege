@@ -82,7 +82,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_dep.id
      *
      * @return the value of crm_dep.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getId() {
@@ -94,7 +93,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_dep.id
      *
      * @param id the value for crm_dep.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setId(Long id) {
@@ -106,7 +104,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_dep.parent_id
      *
      * @return the value of crm_dep.parent_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getParentId() {
@@ -118,7 +115,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_dep.parent_id
      *
      * @param parentId the value for crm_dep.parent_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setParentId(Long parentId) {
@@ -130,7 +126,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_dep.dep_code
      *
      * @return the value of crm_dep.dep_code
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getDepCode() {
@@ -142,7 +137,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_dep.dep_code
      *
      * @param depCode the value for crm_dep.dep_code
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setDepCode(String depCode) {
@@ -154,7 +148,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_dep.dep_name
      *
      * @return the value of crm_dep.dep_name
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getDepName() {
@@ -166,7 +159,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_dep.dep_name
      *
      * @param depName the value for crm_dep.dep_name
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setDepName(String depName) {
@@ -178,7 +170,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_dep.dep_desc
      *
      * @return the value of crm_dep.dep_desc
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getDepDesc() {
@@ -190,7 +181,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_dep.dep_desc
      *
      * @param depDesc the value for crm_dep.dep_desc
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setDepDesc(String depDesc) {
@@ -202,7 +192,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_dep.dep_isleaf
      *
      * @return the value of crm_dep.dep_isleaf
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Byte getDepIsleaf() {
@@ -214,7 +203,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_dep.dep_isleaf
      *
      * @param depIsleaf the value for crm_dep.dep_isleaf
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setDepIsleaf(Byte depIsleaf) {
@@ -226,7 +214,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_dep.is_del
      *
      * @return the value of crm_dep.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Boolean getIsDel() {
@@ -238,7 +225,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_dep.is_del
      *
      * @param isDel the value for crm_dep.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -250,7 +236,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_dep.create_time
      *
      * @return the value of crm_dep.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getCreateTime() {
@@ -262,7 +247,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_dep.create_time
      *
      * @param createTime the value for crm_dep.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -274,7 +258,6 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_dep.update_time
      *
      * @return the value of crm_dep.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getUpdateTime() {
@@ -286,20 +269,19 @@ public class CrmDep extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_dep.update_time
      *
      * @param updateTime the value for crm_dep.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 
-	public List<CrmDep> getChildren() {
-		return children;
-	}
+    public List<CrmDep> getChildren() {
+        return children;
+    }
 
-	public void setChildren(List<CrmDep> children) {
-		this.children = children;
-	}
-    
-    
+    public void setChildren(List<CrmDep> children) {
+        this.children = children;
+    }
+
+
 }

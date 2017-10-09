@@ -4,7 +4,6 @@ import com.vcooline.crm.admin.service.BaseService;
 import com.vcooline.crm.admin.service.CrmContProductService;
 import com.vcooline.crm.common.mapper.CrmContProductMapper;
 import com.vcooline.crm.common.model.CrmContProduct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

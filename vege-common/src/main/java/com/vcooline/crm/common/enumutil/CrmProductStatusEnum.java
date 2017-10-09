@@ -14,12 +14,11 @@ public enum CrmProductStatusEnum {
     /**
      * 产品下架
      */
-    PRODUCT_SHELF((byte)0,"产品下架"),
+    PRODUCT_SHELF((byte) 0, "产品下架"),
     /**
      * 产品上架
      */
-    PRODUCT_SHELVES((byte)1,"产品上架"),
-    ;
+    PRODUCT_SHELVES((byte) 1, "产品上架"),;
 
     private Byte code;
     private String desc;
@@ -44,8 +43,8 @@ public enum CrmProductStatusEnum {
     public void setDesc(String desc) {
         this.desc = desc;
     }
-    
-    public static String toJson(){
+
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (CrmProductStatusEnum pro : CrmProductStatusEnum.values()) {
@@ -57,7 +56,7 @@ public enum CrmProductStatusEnum {
         return JSONObject.toJSONString(list);
     }
 
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (CrmProductStatusEnum pro : CrmProductStatusEnum.values()) {

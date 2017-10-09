@@ -1,8 +1,8 @@
 package com.vcooline.crm.common.mapper;
 
-import java.util.List;
-
 import com.vcooline.crm.common.model.CrmDep;
+
+import java.util.List;
 
 public interface CrmDepMapper {
     /**
@@ -52,47 +52,47 @@ public interface CrmDepMapper {
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     int updateByPrimaryKey(CrmDep record);
-    
+
     /**
-      * @Description:查询部门列表
-      * @return List<CrmDep>    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月22日 上午10:01:19
-      * 上海微客来软件技术有限公司
+     * @return List<CrmDep>    返回类型
+     * @throws
+     * @Description:查询部门列表
+     * @author caohuan
+     * @date 2015年7月22日 上午10:01:19
+     * 上海微客来软件技术有限公司
      */
     List<CrmDep> getDepList();
-    
+
     /**
-      * @Description:根据父id查询部门
-      * @param id    设定文件
-      * @return List<CrmDep>    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月23日 下午3:16:13
-      * 上海微客来软件技术有限公司
+     * @param id 设定文件
+     * @return List<CrmDep>    返回类型
+     * @throws
+     * @Description:根据父id查询部门
+     * @author caohuan
+     * @date 2015年7月23日 下午3:16:13
+     * 上海微客来软件技术有限公司
      */
     List<CrmDep> getChildrenDeps(Long id);
-    
-    /** 
-      * @Description:根据id修改父节点的dep_isleaf
-      * @param  id 
-      * @return int    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月24日 下午1:54:12
-      * 上海微客来软件技术有限公司
+
+    /**
+     * @param id
+     * @return int    返回类型
+     * @throws
+     * @Description:根据id修改父节点的dep_isleaf
+     * @author caohuan
+     * @date 2015年7月24日 下午1:54:12
+     * 上海微客来软件技术有限公司
      */
     int updateDepIsleaf(Long id);
-    
-    /** 
-      * @Description:根据id软删部门
-      * @param id
-      * @return int    返回类型
-      * @throws
-      * @author caohuan
-      * @date 2015年7月24日 下午2:22:26
-      * 上海微客来软件技术有限公司
+
+    /**
+     * @param id
+     * @return int    返回类型
+     * @throws
+     * @Description:根据id软删部门
+     * @author caohuan
+     * @date 2015年7月24日 下午2:22:26
+     * 上海微客来软件技术有限公司
      */
     int deleteDepById(Long id);
 }

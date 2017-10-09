@@ -96,7 +96,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_callback.id
      *
      * @return the value of crm_callback.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getId() {
@@ -108,7 +107,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_callback.id
      *
      * @param id the value for crm_callback.id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setId(Long id) {
@@ -121,7 +119,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_callback.admin_id
      *
      * @return the value of crm_callback.admin_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Long getAdminId() {
@@ -133,7 +130,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_callback.admin_id
      *
      * @param adminId the value for crm_callback.admin_id
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setAdminId(Long adminId) {
@@ -145,7 +141,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_callback.call_content
      *
      * @return the value of crm_callback.call_content
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public String getCallContent() {
@@ -157,7 +152,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_callback.call_content
      *
      * @param callContent the value for crm_callback.call_content
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCallContent(String callContent) {
@@ -169,7 +163,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_callback.call_bargain
      *
      * @return the value of crm_callback.call_bargain
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Byte getCallBargain() {
@@ -181,7 +174,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_callback.call_bargain
      *
      * @param callBargain the value for crm_callback.call_bargain
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCallBargain(Byte callBargain) {
@@ -193,7 +185,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_callback.call_time
      *
      * @return the value of crm_callback.call_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getCallTime() {
@@ -205,7 +196,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_callback.call_time
      *
      * @param callTime the value for crm_callback.call_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCallTime(Date callTime) {
@@ -217,7 +207,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_callback.call_next_time
      *
      * @return the value of crm_callback.call_next_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getCallNextTime() {
@@ -229,7 +218,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_callback.call_next_time
      *
      * @param callNextTime the value for crm_callback.call_next_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCallNextTime(Date callNextTime) {
@@ -241,7 +229,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_callback.is_del
      *
      * @return the value of crm_callback.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Boolean getIsDel() {
@@ -253,7 +240,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_callback.is_del
      *
      * @param isDel the value for crm_callback.is_del
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -265,7 +251,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_callback.create_time
      *
      * @return the value of crm_callback.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getCreateTime() {
@@ -277,7 +262,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_callback.create_time
      *
      * @param createTime the value for crm_callback.create_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -289,7 +273,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_callback.update_time
      *
      * @return the value of crm_callback.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public Date getUpdateTime() {
@@ -301,7 +284,6 @@ public class CrmCallback extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_callback.update_time
      *
      * @param updateTime the value for crm_callback.update_time
-     *
      * @mbggenerated Thu Jul 16 15:20:21 CST 2015
      */
     public void setUpdateTime(Date updateTime) {

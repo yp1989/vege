@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+         pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
     <title>生成代理合同</title>
-    <meta name="description" content="overview &amp; stats" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="overview &amp; stats"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <!-- css样式表异步加载 在/layout/stylesheets.html内 -->
 </head>
 
@@ -22,13 +22,15 @@
             <div class="tabbable">
                 <div class="tab-content no-border padding-24">
                     <div class="tab-pane fade active in">
-                        <form class="form-horizontal" role="form" action="/business/doProductsContract" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal" role="form" action="/business/doProductsContract" method="post"
+                              enctype="multipart/form-data">
                             <input type="hidden" name="contract.busiId" value="${busiId}"/>
                             <input type="hidden" name="contract.contType" value="1"/>
                             <div class="form-group">
-                                <label class="col-md-1 control-label" >签约时间：</label>
+                                <label class="col-md-1 control-label">签约时间：</label>
                                 <div class="col-md-7">
-                                    <p class="form-control-static"><fmt:formatDate value="${currentDate}" pattern="yyyy-MM-dd"/></p>
+                                    <p class="form-control-static"><fmt:formatDate value="${currentDate}"
+                                                                                   pattern="yyyy-MM-dd"/></p>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -38,7 +40,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-1 control-label" >录入人：</label>
+                                <label class="col-md-1 control-label">录入人：</label>
                                 <div class="col-md-7">
                                     <p class="form-control-static">${business.adminName}</p>
                                 </div>
@@ -75,39 +77,49 @@
                             </div>
                             <c:forEach items="${customerList}" var="c" varStatus="index">
                                 <div class="form-group">
-                                        <label class="col-md-1 control-label">联系人<span class="required-star">*</span>：</label>
-                                        <div class="col-md-2">
-                                            <input type="text" class="input-sm form-control" name="customerList[${index.index}].custName" value="${c.custName}">
-                                        </div>
-                                        <label class="col-md-1 control-label">电话<span class="required-star">*</span>：</label>
-                                        <div class="col-md-2">
-                                            <input type="text" class="input-sm form-control" name="customerList[${index.index}].custPhone" value="${c.custPhone}">
-                                        </div>
-                                        <label class="col-md-1 control-label">邮件<span class="required-star">*</span>：</label>
-                                        <div class="col-md-2">
-                                            <input type="text" class="input-sm form-control" name="customerList[${index.index}].custEmail" value="${c.custEmail}">
-                                        </div>
+                                    <label class="col-md-1 control-label">联系人<span
+                                            class="required-star">*</span>：</label>
+                                    <div class="col-md-2">
+                                        <input type="text" class="input-sm form-control"
+                                               name="customerList[${index.index}].custName" value="${c.custName}">
+                                    </div>
+                                    <label class="col-md-1 control-label">电话<span
+                                            class="required-star">*</span>：</label>
+                                    <div class="col-md-2">
+                                        <input type="text" class="input-sm form-control"
+                                               name="customerList[${index.index}].custPhone" value="${c.custPhone}">
+                                    </div>
+                                    <label class="col-md-1 control-label">邮件<span
+                                            class="required-star">*</span>：</label>
+                                    <div class="col-md-2">
+                                        <input type="text" class="input-sm form-control"
+                                               name="customerList[${index.index}].custEmail" value="${c.custEmail}">
+                                    </div>
                                 </div>
                             </c:forEach>
                             <div class="form-group">
                                 <div class="col-md-4">
-                                    <label class="col-md-3 control-label">服务级别<span class="required-star">*</span>：</label>
+                                    <label class="col-md-3 control-label">服务级别<span
+                                            class="required-star">*</span>：</label>
                                     <div class="col-md-9">
-                                        <select class="input-sm form-control" name="contract.contServiceLevel" id="serviceLevel">
+                                        <select class="input-sm form-control" name="contract.contServiceLevel"
+                                                id="serviceLevel">
                                             <option value="">请选择</option>
                                             <c:forEach items="${serviceLevel}" var="c" varStatus="index">
-                                                <option value="${c.code}" >${c.desc}</option>
+                                                <option value="${c.code}">${c.desc}</option>
                                             </c:forEach>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <label class="col-md-3 control-label">类别<span class="required-star">*</span>：</label>
+                                    <label class="col-md-3 control-label">类别<span
+                                            class="required-star">*</span>：</label>
                                     <div class="col-md-9">
-                                        <select class="input-sm form-control" name="contract.contCategory" id="agentCategory">
+                                        <select class="input-sm form-control" name="contract.contCategory"
+                                                id="agentCategory">
                                             <option value="">请选择</option>
                                             <c:forEach items="${category}" var="c" varStatus="index">
-                                                <option value="${c.code}" >${c.desc}</option>
+                                                <option value="${c.code}">${c.desc}</option>
                                             </c:forEach>
                                         </select>
                                     </div>
@@ -115,12 +127,14 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-4">
-                                    <label class="col-md-3 control-label">代理商级别<span class="required-star">*</span>：</label>
+                                    <label class="col-md-3 control-label">代理商级别<span
+                                            class="required-star">*</span>：</label>
                                     <div class="col-md-9">
-                                        <select class="input-sm form-control" name="contract.agentLevel" id="agentLevel">
+                                        <select class="input-sm form-control" name="contract.agentLevel"
+                                                id="agentLevel">
                                             <option value="">请选择</option>
                                             <c:forEach items="${agentLevel}" var="c" varStatus="index">
-                                                <option value="${c.code}" >${c.desc}</option>
+                                                <option value="${c.code}">${c.desc}</option>
                                             </c:forEach>
                                         </select>
                                     </div>
@@ -129,10 +143,14 @@
                             <div class="form-group">
                                 <label class="col-md-1 control-label">购买产品<span class="required-star">*</span>：</label>
                                 <div class="col-md-10">
-                                    <c:forEach items="${productList}" var="p" >
+                                    <c:forEach items="${productList}" var="p">
                                         <label class="checkbox-inline no-padding-left">
-                                        <input name="versionIds" type="checkbox" class="ace agentCheckbox" data-price="${p.productPrice}" value="${p.id}" <c:forEach items="${business.productList}" var="bp"><c:if test="${p.id == bp.id}">checked</c:if></c:forEach> >
-                                        <span class="lbl">${p.productName}</span>
+                                            <input name="versionIds" type="checkbox" class="ace agentCheckbox"
+                                                   data-price="${p.productPrice}" value="${p.id}"
+                                                   <c:forEach items="${business.productList}" var="bp">
+                                                   <c:if test="${p.id == bp.id}">checked</c:if>
+                                            </c:forEach> >
+                                            <span class="lbl">${p.productName}</span>
                                         </label>
                                     </c:forEach>
                                     <div class="form_group pb10">
@@ -148,9 +166,14 @@
                                         <tbody>
                                         <c:forEach items="${business.productList}" var="bp" varStatus="index">
                                             <tr class="selectedagent" data-v-id="${bp.id}">
-                                                <td>${bp.productName}<input type="hidden" name="contProducts[${index.index}].prodId" value="${bp.id}"/>
+                                                <td>${bp.productName}<input type="hidden"
+                                                                            name="contProducts[${index.index}].prodId"
+                                                                            value="${bp.id}"/>
                                                 </td>
-                                                <td class="Standard_amount">${bp.productPrice}<input type="hidden" name="contProducts[${index.index}].actualAmount" value="${bp.productPrice}"/></td>
+                                                <td class="Standard_amount">${bp.productPrice}<input type="hidden"
+                                                                                                     name="contProducts[${index.index}].actualAmount"
+                                                                                                     value="${bp.productPrice}"/>
+                                                </td>
                                             </tr>
                                         </c:forEach>
                                         <tr class="heji">
@@ -174,20 +197,27 @@
                                 <label class="col-md-1 control-label"></label>
                                 <div class="col-md-2">
                                     <div class="file-btn">
-                                        <button type="button" class="btn btn-sm btn-primary" data-fn="submit" id="add_new_contract_file">新增合同文件</button>
+                                        <button type="button" class="btn btn-sm btn-primary" data-fn="submit"
+                                                id="add_new_contract_file">新增合同文件
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-1 control-label" >备注：</label>
+                                <label class="col-md-1 control-label">备注：</label>
                                 <div class="col-md-5">
-                                    <textarea id="form-field-11" class="autosize-transition form-control" name="contract.contRemark" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 52px;"></textarea>
+                                    <textarea id="form-field-11" class="autosize-transition form-control"
+                                              name="contract.contRemark"
+                                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 52px;"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-5">
-                                    <button type="button" class="btn btn-sm btn-primary" data-fn="submit" id="product_contract_submit">保存</button>
-                                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modals">取消</button>
+                                    <button type="button" class="btn btn-sm btn-primary" data-fn="submit"
+                                            id="product_contract_submit">保存
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modals">取消
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -215,9 +245,9 @@
     //初始化加载省市县联动数据
     Package.init();
     Package.calculationAgentTotal();
-    showLocationId('${clue.custProvince}','${clue.custCity}','${clue.custArea}','#sheng','#shi','#qu');
+    showLocationId('${clue.custProvince}', '${clue.custCity}', '${clue.custArea}', '#sheng', '#shi', '#qu');
     var msg = '${msg}';
-    if(msg != undefined && msg != ""){
+    if (msg != undefined && msg != "") {
         $.getNormalMessage(msg);
     }
 </script>

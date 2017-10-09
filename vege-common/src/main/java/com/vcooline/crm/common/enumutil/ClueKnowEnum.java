@@ -11,17 +11,16 @@ import java.util.List;
  * Created by xinbaojian on 15/7/17.
  */
 public enum ClueKnowEnum {
-    SEARCH_ENGINE((byte)1, "搜索引擎"),
-    WEIBO((byte)2, "微博"),
-    WEIXIN((byte)3, "微信"),
-    INTERNET_NEWS((byte)4, "网络新闻媒体"),
-    BLOG_BBS((byte)5, "博客空间论坛"),
-    FRIENDS((byte)6, "朋友介绍"),
-    DAYIN_SELLER((byte)7, "达因销售员"),
-    VCOOLINE_AGENT((byte)8, "微客来代理商"),
-    OTHER_SOURCE((byte)9,"其它"),
-    PC((byte)10, "在线注册"),
-    ;
+    SEARCH_ENGINE((byte) 1, "搜索引擎"),
+    WEIBO((byte) 2, "微博"),
+    WEIXIN((byte) 3, "微信"),
+    INTERNET_NEWS((byte) 4, "网络新闻媒体"),
+    BLOG_BBS((byte) 5, "博客空间论坛"),
+    FRIENDS((byte) 6, "朋友介绍"),
+    DAYIN_SELLER((byte) 7, "达因销售员"),
+    VCOOLINE_AGENT((byte) 8, "微客来代理商"),
+    OTHER_SOURCE((byte) 9, "其它"),
+    PC((byte) 10, "在线注册"),;
 
     private Byte code;
     private String desc;
@@ -48,16 +47,16 @@ public enum ClueKnowEnum {
     }
 
 
-    public static ClueKnowEnum getByCode(Byte code){
+    public static ClueKnowEnum getByCode(Byte code) {
         for (ClueKnowEnum clue : ClueKnowEnum.values()) {
-            if (clue.getCode().equals(code)){
+            if (clue.getCode().equals(code)) {
                 return clue;
             }
         }
         return null;
     }
 
-    public static String toJson(){
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (ClueKnowEnum enumpojo : ClueKnowEnum.values()) {
@@ -69,7 +68,7 @@ public enum ClueKnowEnum {
         return JSONObject.toJSONString(list);
     }
 
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (ClueKnowEnum enumpojo : ClueKnowEnum.values()) {

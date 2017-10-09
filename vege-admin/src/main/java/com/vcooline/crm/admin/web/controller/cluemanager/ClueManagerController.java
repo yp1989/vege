@@ -3,7 +3,6 @@ package com.vcooline.crm.admin.web.controller.cluemanager;
 import com.alibaba.fastjson.JSONObject;
 import com.vcooline.crm.admin.service.*;
 import com.vcooline.crm.admin.web.controller.BaseController;
-import com.vcooline.crm.common.constant.GlobalConstants;
 import com.vcooline.crm.common.enumutil.*;
 import com.vcooline.crm.common.model.*;
 import com.vcooline.crm.common.pojo.ClueAddForm;
@@ -29,7 +28,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/clue")
-public class ClueManagerController extends BaseController{
+public class ClueManagerController extends BaseController {
 
     @Autowired
     private CrmProductService productService;
@@ -56,25 +55,25 @@ public class ClueManagerController extends BaseController{
     private CrmBusinessService businessService;
 
     @RequestMapping("/index")
-    public String index(CrmClue clue,Integer pageNo,Integer pageSize,ModelMap modelMap,HttpServletRequest request){
+    public String index(CrmClue clue, Integer pageNo, Integer pageSize, ModelMap modelMap, HttpServletRequest request) {
         CrmAdmin admin = getUser();
-        clue.setSearchType((byte)0);
+        clue.setSearchType((byte) 0);
         if (admin.getRoleType() != 0 && admin.getRoleType() != 2) {
-            if (admin.getIsDepManager() == null || admin.getIsDepManager() == 0){
+            if (admin.getIsDepManager() == null || admin.getIsDepManager() == 0) {
                 clue.setIsDepManager((byte) 0);
-            }else {
+            } else {
                 clue.setIsDepManager(admin.getIsDepManager());
 
             }
         }
         //判断是否有时间条件查询，如果没有，默认只查2015年的数据
-        if (clue.getCreateTimestart() == null && (admin.getRoleType() == 0 || admin.getRoleType() == 2)){
-            clue.setCreateTimestart(DateUtil.strToDate(String.format("%s-01 00:00:00",DateUtil.getCurrentYearMonthStr()),DateUtil.DEFAULT_FORMAT));
+        if (clue.getCreateTimestart() == null && (admin.getRoleType() == 0 || admin.getRoleType() == 2)) {
+            clue.setCreateTimestart(DateUtil.strToDate(String.format("%s-01 00:00:00", DateUtil.getCurrentYearMonthStr()), DateUtil.DEFAULT_FORMAT));
         }
 
-        modelMap.addAttribute("clue",clue);
-        Page<CrmClue> page = clueService.queryCrmClueForPage(clue,pageNo,pageSize);
-        modelMap.addAttribute("page",page);
+        modelMap.addAttribute("clue", clue);
+        Page<CrmClue> page = clueService.queryCrmClueForPage(clue, pageNo, pageSize);
+        modelMap.addAttribute("page", page);
 
         //线索来源
         modelMap.addAttribute("ClueSource", ClueSourceEnum.toList());
@@ -85,24 +84,24 @@ public class ClueManagerController extends BaseController{
         //线索类型
         modelMap.addAttribute("ClueType", ClueTypeEnum.toList());
         //获取所有产品类型
-        modelMap.addAttribute("products",productService.getAllProduct());
+        modelMap.addAttribute("products", productService.getAllProduct());
         //成交意向
-        modelMap.addAttribute("dealIntention",DealintentionEnum.toList());
+        modelMap.addAttribute("dealIntention", DealintentionEnum.toList());
         //线索状态
-        modelMap.addAttribute("clueStatusOnline",ClueStatusEnum.toList());
+        modelMap.addAttribute("clueStatusOnline", ClueStatusEnum.toList());
 
         //查询归属人信息
         List<CrmAdmin> adminList = adminService.getOwerList(admin);
-        modelMap.addAttribute("adminList",adminList);
+        modelMap.addAttribute("adminList", adminList);
         String msg = request.getParameter("msg");
-        if (StringUtils.isNotEmpty(msg)){
-            modelMap.addAttribute("msg",msg);
+        if (StringUtils.isNotEmpty(msg)) {
+            modelMap.addAttribute("msg", msg);
         }
         return "html/clue/clue";
     }
 
     @RequestMapping("/toAddClue")
-    public String toAddClue(ModelMap model){
+    public String toAddClue(ModelMap model) {
         //角色
         model.addAttribute("roles", CustRoleEnum.toJson());
         //线索来源
@@ -121,22 +120,23 @@ public class ClueManagerController extends BaseController{
 
     /**
      * 新增线索
+     *
      * @param form
      * @param ra
      * @return
      */
     @RequestMapping("/doAddClue")
-    public String doAddClue(ClueAddForm form,RedirectAttributes ra,Byte callBargainByte){
+    public String doAddClue(ClueAddForm form, RedirectAttributes ra, Byte callBargainByte) {
         //设置用户录入人
         CrmAdmin admin = getUser();
-        if (form.getClue().getId() == null){
+        if (form.getClue().getId() == null) {
             form.setIsAllot(true);
             form.getClue().setAdminId(admin.getId());
             form.getClue().setAdminName(admin.getAdminRealName());
             boolean result = clueService.saveClue(form);
             ra.addAttribute("msg", result ? "新增成功！" : "新增失败！");
-        }else {
-            if (callBargainByte != null){
+        } else {
+            if (callBargainByte != null) {
                 form.getCallback().setCallBargain(callBargainByte);
             }
             boolean result = clueService.updateClue(form);
@@ -148,10 +148,11 @@ public class ClueManagerController extends BaseController{
 
     /**
      * 编辑线索
+     *
      * @return
      */
-    @RequestMapping(value = {"/toEditClue","/toShowClue"})
-    public String toEditClue(Long clueId,ModelMap modelMap){
+    @RequestMapping(value = {"/toEditClue", "/toShowClue"})
+    public String toEditClue(Long clueId, ModelMap modelMap) {
         CrmClue clue = clueService.selectByPrimaryKey(clueId);
         //线索来源
         modelMap.addAttribute("ClueSource", ClueSourceEnum.toList());
@@ -162,61 +163,62 @@ public class ClueManagerController extends BaseController{
         //线索类型
         modelMap.addAttribute("ClueType", ClueTypeEnum.toList());
         //获取所有产品类型
-        modelMap.addAttribute("products",productService.getAllProduct());
+        modelMap.addAttribute("products", productService.getAllProduct());
         //成交意向
-        modelMap.addAttribute("dealIntention",DealintentionEnum.toList());
+        modelMap.addAttribute("dealIntention", DealintentionEnum.toList());
         //线索状态
-        modelMap.addAttribute("clueStatusOnline",ClueStatusEnum.toList());
+        modelMap.addAttribute("clueStatusOnline", ClueStatusEnum.toList());
 
         //获取该线索所关联产品
-        modelMap.addAttribute("clueProducts",productService.getProductsByClueId(clueId));
+        modelMap.addAttribute("clueProducts", productService.getProductsByClueId(clueId));
         //角色
         modelMap.addAttribute("roles", CustRoleEnum.toList());
         //角色
         modelMap.addAttribute("rolesJson", CustRoleEnum.toJson());
         //查询归属人信息
         List<CrmAdmin> adminList = adminService.getOwerList(getUser());
-        modelMap.addAttribute("adminList",adminList);
-        modelMap.addAttribute("clue",clue);
+        modelMap.addAttribute("adminList", adminList);
+        modelMap.addAttribute("clue", clue);
         //查询该线索的联系人信息
         List<CrmCustomer> customerList = customerService.getCustlistByClueId(clueId, ReleTypeEnum.CLUE_TYPE.getCode());
-        modelMap.addAttribute("customerList",customerList);
+        modelMap.addAttribute("customerList", customerList);
         //获取线索回访信息
         List<CrmCallback> callbackList = callbackService.selectCallBackListByClueId(clueId, ReleTypeEnum.CLUE_TYPE.getCode());
-        modelMap.addAttribute("callbackList",callbackList);
+        modelMap.addAttribute("callbackList", callbackList);
         //获取线索分配记录
         CrmAllocationLog log = new CrmAllocationLog();
         log.setAlloType(ReleTypeEnum.CLUE_TYPE.getCode());
         log.setTargetId(clueId);
         List<CrmAllocationLog> allocationLogList = allocationLogService.selectListByTargetId(log);
-        modelMap.addAttribute("allocationLogList",allocationLogList);
+        modelMap.addAttribute("allocationLogList", allocationLogList);
         //获取操作记录
         CrmOptionLog optionLog = new CrmOptionLog();
         optionLog.setAlloType(ReleTypeEnum.CLUE_TYPE.getCode());
         optionLog.setTargetId(clueId);
         List<CrmOptionLog> optionLogList = optionLogService.selectListByTargetId(optionLog);
-        modelMap.addAttribute("optionLogList",optionLogList);
-        modelMap.addAttribute("admin",getUser());
+        modelMap.addAttribute("optionLogList", optionLogList);
+        modelMap.addAttribute("admin", getUser());
 
         String url = getReqUrl();
         System.out.println(url);
-        if (url.contains("toEditClue")){
-            if (callbackList != null && callbackList.size() > 0){
-                modelMap.addAttribute("lastCallBargain",callbackList.get(callbackList.size()-1).getCallBargain());
+        if (url.contains("toEditClue")) {
+            if (callbackList != null && callbackList.size() > 0) {
+                modelMap.addAttribute("lastCallBargain", callbackList.get(callbackList.size() - 1).getCallBargain());
             }
             return "html/clue/clueEdit";
-        }else{
+        } else {
             return "html/clue/clueShow";
         }
     }
 
     /**
      * 获取分配人员列表
+     *
      * @return
      */
     @ResponseBody
     @RequestMapping("/allot")
-    public List<CrmAdmin> showClueAllot(CrmAdmin admin){
+    public List<CrmAdmin> showClueAllot(CrmAdmin admin) {
         //查询归属人信息
         admin = getUser();
         List<CrmAdmin> adminList = adminService.getOwerList(admin);
@@ -225,12 +227,13 @@ public class ClueManagerController extends BaseController{
 
     /**
      * 分配线索
+     *
      * @return
      */
     @RequestMapping("/distribution")
-    public String Distributionleads(CrmClue clue,String cluds){
+    public String Distributionleads(CrmClue clue, String cluds) {
         CrmAdmin user = getUser();
-        String [] cludss = cluds.split(",");
+        String[] cludss = cluds.split(",");
         for (String s : cludss) {
 //            CrmClue oldClue = clueService.selectByPrimaryKey(Long.parseLong(s));
             clue.setId(Long.parseLong(s));
@@ -243,7 +246,7 @@ public class ClueManagerController extends BaseController{
             allocationLog.setAlloOwner(clue.getOwner());
             allocationLog.setAlloType(ReleTypeEnum.CLUE_TYPE.getCode());
             allocationLog.setTargetId(Long.parseLong(s));
-            if (clue.getOwner() != null){
+            if (clue.getOwner() != null) {
                 allocationLog.setAlloSource(clue.getOwner());
             }
             allocationLogService.insertSelective(allocationLog);
@@ -254,60 +257,64 @@ public class ClueManagerController extends BaseController{
 
     /**
      * 关闭线索
+     *
      * @param clueId 要关闭的线索ID
      * @return
      */
     @RequestMapping("/close")
     @ResponseBody
-    public String closeClue(Long clueId,RedirectAttributes ra){
+    public String closeClue(Long clueId, RedirectAttributes ra) {
         String msg = "关闭失败";
-        if (clueService.closeClue(clueId) == 1){
+        if (clueService.closeClue(clueId) == 1) {
             msg = "关闭成功";
         }
-        return String.format("{\"msg\":\"%s\"}",msg);
+        return String.format("{\"msg\":\"%s\"}", msg);
     }
 
     /**
      * 根据手机号查询关联线索
+     *
      * @param phone
      * @return
      */
     @RequestMapping("/queryByPhone")
     @ResponseBody
-    public  List<CrmClue> queryCrmClueByPhone(String phone){
+    public List<CrmClue> queryCrmClueByPhone(String phone) {
         List<CrmClue> clueList = clueService.queryCrmClueByPhone(phone);
         return clueList;
     }
 
     /**
      * 查询所有套餐
+     *
      * @return
      */
     @RequestMapping("/queryProdVers")
     @ResponseBody
-    public List<CrmProduct> queryPorductAndVersion(){
+    public List<CrmProduct> queryPorductAndVersion() {
         List<CrmProduct> productList = productService.getAllProductAndVersions();
         return productList;
     }
 
     /**
      * 生成商机
+     *
      * @return
      */
     @RequestMapping("/convertBusiness")
-    public String convertBusinessFormClue(ProductVersionForm versionForm,RedirectAttributes ra){
+    public String convertBusinessFormClue(ProductVersionForm versionForm, RedirectAttributes ra) {
         int result = businessService.convertBusinessFormClue(versionForm.getClueId(), versionForm.getBusiProducts());
-        if (result == 1){
-            ra.addAttribute("msg","生成商机成功！");
-        }else{
-            ra.addAttribute("msg","生成商机失败！");
+        if (result == 1) {
+            ra.addAttribute("msg", "生成商机成功！");
+        } else {
+            ra.addAttribute("msg", "生成商机失败！");
         }
         return "redirect:/clue/index";
     }
 
     @RequestMapping("/import")
     @ResponseBody
-    public String importClue(ClueCustPojo pojo){
+    public String importClue(ClueCustPojo pojo) {
         CrmAdmin admin = new CrmAdmin();
         admin.setId(1l);
         admin.setAdminRealName("amdin");
@@ -315,11 +322,11 @@ public class ClueManagerController extends BaseController{
         String msg = "导入成功!";
         Integer code = 1;
 
-        if (pojo == null || StringUtils.isEmpty(pojo.getCustName())){
+        if (pojo == null || StringUtils.isEmpty(pojo.getCustName())) {
             msg = "数据错误!";
             code = 0;
         }
-        if (code == 1){
+        if (code == 1) {
             //设置线索默认数据
             Integer numCode = clueService.getMaxNumCode();
             form.setClue(new CrmClue());
@@ -334,13 +341,13 @@ public class ClueManagerController extends BaseController{
 
             if (pojo.getClueKnow() == null) {
                 form.getClue().setClueKnow(ClueKnowEnum.PC.getCode());
-            }else{
+            } else {
                 form.getClue().setClueKnow(pojo.getClueKnow());
             }
 
             if (pojo.getClueType() == null) {
                 form.getClue().setClueType(ClueTypeEnum.PRODUCT.getCode());
-            }else {
+            } else {
                 form.getClue().setClueType(pojo.getClueType());
             }
             form.getClue().setAdminId(admin.getId());
@@ -359,7 +366,7 @@ public class ClueManagerController extends BaseController{
 
             form.setCallback(new CrmCallback());
             //设置成交意向
-            if (pojo.getCallBargain() != null){
+            if (pojo.getCallBargain() != null) {
                 form.getCallback().setCallBargain(pojo.getCallBargain());
             }
 
@@ -369,17 +376,17 @@ public class ClueManagerController extends BaseController{
             }
 
         }
-        return String.format("{\"msg\":\"%s\",\"code\":%s}",msg,code);
+        return String.format("{\"msg\":\"%s\",\"code\":%s}", msg, code);
     }
 
 
     @RequestMapping("/importbatch")
     @ResponseBody
-    public String importCluebatch(ClueCustPojo pojo){
+    public String importCluebatch(ClueCustPojo pojo) {
         logger.info(String.format("接收到的参数为:%s", JSONObject.toJSONString(pojo)));
         //判断线索是否存在
-        if(clueService.selectByClueId(pojo.getId()) != null){
-            return String.format("{\"msg\":\"%s\",\"code\":%s}","已存在此线索","0");
+        if (clueService.selectByClueId(pojo.getId()) != null) {
+            return String.format("{\"msg\":\"%s\",\"code\":%s}", "已存在此线索", "0");
         }
         CrmAdmin admin = new CrmAdmin();
         admin.setId(1l);
@@ -387,11 +394,11 @@ public class ClueManagerController extends BaseController{
         ClueAddForm form = new ClueAddForm();
         String msg = "导入成功!";
         Integer code = 1;
-        if (pojo == null){
+        if (pojo == null) {
             msg = "数据错误!";
             code = 0;
         }
-        if (code == 1){
+        if (code == 1) {
             //设置线索默认数据
             Integer numCode = clueService.getMaxNumCode();
             form.setClue(new CrmClue());
@@ -408,10 +415,10 @@ public class ClueManagerController extends BaseController{
             if (StringUtils.isNotEmpty(pojo.getOwnerName())) {
                 //根据真实姓名查询归属人
                 CrmAdmin ownerName = adminService.selectAdminByRealName(pojo.getOwnerName().trim());
-                if (ownerName != null){
+                if (ownerName != null) {
                     form.getClue().setOwner(ownerName.getId());
                     form.getClue().setOwnerName(ownerName.getAdminRealName());
-                }else {
+                } else {
                     form.getClue().setOwner(admin.getId());
                     form.getClue().setOwnerName(admin.getAdminRealName());
                 }
@@ -423,13 +430,13 @@ public class ClueManagerController extends BaseController{
 
             if (pojo.getClueKnow() == null) {
                 form.getClue().setClueKnow(ClueKnowEnum.PC.getCode());
-            }else{
+            } else {
                 form.getClue().setClueKnow(pojo.getClueKnow());
             }
 
             if (pojo.getClueType() == null) {
                 form.getClue().setClueType(ClueTypeEnum.PRODUCT.getCode());
-            }else {
+            } else {
                 form.getClue().setClueType(pojo.getClueType());
             }
 
@@ -447,15 +454,15 @@ public class ClueManagerController extends BaseController{
             form.setCallback(new CrmCallback());
             form.setCallbackList(pojo.getCallbackList());
             //设置成交意向
-            if (pojo.getCallBargain() != null && DealintentionEnum.getByCode(pojo.getCallBargain()) != null && form.getCallback() != null){
+            if (pojo.getCallBargain() != null && DealintentionEnum.getByCode(pojo.getCallBargain()) != null && form.getCallback() != null) {
                 form.getCallback().setCallBargain(pojo.getCallBargain());
             }
-            if (!clueService.saveClueImport(form, admin)){
+            if (!clueService.saveClueImport(form, admin)) {
                 msg = "保存线索出错了！";
                 code = 0;
             }
         }
-        return String.format("{\"msg\":\"%s\",\"code\":%s}",msg,code);
+        return String.format("{\"msg\":\"%s\",\"code\":%s}", msg, code);
     }
 
 }

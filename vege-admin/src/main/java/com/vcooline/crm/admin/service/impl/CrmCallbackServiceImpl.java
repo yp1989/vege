@@ -1,26 +1,22 @@
 package com.vcooline.crm.admin.service.impl;
 
-import java.util.Date;
-import java.util.List;
-
 import com.alibaba.fastjson.JSONObject;
+import com.vcooline.crm.admin.service.BaseService;
 import com.vcooline.crm.admin.service.CrmBusinessService;
-import com.vcooline.crm.common.enumutil.ClueStatusEnum;
+import com.vcooline.crm.admin.service.CrmCallbackService;
+import com.vcooline.crm.common.enumutil.DealintentionEnum;
 import com.vcooline.crm.common.enumutil.ReleTypeEnum;
-import com.vcooline.crm.common.model.CrmAdmin;
+import com.vcooline.crm.common.mapper.CrmCallbackMapper;
 import com.vcooline.crm.common.model.CrmBusiness;
+import com.vcooline.crm.common.model.CrmCallback;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.vcooline.crm.admin.service.BaseService;
-import com.vcooline.crm.admin.service.CrmCallbackService;
-import com.vcooline.crm.common.enumutil.DealintentionEnum;
-import com.vcooline.crm.common.mapper.CrmCallbackMapper;
-import com.vcooline.crm.common.model.CrmCallback;
+import java.util.Date;
+import java.util.List;
 
 /**
- *
  * Created by xinbaojian on 15/7/24.
  */
 @Transactional
@@ -71,9 +67,9 @@ public class CrmCallbackServiceImpl extends BaseService implements CrmCallbackSe
 
     @Override
     public List<CrmCallback> selectCallBackListByClueId(Long clueId, Byte releType) {
-        List<CrmCallback> list = callbackMapper.selectCallBackListByTarget(clueId,releType);
+        List<CrmCallback> list = callbackMapper.selectCallBackListByTarget(clueId, releType);
         for (CrmCallback callback : list) {
-            if (callback.getCallBargain() != null){
+            if (callback.getCallBargain() != null) {
                 callback.setCallBargainStr(DealintentionEnum.getByCode(callback.getCallBargain()).getDesc());
             }
         }

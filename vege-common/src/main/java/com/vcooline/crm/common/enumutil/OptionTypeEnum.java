@@ -11,9 +11,8 @@ import java.util.List;
  * Created by xinbaojian on 15/7/27.
  */
 public enum OptionTypeEnum {
-    CLOSE((byte)0,"关闭"),
-    EDIT((byte)1,"编辑"),
-    ;
+    CLOSE((byte) 0, "关闭"),
+    EDIT((byte) 1, "编辑"),;
 
     private Byte code;
     private String desc;
@@ -24,16 +23,16 @@ public enum OptionTypeEnum {
     }
 
 
-    public static OptionTypeEnum getByCode(Byte code){
+    public static OptionTypeEnum getByCode(Byte code) {
         for (OptionTypeEnum clue : OptionTypeEnum.values()) {
-            if (clue.getCode().equals(code)){
+            if (clue.getCode().equals(code)) {
                 return clue;
             }
         }
         return null;
     }
 
-    public static String toJson(){
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (OptionTypeEnum enumpojo : OptionTypeEnum.values()) {
@@ -45,7 +44,7 @@ public enum OptionTypeEnum {
         return JSONObject.toJSONString(list);
     }
 
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (OptionTypeEnum enumpojo : OptionTypeEnum.values()) {

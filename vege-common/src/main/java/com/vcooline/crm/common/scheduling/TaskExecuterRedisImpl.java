@@ -10,10 +10,9 @@ public class TaskExecuterRedisImpl implements TaskExecuter {
     protected Logger logger = LoggerFactory.getLogger(getClass());
 
 
-
     @Override
     public void execute(Task task) {
-       
+
     }
 
 }

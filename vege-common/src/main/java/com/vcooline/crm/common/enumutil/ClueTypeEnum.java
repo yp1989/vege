@@ -11,9 +11,8 @@ import java.util.List;
  * Created by xinbaojian on 15/7/17.
  */
 public enum ClueTypeEnum {
-    PROXY((byte)2,"咨询代理"),
-    PRODUCT((byte)1,"咨询产品"),
-    ;
+    PROXY((byte) 2, "咨询代理"),
+    PRODUCT((byte) 1, "咨询产品"),;
 
     private Byte code;
     private String desc;
@@ -39,16 +38,16 @@ public enum ClueTypeEnum {
         this.desc = desc;
     }
 
-    public static ClueTypeEnum getByCode(Byte code){
+    public static ClueTypeEnum getByCode(Byte code) {
         for (ClueTypeEnum clue : ClueTypeEnum.values()) {
-            if (clue.getCode().equals(code)){
+            if (clue.getCode().equals(code)) {
                 return clue;
             }
         }
         return ClueTypeEnum.PRODUCT;
     }
 
-    public static String toJson(){
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (ClueTypeEnum enumpojo : ClueTypeEnum.values()) {
@@ -60,7 +59,7 @@ public enum ClueTypeEnum {
         return JSONObject.toJSONString(list);
     }
 
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (ClueTypeEnum enumpojo : ClueTypeEnum.values()) {

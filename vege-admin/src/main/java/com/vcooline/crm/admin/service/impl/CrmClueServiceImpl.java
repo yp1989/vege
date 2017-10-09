@@ -4,14 +4,13 @@ import com.alibaba.fastjson.JSONObject;
 import com.vcooline.crm.admin.service.*;
 import com.vcooline.crm.common.enumutil.ClueStatusEnum;
 import com.vcooline.crm.common.enumutil.DealintentionEnum;
-import com.vcooline.crm.common.enumutil.ReleTypeEnum;
 import com.vcooline.crm.common.enumutil.OptionTypeEnum;
+import com.vcooline.crm.common.enumutil.ReleTypeEnum;
 import com.vcooline.crm.common.mapper.CrmClueMapper;
 import com.vcooline.crm.common.model.*;
 import com.vcooline.crm.common.pojo.ClueAddForm;
 import com.vcooline.crm.common.utils.DateUtil;
 import com.vcooline.crm.common.utils.StringUtils;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -57,7 +56,7 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
 
     @Override
     public int insert(CrmClue record) {
-        if (record.getCreateTime() != null){
+        if (record.getCreateTime() != null) {
             record.setCreateTimeLong(DateUtil.getTime(record.getCreateTime()));
         }
         return crmClueMapper.insert(record);
@@ -65,7 +64,7 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
 
     @Override
     public int insertSelective(CrmClue record) {
-        if (record.getCreateTime() != null){
+        if (record.getCreateTime() != null) {
             record.setCreateTimeLong(DateUtil.getTime(record.getCreateTime()));
         }
         return crmClueMapper.insertSelective(record);
@@ -97,6 +96,7 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
 
     /**
      * 保存线索
+     *
      * @param form
      */
     @Override
@@ -124,10 +124,10 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
             } else {
                 clueResult = updateByPrimaryKeySelective(form.getClue());//更新线索
             }
-            if (clueResult == 1){
+            if (clueResult == 1) {
                 //保存客户联系人信息
                 for (CrmCustomer customer : form.getCustomerList()) {
-                    if (customer.getId() == null){
+                    if (customer.getId() == null) {
                         customerService.insertSelective(customer);
                         //保存线索 客户联系人关联表
                         CrmReleCust clueCust = new CrmReleCust();
@@ -136,19 +136,19 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
                         clueCust.setReleType(ReleTypeEnum.CLUE_TYPE.getCode());
                         clueCust.setCreateTime(new Date());
                         clueCustService.insertSelective(clueCust);
-                    }else{
+                    } else {
                         customerService.updateByPrimaryKeySelective(customer);
                     }
                 }
                 //保存产品信息begin
                 for (Long aLong : form.getProductIds()) {
                     CrmClueProduct product = clueProductService.selectByPrimaryKey(aLong);
-                    if (product == null){
+                    if (product == null) {
                         CrmClueProduct clueProduct = new CrmClueProduct();
                         clueProduct.setClueId(form.getClue().getId());
                         clueProduct.setProductId(aLong);
                         clueProductService.insertSelective(clueProduct);
-                    }else{
+                    } else {
                         clueProductService.deleteByPrimaryKey(aLong);
                     }
 
@@ -156,7 +156,7 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
                 //保存产品信息end
 
                 //保存回访信息begin 导入接口时会用到
-                if (form.getCallback() != null && form.getCallback().getCallBargain() != null){
+                if (form.getCallback() != null && form.getCallback().getCallBargain() != null) {
                     form.getCallback().setTargetId(form.getClue().getId());
                     form.getCallback().setReleType(ReleTypeEnum.CLUE_TYPE.getCode());
                     form.getCallback().setAdminId(admin.getId());
@@ -176,10 +176,11 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
 
     /**
      * 保存线索
+     *
      * @param form
      */
     @Override
-    public Boolean saveClueImport(ClueAddForm form,CrmAdmin admin) {
+    public Boolean saveClueImport(ClueAddForm form, CrmAdmin admin) {
         //完善线索信息
         try {
             Integer numCode = getMaxNumCode();
@@ -201,10 +202,10 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
             } else {
                 clueResult = updateByPrimaryKeySelective(form.getClue());//更新线索
             }
-            if (clueResult == 1){
+            if (clueResult == 1) {
                 //保存客户联系人信息
                 for (CrmCustomer customer : form.getCustomerList()) {
-                    if (customer.getId() == null){
+                    if (customer.getId() == null) {
                         customerService.insertSelective(customer);
                         //保存线索 客户联系人关联表
                         CrmReleCust clueCust = new CrmReleCust();
@@ -213,19 +214,19 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
                         clueCust.setReleType(ReleTypeEnum.CLUE_TYPE.getCode());
                         clueCust.setCreateTime(new Date());
                         clueCustService.insertSelective(clueCust);
-                    }else{
+                    } else {
                         customerService.updateByPrimaryKeySelective(customer);
                     }
                 }
                 //保存产品信息begin
                 for (Long aLong : form.getProductIds()) {
                     CrmClueProduct product = clueProductService.selectByPrimaryKey(aLong);
-                    if (product == null){
+                    if (product == null) {
                         CrmClueProduct clueProduct = new CrmClueProduct();
                         clueProduct.setClueId(form.getClue().getId());
                         clueProduct.setProductId(aLong);
                         clueProductService.insertSelective(clueProduct);
-                    }else{
+                    } else {
                         clueProductService.deleteByPrimaryKey(aLong);
                     }
 
@@ -233,17 +234,17 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
                 //保存产品信息end
 
                 //保存回访信息begin 导入接口时会用到
-                if (form.getCallbackList() != null && !form.getCallbackList().isEmpty()){
+                if (form.getCallbackList() != null && !form.getCallbackList().isEmpty()) {
                     try {
-                        for (CrmCallback callback:form.getCallbackList()){
+                        for (CrmCallback callback : form.getCallbackList()) {
                             //根据真实姓名查询归属人
-                            logger.info("判断回访人姓名是否为空:callback.getAdminName()"+callback.getAdminName());
-                            if (StringUtils.isNotEmpty(callback.getAdminName())){
+                            logger.info("判断回访人姓名是否为空:callback.getAdminName()" + callback.getAdminName());
+                            if (StringUtils.isNotEmpty(callback.getAdminName())) {
                                 logger.info("查询回访人是否存在");
                                 CrmAdmin ownerName = adminService.selectAdminByRealName(callback.getAdminName());
-                                if (ownerName != null){
+                                if (ownerName != null) {
                                     callback.setAdminId(ownerName.getId());
-                                }else {
+                                } else {
                                     callback.setAdminId(admin.getId());
                                 }
                                 callback.setCallBargain(form.getCallback().getCallBargain());
@@ -270,6 +271,7 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
 
     /**
      * 保存线索
+     *
      * @param form
      */
     @Override
@@ -278,11 +280,11 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
         try {
             CrmAdmin admin = getUser();
             form.getClue().setUpdateTime(new Date());
-            int clueResult  = updateByPrimaryKeySelective(form.getClue());//更新线索
-            if (clueResult == 1){
+            int clueResult = updateByPrimaryKeySelective(form.getClue());//更新线索
+            if (clueResult == 1) {
                 //保存客户联系人信息
                 for (CrmCustomer customer : form.getCustomerList()) {
-                    if (customer.getId() == null){
+                    if (customer.getId() == null) {
                         customerService.insertSelective(customer);
                         //保存线索 客户联系人关联表
                         CrmReleCust clueCust = new CrmReleCust();
@@ -291,7 +293,7 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
                         clueCust.setReleType(ReleTypeEnum.CLUE_TYPE.getCode());
                         clueCust.setCreateTime(new Date());
                         clueCustService.insertSelective(clueCust);
-                    }else{
+                    } else {
                         customerService.updateByPrimaryKeySelective(customer);
                     }
                 }
@@ -307,7 +309,7 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
                 }
                 //保存产品信息end
                 //保存回访信息begin
-                if (!StringUtils.isEmpty(form.getCallback().getCallContent()) || form.getCallback().getCallNextTime() != null){
+                if (!StringUtils.isEmpty(form.getCallback().getCallContent()) || form.getCallback().getCallNextTime() != null) {
                     form.getCallback().setTargetId(form.getClue().getId());
                     form.getCallback().setReleType(ReleTypeEnum.CLUE_TYPE.getCode());
                     form.getCallback().setAdminId(admin.getId());
@@ -318,7 +320,7 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
                 //保存回访信息end
             }
             //记录操作记录
-            optionLogService.saveOptionLog(ReleTypeEnum.CLUE_TYPE.getCode(),form.getClue().getId(),admin.getId(), OptionTypeEnum.EDIT.getCode());
+            optionLogService.saveOptionLog(ReleTypeEnum.CLUE_TYPE.getCode(), form.getClue().getId(), admin.getId(), OptionTypeEnum.EDIT.getCode());
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -344,39 +346,39 @@ public class CrmClueServiceImpl extends BaseService implements CrmClueService {
         Map<String, Object> params = new HashMap<>();
         params.put("contacts", StringUtils.isNotEmpty(clue.getContacts()) ? clue.getContacts() : null);
         params.put("contactsPhone", StringUtils.isNotEmpty(clue.getContactsPhone()) ? clue.getContactsPhone() : null);
-        params.put("custName",StringUtils.isNotEmpty(clue.getCustName()) ? clue.getCustName() : null);
-        params.put("clueStatusOnline",clue.getClueStatusOnline());
-        params.put("custProvince",clue.getCustProvince());
-        params.put("custCity",clue.getCustCity());
-        params.put("clueType",clue.getClueType());
-        params.put("clueSource",clue.getClueSource());
-        params.put("owner",clue.getOwner());
-        params.put("ownerName",StringUtils.isNotEmpty(clue.getOwnerName()) && StringUtils.isNotEmpty(clue.getOwnerName().trim()) ? clue.getOwnerName() : null);
-        params.put("userId",getUser().getId());//当前登录用户ID
-        params.put("roleType",getUser().getRoleType());//当前登录用户ID
-        params.put("adminId",clue.getAdminId());
+        params.put("custName", StringUtils.isNotEmpty(clue.getCustName()) ? clue.getCustName() : null);
+        params.put("clueStatusOnline", clue.getClueStatusOnline());
+        params.put("custProvince", clue.getCustProvince());
+        params.put("custCity", clue.getCustCity());
+        params.put("clueType", clue.getClueType());
+        params.put("clueSource", clue.getClueSource());
+        params.put("owner", clue.getOwner());
+        params.put("ownerName", StringUtils.isNotEmpty(clue.getOwnerName()) && StringUtils.isNotEmpty(clue.getOwnerName().trim()) ? clue.getOwnerName() : null);
+        params.put("userId", getUser().getId());//当前登录用户ID
+        params.put("roleType", getUser().getRoleType());//当前登录用户ID
+        params.put("adminId", clue.getAdminId());
         params.put("productId", clue.getProductId());
         params.put("callBargain", clue.getCallBargain());
         params.put("clueKnow", clue.getClueKnow());
         params.put("createTimestart", clue.getCreateTimestart());
         params.put("createTimeend", clue.getCreateTimeend());
-        params.put("nextTimestart",clue.getNextTimestart());
-        params.put("nextTimeend",clue.getNextTimeend());
+        params.put("nextTimestart", clue.getNextTimestart());
+        params.put("nextTimeend", clue.getNextTimeend());
         params.put("allotTimestart", clue.getAllotTimestart());
         params.put("allotTimeend", clue.getAllotTimeend());
         params.put("searchType", clue.getSearchType());
         params.put("isDepManager", clue.getIsDepManager());
         params.put("optionStatus", clue.getOptionStatus());
-        params.put("contactsQQ",clue.getContactsQQ());
-        params.put("callTimestart",clue.getCallTimestart());
-        params.put("callTimeend",clue.getCallTimeend());
-        if (clue.getIsDepManager() != null && clue.getIsDepManager() == 1){
+        params.put("contactsQQ", clue.getContactsQQ());
+        params.put("callTimestart", clue.getCallTimestart());
+        params.put("callTimeend", clue.getCallTimeend());
+        if (clue.getIsDepManager() != null && clue.getIsDepManager() == 1) {
             List<CrmAdmin> adminList = adminService.getOwerList(getUser());
             List<Long> ownersList = new ArrayList<>();
             for (CrmAdmin admin : adminList) {
                 ownersList.add(admin.getId());
             }
-            params.put("ownersList",ownersList);
+            params.put("ownersList", ownersList);
         }
 
 

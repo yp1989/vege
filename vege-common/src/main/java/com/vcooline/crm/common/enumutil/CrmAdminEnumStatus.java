@@ -11,10 +11,9 @@ import java.util.List;
  * Created by xinbaojian on 15/7/16.
  */
 public enum CrmAdminEnumStatus {
-    NORMAL((byte)1,"正常"),
-    FREEZE((byte)2,"冻结"),
-    CANCEL((byte)3,"注销"),
-    ;
+    NORMAL((byte) 1, "正常"),
+    FREEZE((byte) 2, "冻结"),
+    CANCEL((byte) 3, "注销"),;
 
     private Byte code;
     private String desc;
@@ -24,9 +23,9 @@ public enum CrmAdminEnumStatus {
         this.desc = desc;
     }
 
-    public static String getDescByCode(Byte code){
+    public static String getDescByCode(Byte code) {
         for (CrmAdminEnumStatus adm : CrmAdminEnumStatus.values()) {
-            if (adm.getCode().equals(code)){
+            if (adm.getCode().equals(code)) {
                 return adm.getDesc();
             }
         }
@@ -49,7 +48,7 @@ public enum CrmAdminEnumStatus {
         this.desc = desc;
     }
 
-    public static String toJson(){
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (CrmAdminEnumStatus enumpojo : CrmAdminEnumStatus.values()) {
@@ -61,7 +60,7 @@ public enum CrmAdminEnumStatus {
         return JSONObject.toJSONString(list);
     }
 
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (CrmAdminEnumStatus enumpojo : CrmAdminEnumStatus.values()) {

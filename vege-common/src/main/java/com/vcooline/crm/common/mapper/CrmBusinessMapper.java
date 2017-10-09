@@ -57,20 +57,23 @@ public interface CrmBusinessMapper {
 
     /**
      * 获取当前自增码最大值
+     *
      * @return
      */
     Integer getMaxNumCode();
 
     /**
      * 根据条件查询分页
+     *
      * @param page
      * @return
      */
-    List<CrmBusiness> queryCrmBusieForPage(@Param("page")Page<CrmBusiness> page);
+    List<CrmBusiness> queryCrmBusieForPage(@Param("page") Page<CrmBusiness> page);
 
 
     /**
      * 查询列表
+     *
      * @param record
      * @return
      */

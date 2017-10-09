@@ -31,7 +31,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method returns the value of the database column districts.id
      *
      * @return the value of districts.id
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public Integer getId() {
@@ -43,7 +42,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method sets the value of the database column districts.id
      *
      * @param id the value for districts.id
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setId(Integer id) {
@@ -55,7 +53,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method returns the value of the database column districts.name
      *
      * @return the value of districts.name
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public String getName() {
@@ -67,7 +64,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method sets the value of the database column districts.name
      *
      * @param name the value for districts.name
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setName(String name) {
@@ -79,7 +75,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method returns the value of the database column districts.pinyin
      *
      * @return the value of districts.pinyin
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public String getPinyin() {
@@ -91,7 +86,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method sets the value of the database column districts.pinyin
      *
      * @param pinyin the value for districts.pinyin
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setPinyin(String pinyin) {
@@ -103,7 +97,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method returns the value of the database column districts.city_id
      *
      * @return the value of districts.city_id
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public Integer getCityId() {
@@ -115,7 +108,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method sets the value of the database column districts.city_id
      *
      * @param cityId the value for districts.city_id
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setCityId(Integer cityId) {
@@ -127,7 +119,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method returns the value of the database column districts.sort
      *
      * @return the value of districts.sort
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public Integer getSort() {
@@ -139,7 +130,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method sets the value of the database column districts.sort
      *
      * @param sort the value for districts.sort
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setSort(Integer sort) {
@@ -151,7 +141,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method returns the value of the database column districts.created_at
      *
      * @return the value of districts.created_at
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public Date getCreatedAt() {
@@ -163,7 +152,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method sets the value of the database column districts.created_at
      *
      * @param createdAt the value for districts.created_at
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setCreatedAt(Date createdAt) {
@@ -175,7 +163,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method returns the value of the database column districts.updated_at
      *
      * @return the value of districts.updated_at
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public Date getUpdatedAt() {
@@ -187,7 +174,6 @@ public class Districts extends BaseModel implements Serializable {
      * This method sets the value of the database column districts.updated_at
      *
      * @param updatedAt the value for districts.updated_at
-     *
      * @mbggenerated Thu Jul 16 15:20:22 CST 2015
      */
     public void setUpdatedAt(Date updatedAt) {

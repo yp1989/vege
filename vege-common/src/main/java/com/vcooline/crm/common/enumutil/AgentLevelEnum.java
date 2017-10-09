@@ -11,13 +11,11 @@ import java.util.List;
  * Created by xinbaojian on 15/8/4.
  */
 public enum AgentLevelEnum {
-    PU_DAI((byte)1,"普代"),
-    ZONG_DAI((byte)2,"总代"),
-    SAN_FANG_DAI_LI((byte)3,"三方代理"),
-    WEI_KE_LIFE((byte)4,"微客生活"),
-    SHI_XING((byte)5,"试行"),
-
-    ;
+    PU_DAI((byte) 1, "普代"),
+    ZONG_DAI((byte) 2, "总代"),
+    SAN_FANG_DAI_LI((byte) 3, "三方代理"),
+    WEI_KE_LIFE((byte) 4, "微客生活"),
+    SHI_XING((byte) 5, "试行"),;
     private Byte code;
     private String desc;
 
@@ -42,16 +40,16 @@ public enum AgentLevelEnum {
         this.desc = desc;
     }
 
-    public static AgentLevelEnum getByCode(Byte code){
+    public static AgentLevelEnum getByCode(Byte code) {
         for (AgentLevelEnum clue : AgentLevelEnum.values()) {
-            if (clue.getCode().equals(code)){
+            if (clue.getCode().equals(code)) {
                 return clue;
             }
         }
         return null;
     }
 
-    public static String toJson(){
+    public static String toJson() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (AgentLevelEnum enumpojo : AgentLevelEnum.values()) {
@@ -63,7 +61,7 @@ public enum AgentLevelEnum {
         return JSONObject.toJSONString(list);
     }
 
-    public static List<EnumPojo> toList(){
+    public static List<EnumPojo> toList() {
         List<EnumPojo> list = new ArrayList<>();
         EnumPojo pojo = null;
         for (AgentLevelEnum enumpojo : AgentLevelEnum.values()) {

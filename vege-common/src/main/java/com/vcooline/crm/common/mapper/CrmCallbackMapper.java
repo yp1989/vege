@@ -56,6 +56,7 @@ public interface CrmCallbackMapper {
 
     /**
      * 根据线索ID查询该线索最后一条回访记录
+     *
      * @param clueId
      * @return
      */
@@ -63,9 +64,10 @@ public interface CrmCallbackMapper {
 
     /**
      * 根据线索ID查询该线索最后一条回访记录(倒序)
+     *
      * @param targetId
      * @param releType
      * @return
      */
-    List<CrmCallback> selectCallBackListByTarget(@Param("targetId")Long targetId,@Param("releType")Byte releType);
+    List<CrmCallback> selectCallBackListByTarget(@Param("targetId") Long targetId, @Param("releType") Byte releType);
 }

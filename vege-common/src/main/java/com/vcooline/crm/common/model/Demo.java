@@ -4,55 +4,55 @@ import java.util.Date;
 
 public class Demo extends BaseModel {
 
-	private static final long serialVersionUID = -7690521888646016588L;
+    private static final long serialVersionUID = -7690521888646016588L;
 
-	private String id;
+    private String id;
 
-	private String name;
+    private String name;
 
-	private Date createdAt;
+    private Date createdAt;
 
-	private Date updatedAt;
+    private Date updatedAt;
 
-	private Byte status;
+    private Byte status;
 
-	public String getId() {
-		return id;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public Date getCreatedAt() {
-		return createdAt;
-	}
+    public Date getCreatedAt() {
+        return createdAt;
+    }
 
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
 
-	public Date getUpdatedAt() {
-		return updatedAt;
-	}
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
 
-	public void setUpdatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
-	}
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 
-	public Byte getStatus() {
-		return status;
-	}
+    public Byte getStatus() {
+        return status;
+    }
 
-	public void setStatus(Byte status) {
-		this.status = status;
-	}
+    public void setStatus(Byte status) {
+        this.status = status;
+    }
 }

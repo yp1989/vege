@@ -102,7 +102,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_gathering.id
      *
      * @return the value of crm_gathering.id
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public Long getId() {
@@ -114,7 +113,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_gathering.id
      *
      * @param id the value for crm_gathering.id
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public void setId(Long id) {
@@ -126,7 +124,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_gathering.cont_id
      *
      * @return the value of crm_gathering.cont_id
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public Long getContId() {
@@ -138,7 +135,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_gathering.cont_id
      *
      * @param contId the value for crm_gathering.cont_id
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public void setContId(Long contId) {
@@ -150,7 +146,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_gathering.gath_money
      *
      * @return the value of crm_gathering.gath_money
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public Long getGathMoney() {
@@ -162,7 +157,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_gathering.gath_money
      *
      * @param gathMoney the value for crm_gathering.gath_money
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public void setGathMoney(Long gathMoney) {
@@ -174,7 +168,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_gathering.gath_date
      *
      * @return the value of crm_gathering.gath_date
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public Date getGathDate() {
@@ -186,7 +179,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_gathering.gath_date
      *
      * @param gathDate the value for crm_gathering.gath_date
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public void setGathDate(Date gathDate) {
@@ -198,7 +190,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_gathering.register_id
      *
      * @return the value of crm_gathering.register_id
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public Long getRegisterId() {
@@ -210,7 +201,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_gathering.register_id
      *
      * @param registerId the value for crm_gathering.register_id
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public void setRegisterId(Long registerId) {
@@ -222,7 +212,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_gathering.register_name
      *
      * @return the value of crm_gathering.register_name
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public String getRegisterName() {
@@ -234,7 +223,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_gathering.register_name
      *
      * @param registerName the value for crm_gathering.register_name
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public void setRegisterName(String registerName) {
@@ -246,7 +234,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_gathering.is_del
      *
      * @return the value of crm_gathering.is_del
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public Boolean getIsDel() {
@@ -258,7 +245,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_gathering.is_del
      *
      * @param isDel the value for crm_gathering.is_del
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -270,7 +256,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_gathering.create_time
      *
      * @return the value of crm_gathering.create_time
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public Date getCreateTime() {
@@ -282,7 +267,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_gathering.create_time
      *
      * @param createTime the value for crm_gathering.create_time
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -294,7 +278,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_gathering.update_time
      *
      * @return the value of crm_gathering.update_time
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public Date getUpdateTime() {
@@ -306,7 +289,6 @@ public class CrmGathering extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_gathering.update_time
      *
      * @param updateTime the value for crm_gathering.update_time
-     *
      * @mbggenerated Wed Aug 05 14:41:06 CST 2015
      */
     public void setUpdateTime(Date updateTime) {

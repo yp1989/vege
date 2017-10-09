@@ -28,25 +28,30 @@ public interface CrmClueService {
 
     /**
      * 获取当前自增码最大值
+     *
      * @return
      */
     Integer getMaxNumCode();
 
     Boolean saveClue(ClueAddForm form);
-    Boolean saveClueImport(ClueAddForm form,CrmAdmin admin);
+
+    Boolean saveClueImport(ClueAddForm form, CrmAdmin admin);
+
     Boolean updateClue(ClueAddForm form);
 
     /**
      * 分页查询
+     *
      * @param clue
      * @param pageNo
      * @param pageSize
      * @return
      */
-    public Page<CrmClue> queryCrmClueForPage(CrmClue clue,Integer pageNo,Integer pageSize);
+    public Page<CrmClue> queryCrmClueForPage(CrmClue clue, Integer pageNo, Integer pageSize);
 
     /**
      * 关闭线索
+     *
      * @param clueId 要关闭的线索ID
      * @return
      */
@@ -54,6 +59,7 @@ public interface CrmClueService {
 
     /**
      * 根据手机号查询所关联线索
+     *
      * @param phone
      * @return
      */
@@ -61,6 +67,7 @@ public interface CrmClueService {
 
     /**
      * 根据客户名称查询所关联线索
+     *
      * @param custName
      * @return
      */
@@ -68,6 +75,7 @@ public interface CrmClueService {
 
     /**
      * 根据老Admin线索ID查询该线索是否存在
+     *
      * @param clueId
      * @return
      */

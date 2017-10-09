@@ -13,7 +13,7 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
 
     /**
      * 1 表示线索
-            2 表示商机
+     * 2 表示商机
      *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
@@ -99,7 +99,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_allocation_log.id
      *
      * @return the value of crm_allocation_log.id
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public Long getId() {
@@ -111,7 +110,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_allocation_log.id
      *
      * @param id the value for crm_allocation_log.id
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public void setId(Long id) {
@@ -123,7 +121,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_allocation_log.allo_type
      *
      * @return the value of crm_allocation_log.allo_type
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public Byte getAlloType() {
@@ -135,7 +132,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_allocation_log.allo_type
      *
      * @param alloType the value for crm_allocation_log.allo_type
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public void setAlloType(Byte alloType) {
@@ -147,7 +143,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_allocation_log.target_id
      *
      * @return the value of crm_allocation_log.target_id
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public Long getTargetId() {
@@ -159,7 +154,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_allocation_log.target_id
      *
      * @param targetId the value for crm_allocation_log.target_id
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public void setTargetId(Long targetId) {
@@ -171,7 +165,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_allocation_log.allo_source
      *
      * @return the value of crm_allocation_log.allo_source
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public Long getAlloSource() {
@@ -183,7 +176,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_allocation_log.allo_source
      *
      * @param alloSource the value for crm_allocation_log.allo_source
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public void setAlloSource(Long alloSource) {
@@ -195,7 +187,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_allocation_log.allo_admin
      *
      * @return the value of crm_allocation_log.allo_admin
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public Long getAlloAdmin() {
@@ -207,7 +198,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_allocation_log.allo_admin
      *
      * @param alloAdmin the value for crm_allocation_log.allo_admin
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public void setAlloAdmin(Long alloAdmin) {
@@ -219,7 +209,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_allocation_log.allo_owner
      *
      * @return the value of crm_allocation_log.allo_owner
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public Long getAlloOwner() {
@@ -231,7 +220,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_allocation_log.allo_owner
      *
      * @param alloOwner the value for crm_allocation_log.allo_owner
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public void setAlloOwner(Long alloOwner) {
@@ -243,7 +231,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_allocation_log.is_del
      *
      * @return the value of crm_allocation_log.is_del
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public Boolean getIsDel() {
@@ -255,7 +242,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_allocation_log.is_del
      *
      * @param isDel the value for crm_allocation_log.is_del
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public void setIsDel(Boolean isDel) {
@@ -267,7 +253,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_allocation_log.create_time
      *
      * @return the value of crm_allocation_log.create_time
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public Date getCreateTime() {
@@ -279,7 +264,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_allocation_log.create_time
      *
      * @param createTime the value for crm_allocation_log.create_time
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public void setCreateTime(Date createTime) {
@@ -291,7 +275,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method returns the value of the database column crm_allocation_log.update_time
      *
      * @return the value of crm_allocation_log.update_time
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public Date getUpdateTime() {
@@ -303,7 +286,6 @@ public class CrmAllocationLog extends BaseModel implements Serializable {
      * This method sets the value of the database column crm_allocation_log.update_time
      *
      * @param updateTime the value for crm_allocation_log.update_time
-     *
      * @mbggenerated Fri Jul 24 16:50:38 CST 2015
      */
     public void setUpdateTime(Date updateTime) {

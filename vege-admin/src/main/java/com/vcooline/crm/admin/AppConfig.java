@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Import;
 @Configuration
 @EnableAutoConfiguration
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-@Import({ DataSourceConfig.class, WebConfig.class, SecureConfig.class })
+@Import({DataSourceConfig.class, WebConfig.class, SecureConfig.class})
 public class AppConfig {
 
 }

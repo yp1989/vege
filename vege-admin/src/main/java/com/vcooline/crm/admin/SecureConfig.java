@@ -1,5 +1,6 @@
 package com.vcooline.crm.admin;
 
+import com.vcooline.crm.admin.service.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Configuration;
@@ -12,42 +13,40 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.vcooline.crm.admin.service.MyUserDetailsService;
-
 @Configuration
 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecureConfig extends WebSecurityConfigurerAdapter {
 
-	@Autowired
-	MyUserDetailsService detailsService;
-	
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.exceptionHandling().accessDeniedPage("/accessDenied")
-			.and().authorizeRequests()
-			.anyRequest().permitAll()
-			.antMatchers("/admin/*").hasAuthority("admin")
+    @Autowired
+    MyUserDetailsService detailsService;
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.exceptionHandling().accessDeniedPage("/accessDenied")
+                .and().authorizeRequests()
+                .anyRequest().permitAll()
+                .antMatchers("/admin/*").hasAuthority("admin")
 //			.anyRequest().authenticated()
-			.and().formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/", true)
+                .and().formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/", true)
 //			.successHandler(successHandler)
-			.and().logout().logoutUrl("/logout")
+                .and().logout().logoutUrl("/logout")
 //			.addLogoutHandler(logoutHandler)
-			.and().sessionManagement().maximumSessions(1).expiredUrl("/expired")
-			.and()
-			.and().csrf().disable();
-		
-	}
+                .and().sessionManagement().maximumSessions(1).expiredUrl("/expired")
+                .and()
+                .and().csrf().disable();
 
-	@Override
-	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/static/**").antMatchers("/**/favicon.ico").antMatchers("/druid/**");
-	}
+    }
 
-	@Override
-	public void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(detailsService).passwordEncoder(new BCryptPasswordEncoder());
-	}
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/static/**").antMatchers("/**/favicon.ico").antMatchers("/druid/**");
+    }
+
+    @Override
+    public void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(detailsService).passwordEncoder(new BCryptPasswordEncoder());
+    }
 
 }
