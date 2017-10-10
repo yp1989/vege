@@ -9,7 +9,7 @@
             <property name="suppressAllComments" value="false"/>
         </commentGenerator>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.1.166:3306/crm_production" userId="root" password="root"/>
+                        connectionURL="jdbc:mysql://localhost:4407/crm" userId="root" password="root"/>
         <!--
         <javaTypeResolver >
             <property name="forceBigDecimals" value="true" />
@@ -17,100 +17,22 @@
         -->
 
         <javaModelGenerator targetPackage="com.vcooline.crm.common.model"
-                            targetProject="/Users/xinbaojian/java/crm/crm-common/src/main/java">
+                            targetProject="/Users/baojian/workfile/workspace/java/vege/vege-common/src/main/java">
             <property name="rootClass" value="com.vcooline.crm.common.model.BaseModel"/>
             <property name="trimStrings" value="true"/>
             <!--<property name="enableSubPackages" value="true" />-->
         </javaModelGenerator>
         <sqlMapGenerator targetPackage="com.vcooline.crm.common.mapper.impl"
-                         targetProject="/Users/xinbaojian/java/crm/crm-common/src/main/java">
+                         targetProject="/Users/baojian/workfile/workspace/java/vege/vege-common/src/main/java">
             <!--<property name="enableSubPackages" value="true" />-->
         </sqlMapGenerator>
         <javaClientGenerator targetPackage="com.vcooline.crm.common.mapper"
-                             targetProject="/Users/xinbaojian/java/crm/crm-common/src/main/java" type="XMLMAPPER">
+                             targetProject="/Users/baojian/workfile/workspace/java/vege/vege-common/src/main/java" type="XMLMAPPER">
             <!--<property name="enableSubPackages" value="true" />-->
         </javaClientGenerator>
 
-        <!--  <table tableName="cities" domainObjectName="Cities" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
-         </table>
-
-         <table tableName="crm_admin" domainObjectName="CrmAdmin" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
-
-         </table>
-         <table tableName="crm_admin_role" domainObjectName="CrmAdminRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
-
-         </table>
-
-         <table tableName="crm_auth" domainObjectName="CrmAuth" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
-
-         </table>
-         <table tableName="crm_autharea" domainObjectName="CrmAutharea" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
-
-
-
-         </table>-->
-        <!--<table tableName="crm_business" domainObjectName="CrmBusiness" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >-->
-        <!-- -->
-        <!--</table>-->
-        <!--<table tableName="crm_callback" domainObjectName="CrmCallback" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table> -->
-        <!--<table tableName="crm_clue" domainObjectName="CrmClue" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >-->
-        <!-- -->
-        <!--</table>-->
-        <!-- <table tableName="crm_clue_cust" domainObjectName="CrmClueCust" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="crm_clue_product" domainObjectName="CrmClueProduct" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="crm_cont_product" domainObjectName="CrmContProduct" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="crm_contract" domainObjectName="CrmContract" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="crm_customer" domainObjectName="CrmCustomer" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="crm_dep" domainObjectName="CrmDep" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="crm_gathering" domainObjectName="CrmGathering" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="crm_product" domainObjectName="CrmProduct" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="crm_product_version" domainObjectName="CrmProductVersion" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="crm_role" domainObjectName="CrmRole" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="crm_role_auth" domainObjectName="CrmRoleAuth" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="districts" domainObjectName="Districts" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table>
-        <table tableName="provinces" domainObjectName="Provinces" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
- 				
-        </table> -->
-        <!--<table tableName="crm_option_log" domainObjectName="CrmOptionLog" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >-->
-
-        <!--</table>-->
-
-        <!--<table tableName="crm_allocation_log" domainObjectName="CrmAllocationLog" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >-->
-
-        <!--</table>-->
-
-
-        <!--<table tableName="crm_rele_version" domainObjectName="CrmReleVersion" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >-->
-        <!--</table>-->
-        <table tableName="crm_contract_file" domainObjectName="CrmContractFile" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false">
+        <!--<table tableName="vege_category" domainObjectName="VegeCategory" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <table tableName="vege_product" domainObjectName="VegeProdect" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 
         </table>
     </context>

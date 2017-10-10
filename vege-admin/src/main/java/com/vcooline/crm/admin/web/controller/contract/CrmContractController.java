@@ -38,7 +38,7 @@ public class CrmContractController extends BaseController {
     @Autowired
     private CrmContractFileService fileService;
 
-    @Value("${file.upload.path}")
+
     private String filePath;
 
     @RequestMapping("contractPage")

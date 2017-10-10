@@ -1,6 +1,8 @@
 package com.vcooline.crm.common.utils;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.vcooline.crm.common.pojo.GoodsPojo;
 import com.vcooline.crm.common.util.ConstantUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -141,6 +143,10 @@ public class HttpRequestUtil {
 
     public static void main(String[] args) {
         String url = "http://at.itsmore.com/goods/";
-        System.out.println(HttpRequestUtil.sendGet(url, null));
+        String jsonData = HttpRequestUtil.sendGet(url, null);
+        System.out.println(jsonData);
+        Gson gson = new Gson();
+        List<GoodsPojo> goodsPojos = gson.fromJson(jsonData, new TypeToken<List<GoodsPojo>>(){}.getType());
+        System.out.println(goodsPojos.toString());
     }
 }
