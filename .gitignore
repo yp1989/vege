@@ -7,5 +7,7 @@ target/
 .idea/
 *.iml
 /log/*
+*.zip
+*.log
 /crm-admin/log
 .DS_Store
