@@ -53,4 +53,6 @@ interface IVegeCategoryService {
     int updateByPrimaryKey(VegeCategory record)
 
     int saveOrUpdate(VegeCategory record)
+
+    List<VegeCategory> selectAllCategory(VegeCategory category)
 }

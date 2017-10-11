@@ -17,6 +17,8 @@ public class DateUtil extends DateUtils {
 
     public final static String DEFAULT_YMD_FORMAT = "yyyy-MM-dd";
 
+    public final static String DEFAULT_T_FORMAT = "yyyy-MM-dd'T'HH:mm:ss";
+
     private final static SimpleDateFormat FORMAT = new SimpleDateFormat(DEFAULT_FORMAT);
 
     // 字符串转换到时间格式
@@ -213,6 +215,8 @@ public class DateUtil extends DateUtils {
         System.out.println(format.parse(str).getTime() / 1000);
 //		System.out.println(getTime(strToDate(String.format("%s-01-01 00:00:00",),DEFAULT_FORMAT)));
         System.out.println(getCurrentYearMonthStr());
+        System.out.println(strToDate("2017-04-20T14:28:07.77", DEFAULT_T_FORMAT));
+        System.out.println(strToDate("1900-01-01T00:00:00", DEFAULT_T_FORMAT));
     }
 
 }

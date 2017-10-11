@@ -63,7 +63,7 @@ interface IVegeProductService {
 
 
 
-    int saveOrUpdate(VegeProdect record)
+    int saveOrUpdate(VegeProdectWithBLOBs record)
 
 
 

@@ -51,7 +51,14 @@ class VegeProductServiceImpl implements IVegeProductService{
     }
 
     @Override
-    int saveOrUpdate(VegeProdect record) {
-        return 0
+    int saveOrUpdate(VegeProdectWithBLOBs record) {
+        //根据商品编码查询商品
+        VegeProdect prodect = vegeProdectMapper.selectByNumber(record.number)
+        int result = 0
+        if (prodect == null)
+            vegeProdectMapper.insertSelective(record)
+        else
+            vegeProdectMapper.updateByPrimaryKeySelective(record)
+        return result
     }
 }

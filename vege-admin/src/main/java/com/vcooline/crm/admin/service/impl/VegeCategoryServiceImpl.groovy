@@ -58,4 +58,9 @@ class VegeCategoryServiceImpl implements IVegeCategoryService{
         }
         return result
     }
+
+    @Override
+    List<VegeCategory> selectAllCategory(VegeCategory category) {
+        return vegeCategoryMapper.selectAllCategory(category)
+    }
 }
