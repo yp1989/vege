@@ -46,6 +46,7 @@ class SyscGoodsServiceImpl implements ISyscGoodsService{
 
             product = convertFromGoodsPojo(pojo)
             product.categoryId = category.id
+            println category.id
             vegeProductService.saveOrUpdate(product)
         }
     }

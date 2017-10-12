@@ -65,6 +65,8 @@ interface IVegeProductService {
 
     int saveOrUpdate(VegeProdectWithBLOBs record)
 
+    List<VegeProdectWithBLOBs> getAllList(VegeProdect vegeProdect)
+
 
 
 }

@@ -5,16 +5,16 @@ import com.google.gson.annotations.SerializedName
 class GoodsPojo {
 
     @SerializedName("category_id")
-    private String categoryId
+    String categoryId
 
     @SerializedName("caregory_name")
-    private String categoryName
+    String categoryName
 
     @SerializedName("Number")
-    private String number
+    String number
 
     @SerializedName("Name")
-    private String name
+    String name
 
     @SerializedName("barcode")
     String barcode

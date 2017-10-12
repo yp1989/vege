@@ -431,4 +431,8 @@
   <select id="selectByNumber" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
       SELECT * FROM vege_product product WHERE product.number = #{number,jdbcType=VARCHAR}
   </select>
+
+  <select id="getAllList" resultMap="ResultMapWithBLOBs" parameterType="com.vcooline.crm.common.model.VegeProdect">
+
+  </select>
 </mapper>

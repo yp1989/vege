@@ -61,4 +61,9 @@ class VegeProductServiceImpl implements IVegeProductService{
             vegeProdectMapper.updateByPrimaryKeySelective(record)
         return result
     }
+
+    @Override
+    List<VegeProdectWithBLOBs> getAllList(VegeProdect vegeProdect) {
+        return null
+    }
 }

@@ -784,7 +784,7 @@ delimiter ;
 -- ----------------------------
 DROP FUNCTION IF EXISTS `getChildList`;
 delimiter ;;
-CREATE DEFINER=`vcooline`@`%` FUNCTION `getChildList`(rootId BIGINT(32)) RETURNS varchar(1000) CHARSET utf8
+CREATE DEFINER=`root`@`%` FUNCTION `getChildList`(rootId BIGINT(32)) RETURNS varchar(1000) CHARSET utf8
 BEGIN
     DECLARE sTemp VARCHAR(1000);
     DECLARE sTempChd VARCHAR(1000);

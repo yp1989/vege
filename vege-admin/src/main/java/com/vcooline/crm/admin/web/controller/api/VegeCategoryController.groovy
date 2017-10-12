@@ -1,4 +1,4 @@
-package com.vcooline.crm.admin.web.controller
+package com.vcooline.crm.admin.web.controller.api
 
 import com.vcooline.crm.admin.service.IVegeCategoryService
 import com.vcooline.crm.common.model.VegeCategory

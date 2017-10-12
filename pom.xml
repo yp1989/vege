@@ -183,6 +183,5 @@
     <modules>
         <module>vege-common</module>
         <module>vege-admin</module>
-        <module>vege-api</module>
     </modules>
 </project>
