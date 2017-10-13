@@ -1,4 +1,4 @@
-package com.vcooline.crm.admin.web.controller.api
+package com.vcooline.crm.admin.web.api
 
 import com.vcooline.crm.admin.service.IVegeCategoryService
 import com.vcooline.crm.common.model.VegeCategory
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/category")
+@RequestMapping("/api/category")
 class VegeCategoryController {
 
     @Autowired

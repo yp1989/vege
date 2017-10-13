@@ -27,6 +27,7 @@ public class SecureConfig extends WebSecurityConfigurerAdapter {
         http.exceptionHandling().accessDeniedPage("/accessDenied")
                 .and().authorizeRequests()
                 .anyRequest().permitAll()
+                .antMatchers("/api/*").permitAll()
                 .antMatchers("/admin/*").hasAuthority("admin")
 //			.anyRequest().authenticated()
                 .and().formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/", true)
