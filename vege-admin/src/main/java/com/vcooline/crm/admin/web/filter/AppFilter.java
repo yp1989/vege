@@ -29,7 +29,7 @@ public class AppFilter implements Filter {
         logger.info("request path:" + path);
         CrmAdmin admin = (CrmAdmin) req.getSession().getAttribute(GlobalConstants.USER);
 
-        if (admin == null && !path.toLowerCase().contains("login")
+        if (!path.contains("/api/") && admin == null && !path.toLowerCase().contains("login")
                 && !path.contains("/static/admin")
                 && !path.toLowerCase().contains("import")) {
             res.sendRedirect("/login");

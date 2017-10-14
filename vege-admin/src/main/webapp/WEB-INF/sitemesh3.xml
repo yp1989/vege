@@ -10,4 +10,5 @@
     <mapping path="/callcenter/getAgent" exclue="true"/>
     <mapping path="/business/auditing" exclue="true"/>
     <mapping path="/err" exclue="true"/>
+    <mapping path="/api/*" exclue="true"/>
 </sitemesh>

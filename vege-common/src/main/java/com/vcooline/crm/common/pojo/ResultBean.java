@@ -32,4 +32,17 @@ public class ResultBean<T> {
     public void setObject(T object) {
         this.object = object;
     }
+
+    public ResultBean<T> success(T t){
+        this.object = t;
+        this.msg = "success";
+        this.code = 1;
+        return this;
+    }
+
+    public ResultBean<T> error(){
+        this.msg = "error";
+        this.code = -1;
+        return this;
+    }
 }

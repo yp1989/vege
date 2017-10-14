@@ -39,7 +39,8 @@ public class AuthUrlFilter implements Filter {
                 res.sendRedirect("/rootUrl");
                 return;
             }
-            if (isFreePage(path, auths)) {
+
+            if (path.contains("/api/") || isFreePage(path, auths)) {
                 chain.doFilter(request, response);
             } else {
                 res.sendRedirect("/err");
