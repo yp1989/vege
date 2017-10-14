@@ -67,6 +67,8 @@ interface IVegeProductService {
 
     List<VegeProdectWithBLOBs> getAllList(VegeProdect vegeProdect)
 
+    List<VegeProdectWithBLOBs> getAllListByCategoryId(Integer categoryId)
+
 
 
 }

@@ -429,10 +429,23 @@
   </update>
 
   <select id="selectByNumber" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
-      SELECT * FROM vege_product product WHERE product.number = #{number,jdbcType=VARCHAR}
+      SELECT
+        <include refid="Base_Column_List"/>,
+        <include refid="Blob_Column_List"/>
+       FROM vege_product product WHERE product.number = #{number,jdbcType=VARCHAR}
   </select>
 
   <select id="getAllList" resultMap="ResultMapWithBLOBs" parameterType="com.vcooline.crm.common.model.VegeProdect">
+    SELECT
+    <include refid="Base_Column_List"/>,
+    <include refid="Blob_Column_List"/>
+    FROM vege_product product
+  </select>
 
+  <select id="getAllListByCategoryId" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+    SELECT
+    <include refid="Base_Column_List"/>,
+    <include refid="Blob_Column_List"/>
+    FROM vege_product product WHERE product.category_id = #{categoryId,jdbcType=INTEGER}
   </select>
 </mapper>

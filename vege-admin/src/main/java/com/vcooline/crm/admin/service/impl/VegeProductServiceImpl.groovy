@@ -64,6 +64,11 @@ class VegeProductServiceImpl implements IVegeProductService{
 
     @Override
     List<VegeProdectWithBLOBs> getAllList(VegeProdect vegeProdect) {
-        return null
+        return vegeProdectMapper.getAllList(vegeProdect)
+    }
+
+    @Override
+    List<VegeProdectWithBLOBs> getAllListByCategoryId(Integer categoryId) {
+        return vegeProdectMapper.getAllListByCategoryId(categoryId)
     }
 }

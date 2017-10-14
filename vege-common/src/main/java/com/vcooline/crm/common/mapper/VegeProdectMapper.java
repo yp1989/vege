@@ -66,4 +66,6 @@ public interface VegeProdectMapper {
     VegeProdect selectByNumber(@Param("number")String number);
 
     List<VegeProdectWithBLOBs> getAllList(VegeProdect vegeProdect);
+
+    List<VegeProdectWithBLOBs> getAllListByCategoryId(@Param("categoryId") Integer categoryId);
 }
