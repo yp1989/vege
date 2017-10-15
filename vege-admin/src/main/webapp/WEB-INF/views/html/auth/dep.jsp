@@ -7,7 +7,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>部门管理</title>
+    <title>菜场管理</title>
 
 
 </head>
@@ -20,11 +20,11 @@
         <div class="col-md-3">
             <div id="tree_test"></div>
             <div id="mm" class="easyui-menu" style="width:120px;">
-                <div onclick="append()" data-toggle="modal" data-target="#add" data-options="iconCls:'icon-add'">添加部门
+                <div onclick="append()" data-toggle="modal" data-target="#add" data-options="iconCls:'icon-add'">添加菜场
                 </div>
-                <div onclick="edit()" data-toggle="modal" data-target="#edit" data-options="iconCls:'icon-edit'">修改部门
+                <div onclick="edit()" data-toggle="modal" data-target="#edit" data-options="iconCls:'icon-edit'">修改菜场
                 </div>
-                <div onclick="deleteNode()" data-options="iconCls:'icon-remove'">删除部门</div>
+                <div onclick="deleteNode()" data-options="iconCls:'icon-remove'">删除菜场</div>
             </div>
 
         </div>
@@ -38,8 +38,8 @@
                 <tr>
                     <th>序号</th>
                     <th>姓名</th>
-                    <th>部门</th>
-                    <th>部门管理者</th>
+                    <th>菜场</th>
+                    <th>菜场管理者</th>
                     <th>操作</th>
                 </tr>
                 </thead>
@@ -80,7 +80,7 @@
     <!-- 页面内容全部放大这里 结束 -->
 </div>
 
-<!--添加子部门弹窗-->
+<!--添加子菜场弹窗-->
 <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -89,16 +89,16 @@
                         aria-hidden="true">×
                 </button>
                 <h4 class="modal-title" id="myModalLabel">
-                    添加部门
+                    添加菜场
                 </h4>
             </div>
             <div class="modal-body">
                 <form id="addDepForm" class="form-horizontal" role="form" method="post">
                     <input type="hidden" id="parentId" name="parentId">
                     <div class="form-group">
-                        <label class="col-md-3 control-label" for="form-field-1">部门名称：</label>
+                        <label class="col-md-3 control-label" for="form-field-1">菜场名称：</label>
                         <div class="col-md-9">
-                            <input type="text" name="depName" placeholder="请输入部门名称" class="input-sm form-control">
+                            <input type="text" name="depName" placeholder="请输入菜场名称" class="input-sm form-control">
                         </div>
                     </div>
                 </form>
@@ -112,7 +112,7 @@
     </div>
 </div>
 
-<!--修改部门弹窗-->
+<!--修改菜场弹窗-->
 <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -121,14 +121,14 @@
                         aria-hidden="true">×
                 </button>
                 <h4 class="modal-title" id="myModalLabel">
-                    修改部门
+                    修改菜场
                 </h4>
             </div>
             <div class="modal-body">
                 <form id="editDepForm" class="form-horizontal" role="form" method="post">
                     <input type="hidden" id="depId" name="id">
                     <div class="form-group">
-                        <label class="col-md-3 control-label" for="form-field-1">部门名称：</label>
+                        <label class="col-md-3 control-label" for="form-field-1">菜场名称：</label>
                         <div class="col-md-9">
                             <input type="text" name="depName" id="editDepName" class="input-sm form-control">
                         </div>
@@ -145,7 +145,7 @@
     </div>
 </div>
 
-<!--移动部门-->
+<!--移动菜场-->
 <div class="modal fade" id="move" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -154,7 +154,7 @@
                         aria-hidden="true">×
                 </button>
                 <h4 class="modal-title" id="myModalLabel">
-                    请选择从属部门
+                    请选择从属菜场
                 </h4>
             </div>
             <div class="modal-body">

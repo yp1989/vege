@@ -13,7 +13,7 @@
         <a href="#" class="navbar-brand">
             <small>
                 <img src="/static/admin/avatars/logo.png" alt="">
-                销售管理系统
+                管理系统
             </small>
         </a>
     </div>

@@ -17,7 +17,7 @@
     <form action="/doLogin" method="post">
         <div class="m-form">
             <div class="m-icon circle"><i class="fa fa-user"></i></div>
-            <div class="m-title">微客来销售管理系统</div>
+            <div class="m-title">菜场管理系统</div>
             <div class="m-input-text m-input-join-u">
                 <input name="adminName" class="input-focus radius-bl0 radius-br0" type="text" placeholder="请输入您的账号"/>
             </div>
